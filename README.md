@@ -91,12 +91,23 @@
    npm run build
    ```
 
-#### كيف تركبها في متصفحك يدويًا (Load Unpacked)؟
-1. افتح صفحة الإضافات في متصفحك: `chrome://extensions/`
-2. فعّل خيار **وضع المطور (Developer mode)** في الزاوية العلوية.
-3. اضغط على زر **تحميل إضافة لم يتم حزمها (Load unpacked)**.
-4. اختر المجلد الناتج من البناء: `.output/chrome-mv3`.
-5. مبروك! بتشوف أيقونة «حارس المحتوى» في شريط أدوات المتصفح.
+#### كيف تركبها وتجربها في متصفحك يدويًا؟ 🧩
+
+* **في متصفحات كروم ومبنياتها (Chrome, Brave, Edge):**
+  1. بعد تنفيذ `npm run build`
+  2. افتح صفحة الإضافات في متصفحك: `chrome://extensions/`
+  3. فعّل خيار **وضع المطور (Developer mode)** في الزاوية العلوية.
+  4. اضغط على زر **تحميل إضافة لم يتم حزمها (Load unpacked)**.
+  5. اختر المجلد الناتج من البناء: `.output/chrome-mv3`.
+
+* **في متصفح فايرفوكس (Firefox):**
+  > [!NOTE]
+  > في فايرفوكس الرسمي، لا تقم بتثبيتها من صفحة `about:addons` لأن فايرفوكس يرفض الإضافات غير الموقعة رقمياً برمز التحقق. الطريقة الصحيحة للمطورين هي:
+  1. بعد تنفيذ `npm run build:firefox`
+  2. افتح هذا الرابط في فايرفوكس: `about:debugging#/runtime/this-firefox`
+  3. اضغط على زر **تحميل إضافة مؤقتة... (Load Temporary Add-on...)**
+  4. ادخل لمجلد المشروع ثم `.output/firefox-mv2/` واختر ملف **`manifest.json`**.
+  5. ستعمل الإضافة معك فوراً وبدون أي رسائل خطأ!
 
 ---
 
@@ -167,11 +178,23 @@ I built **Haris Al-Muhtawa (Content Guardian)** as a personal shield. It puts yo
    npm run build
    ```
 
-#### How to load the unpacked extension in Chrome:
-1. Navigate to `chrome://extensions/`.
-2. Enable **Developer mode** toggle in the top-right corner.
-3. Click **Load unpacked**.
-4. Select the `.output/chrome-mv3` folder.
+#### How to load the extension manually:
+
+* **In Chrome / Chromium (Brave, Edge):**
+  1. Run `npm run build`
+  2. Navigate to `chrome://extensions/`
+  3. Enable **Developer mode** toggle in the top-right corner.
+  4. Click **Load unpacked**.
+  5. Select the `.output/chrome-mv3` folder.
+
+* **In Firefox:**
+  > [!NOTE]
+  > Standard Firefox does not allow installing unsigned `.zip` or `.xpi` files from `about:addons`. To load and test the unpacked extension:
+  1. Run `npm run build:firefox`
+  2. In your Firefox address bar, navigate to: `about:debugging#/runtime/this-firefox`
+  3. Click **Load Temporary Add-on...**
+  4. Navigate into `.output/firefox-mv2/` and select the **`manifest.json`** file.
+  5. The extension will load and run immediately!
 
 ---
 
