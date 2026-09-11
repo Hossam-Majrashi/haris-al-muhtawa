@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "채널 추가",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "비디오 추가",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "내 목록에 추가",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "비디오 추가",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "추가됨",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "승인된 목록에 있음 ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "승인된 동영상 ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "승인된 채널 ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "차단된 채널 수",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "이 채널 차단",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "채널이 Haris Al-Muhtawa의 차단된 채널 목록에 있기 때문에 이 비디오는 숨겨져 있습니다.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "이 채널은 차단되었습니다",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "막힌",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "블록 채널",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "목록 내보내기(JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "파일 복원 (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "파일을 복원하려면 여기를 클릭하여 페이지로 이동 (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "설정 저장",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "차단 해제",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "귀하의 목록에 {name}을(를) 성공적으로 추가했습니다!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "이 채널은 차단되었습니다",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "채널이 차단되었습니다!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count}개의 승인된 채널",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "막힌",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "채널이 차단 해제되었습니다!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "이 채널을 차단하시겠습니까? 해당 동영상은 YouTube에 표시되지 않습니다.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "취소",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "삭제",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "조치 확인",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "목록에서 이 채널을 삭제하시겠습니까?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "목록에서 이 동영상을 삭제하시겠습니까?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "이 채널의 차단을 해제하시겠습니까?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "승인된 채널에 추가",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "현재 YouTube 채널",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "현재 YouTube 동영상",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "여기에 추가된 채널은 홈 피드, 제안 또는 검색에 표시되지 않습니다.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "차단된 채널 없음",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "YouTube를 탐색하고 채널이나 비디오 페이지에서 \"내 목록에 추가\"를 클릭하여 여기에 추가하세요.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "아직 승인된 채널이 없습니다.",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "YouTube를 탐색하고 동영상에서 (+)를 클릭하여 승인된 목록에 추가하세요.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "아직 승인된 동영상이 없습니다.",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "채널 목록을 성공적으로 내보냈습니다!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "알고리즘이나 방해 요소 없이 승인된 채널만 추적하는 개인 YouTube 콘텐츠 필터입니다.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "{channels} 승인 채널, {blocked} 차단 채널, {videos} 동영상을 가져왔습니다!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "파일 형식이 잘못되었거나 승인된 채널 구조가 누락되었습니다.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "{count}개의 채널을 성공적으로 가져왔습니다!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "내 목록에 ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "채널 URL, @handle 또는 채널 ID를 입력하세요...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "인터페이스 언어",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "모두 읽음으로 표시",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "분",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "{count} 새 동영상을 찾았습니다!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "검색어와 일치하는 채널이 없습니다.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "검색결과가 없습니다",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "검색어와 일치하는 항목이 없습니다.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "검색어와 일치하는 동영상이 없습니다.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "목표와 목적",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "이해했다",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "자신이 리뷰한 채널만 구독하고 채널에 음악이나 여성 콘텐츠가 없는지 확인하여 YouTube에서 채널을 구독하지 않으며, 동영상에 음악과 여성이 포함되어 있고 죽은 후에도 나쁜 행동이 지속되는 경우 그를 지지합니다. 신이 당신을 도와주시기를 바랍니다.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "인터페이스 언어 선택:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "시작 전 경고 및 중요 메시지",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "콘텐츠 수호자",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "동영상 보기",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "백업 JSON을 아래 상자에 붙여넣고 가져오기 확인을 클릭하세요.",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "새로운 업로드 확인 간격",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "지금 새로고침",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "피드 확인 중...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "제거",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "동영상 삭제",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "차단된 채널 검색...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "승인된 채널 검색...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "승인된 동영상 검색...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "원본 동영상 제목 표시(자동 번역 비활성화)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "YouTube 자동 번역 없이 제작자의 실제 원본 제목을 표시합니다.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "어디서나 YouTube Shorts 삭제",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Shorts 섹션, 탭, 버튼을 숨기고 Shorts를 표준 동영상 플레이어로 리디렉션합니다.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "설정이 성공적으로 저장되었습니다!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "차단된 채널",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "승인된 채널",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "승인된 동영상",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "설정",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}d 전",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count}시간 전",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "방금",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "차단 해제",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "승인 목록에 동영상이 추가되었습니다!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "승인된 동영상 ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

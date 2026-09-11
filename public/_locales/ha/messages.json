@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "Ƙara Channel",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "Ƙara Bidiyo",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "Ƙara zuwa lissafina",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "Ƙara Bidiyo",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "An ƙara",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "A cikin jerin da aka amince da ku ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "Bidiyo da aka Amince ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "Tashar da aka amince ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "Ƙididdigar tashoshi da aka toshe",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "Toshe Wannan Tashar",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "Wannan bidiyon yana boye ne saboda tashar tana cikin jerin tashoshi da aka toshe a Haris Al-Muhtawa.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "An Toshe Wannan Tashar",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "An katange",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "Toshe Channel",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "Lissafin fitarwa (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "Maido da fayil (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "Danna nan don zuwa shafin mayar da fayil (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "Ajiye Saituna",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "Cire katanga",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "An yi nasarar ƙara {name} cikin jerinku!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "An Toshe Wannan Tashar",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "An toshe tashar cikin nasara!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} tashoshin da aka amince dasu",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "An katange",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "An buɗe tashar!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "Shin kun tabbata kuna son toshe wannan tashar? Babu ɗayan bidiyonsa da zai bayyana akan YouTube.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "Soke",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "Share",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "Tabbatar da Aiki",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "Shin kun tabbata kuna son cire wannan tashar daga jerinku?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "Shin kun tabbata kuna son cire wannan bidiyo daga jerin?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "Shin kun tabbata kuna son buɗe wannan tashar?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "Ƙara zuwa tashoshi da aka amince",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "Tashar YouTube ta yanzu",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "Bidiyon YouTube na yanzu",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "Tashoshi da aka ƙara anan ba za su taɓa fitowa a cikin ciyarwar gida, shawarwari, ko bincike ba.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "Babu Tashoshi da aka Katange",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "Bincika YouTube kuma danna \"Ƙara zuwa lissafina\" akan kowace tasha ko shafin bidiyo don ƙara shi anan.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "Babu tashoshi da aka amince tukuna",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "Bincika YouTube kuma danna (+) akan kowane bidiyo don ƙara shi cikin jerin da aka amince da ku.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "Babu bidiyon da aka yarda tukuna",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "An fitar da jerin tashoshi cikin nasara!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "Tacewar abun ciki na YouTube na sirri don bin tashoshi da aka amince da su kawai ba tare da algorithm ko karkatarwa ba.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "An shigo da tashoshi {channels} da aka yarda, {blocked} katange tashoshi, da bidiyoyi {videos}!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "Tsarin fayil mara inganci ko rashin ingantaccen tsarin tashoshi.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "An shigo da tashoshi {count} cikin nasara!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "A cikin lissafina ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "Shigar da URL tashoshi, @handle, ko ID na tashar...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "Harshen Mu'amala",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "Yi alama duka kamar yadda aka karanta",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "min",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "An sami sabbin bidiyoyi {count}!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "Babu tashoshi da suka dace da bincikenku.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "Ba a sami sakamako ba",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "Babu wani abu da ya dace da bincikenku.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "Babu bidiyon da ya dace da bincikenku.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "Buri da manufa",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "An fahimta",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "Kuyi subscribing kawai a tashoshin da kuke bitar kanku kuma ku tabbata cewa basu da kida ko abubuwan mata don kada ku yi subscribing dinsa a YouTube kuma kuna tallafa masa idan bidiyonsa ya ƙunshi kiɗa da mata kuma kuna ci gaba da ayyukan banza bayan mutuwar ku. Allah ya taimake ku.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "Zaɓi yaren mu'amala:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "Gargaɗi da saƙo mai mahimmanci kafin farawa",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "Mai gadin abun ciki",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "Kalli Bidiyo",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "Da fatan za a liƙa madadin JSON a cikin akwatin da ke ƙasa kuma danna Tabbatar da Shigowa",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "Sabuwar tazarar rajistan lodawa",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "Sake sabuntawa yanzu",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "Ana duba ciyarwa...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "Cire",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "Cire bidiyo",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "Bincika tashoshi da aka katange...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "Bincika tashoshi da aka amince...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "Bincika ingantaccen bidiyoyi...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "Nuna taken bidiyo na asali (kashe fassarar atomatik)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "Nuna ainihin ainihin take na mahaliccin ba tare da fassarar YouTube ta atomatik ba.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "Cire Shorts YouTube a ko'ina",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Ɓoye Shorts shelves, shafuka, maɓalli, da kuma tura Shorts zuwa daidaitaccen mai kunna bidiyo.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "An ajiye saituna cikin nasara!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "Tashoshi da aka toshe",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "Tashoshi Masu Amincewa",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "Bidiyoyin da aka yarda",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "Saituna",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}d da suka wuce",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count}h da suka wuce",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "Yanzu dai",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "Cire katanga",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "An ƙara bidiyon zuwa jerin da aka amince da ku!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "Bidiyo da aka Amince ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

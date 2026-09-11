@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "ချန်နယ်ထည့်ပါ။",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "ဗီဒီယိုထည့်ပါ။",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "ကျွန်ုပ်၏စာရင်းထဲသို့ထည့်ပါ။",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "ဗီဒီယိုထည့်ပါ။",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "ထပ်ထည့်ထားပါတယ်။",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "သင်၏အတည်ပြုထားသောစာရင်း ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "အတည်ပြုထားသော ဗီဒီယို ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "အတည်ပြုထားသောချန်နယ် ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "ပိတ်ထားသော ချန်နယ်များ အရေအတွက်",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "ဤချန်နယ်ကို ပိတ်ပါ။",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "ချန်နယ်သည် Haris Al-Muhtawa ရှိ သင်၏ ပိတ်ဆို့ထားသော ချန်နယ်များစာရင်းတွင် ရှိနေသောကြောင့် ဤဗီဒီယိုကို ဖျောက်ထားသည်။",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "ဤချန်နယ်ကို ပိတ်ဆို့ထားသည်။",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "ပိတ်ဆို့ထားသည်။",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "ချန်နယ်ကို ပိတ်ပါ။",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "ထုတ်ယူစာရင်း (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "ဖိုင်ကို ပြန်လည်ရယူပါ (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "ဖိုင်ကို ပြန်လည်ရယူရန် ဤနေရာကို နှိပ်ပြီး စာမျက်နှာသို့ သွားပါ (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "ဆက်တင်များကို သိမ်းဆည်းပါ။",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "ပြန်ဖွင့်ပါ။",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "သင့်စာရင်းသို့ {name} ကို အောင်မြင်စွာ ထည့်သွင်းခဲ့သည်။",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "ဤချန်နယ်ကို ပိတ်ဆို့ထားသည်။",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "ချန်နယ်ကို အောင်မြင်စွာ ပိတ်ဆို့လိုက်ပါပြီ။",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "အတည်ပြုထားသော ချန်နယ် {count} ခု",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "ပိတ်ဆို့ထားသည်။",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "ချန်နယ်ကို ပြန်ဖွင့်လိုက်ပါပြီ။",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "ဤချန်နယ်ကို ပိတ်ဆို့လိုသည်မှာ သေချာပါသလား။ ၎င်း၏ဗီဒီယိုများအားလုံးကို YouTube တွင် ပေါ်မည်မဟုတ်ပါ။",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "မလုပ်တော့",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "ဖျက်ပါ။",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "လုပ်ဆောင်ချက်ကို အတည်ပြုပါ။",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "ဤချန်နယ်ကို သင့်စာရင်းမှ ဖယ်ရှားလိုသည်မှာ သေချာပါသလား။",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "ဤဗီဒီယိုကို စာရင်းမှ ဖယ်ရှားလိုသည်မှာ သေချာပါသလား။",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "ဤချန်နယ်ကို ပြန်ဖွင့်လိုသည်မှာ သေချာပါသလား။",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "အတည်ပြုထားသောချန်နယ်များသို့ ထည့်ပါ။",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "လက်ရှိ YouTube ချန်နယ်",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "လက်ရှိ YouTube ဗီဒီယို",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "ဤနေရာတွင် ထည့်သွင်းထားသော ချန်နယ်များသည် သင့်ပင်မဖိဒ်၊ အကြံပြုချက်များ သို့မဟုတ် ရှာဖွေမှုတွင် မည်သည့်အခါမျှ ပေါ်မည်မဟုတ်ပါ။",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "ပိတ်ဆို့ထားသောချန်နယ်များမရှိပါ။",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "YouTube ကိုရှာဖွေပြီး ဤနေရာတွင်ထည့်ရန် မည်သည့်ချန်နယ် သို့မဟုတ် ဗီဒီယိုစာမျက်နှာရှိ \"ကျွန်ုပ်၏စာရင်းသို့ထည့်ပါ\" ကိုနှိပ်ပါ။",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "အတည်ပြုထားသော ချန်နယ်များ မရှိသေးပါ။",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "YouTube ကိုရှာဖွေပြီး သင့်ခွင့်ပြုထားသောစာရင်းတွင် ထည့်သွင်းရန် မည်သည့်ဗီဒီယိုတွင်မဆို (+) ကိုနှိပ်ပါ။",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "အတည်ပြုထားသော ဗီဒီယိုများ မရှိသေးပါ။",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "ချန်နယ်များစာရင်းကို အောင်မြင်စွာ ထုတ်ယူပြီးပါပြီ။",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "အယ်လဂိုရီသမ်များ သို့မဟုတ် အနှောင့်အယှက်များမရှိဘဲ သင်၏အတည်ပြုထားသောချန်နယ်များကိုသာ ခြေရာခံရန် ကိုယ်ပိုင် YouTube အကြောင်းအရာ စစ်ထုတ်ခြင်း။",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "တင်သွင်းထားသည့် {channels} ခွင့်ပြုထားသောချန်နယ်များ၊ {blocked} ပိတ်ဆို့ထားသောချန်နယ်များနှင့် {videos} ဗီဒီယိုများ။",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "မမှန်ကန်သော ဖိုင်ဖော်မတ် သို့မဟုတ် အတည်ပြုထားသော ချန်နယ်များဖွဲ့စည်းပုံ ပျောက်ဆုံးနေပါသည်။",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "ချန်နယ် {count} ခုကို အောင်မြင်စွာ တင်သွင်းခဲ့သည်။",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "ကျွန်ုပ်၏စာရင်းတွင် ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "ချန်နယ် URL၊ @handle သို့မဟုတ် ချန်နယ် ID ကို ထည့်ပါ...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "Interface ဘာသာစကား",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "အားလုံးကို ဖတ်ပြီးကြောင်း အမှတ်အသားပြုပါ။",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "မိ",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "ဗီဒီယိုအသစ် {count} ခု တွေ့ရှိခဲ့သည်။",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "သင့်ရှာဖွေမှုနှင့် ကိုက်ညီသော ချန်နယ်မရှိပါ။",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "ရလဒ်များမတွေ့ပါ။",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "သင့်ရှာဖွေမှုနှင့် ကိုက်ညီသည့် မည်သည့်အရာမျှ မရှိပါ။",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "သင့်ရှာဖွေမှုနှင့် ကိုက်ညီသော ဗီဒီယိုမရှိပါ။",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "ရည်မှန်းချက်နှင့်ရည်ရွယ်ချက်",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "သဘောပေါက်တယ်။",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "သင့်ကိုယ်သင် ပြန်လည်သုံးသပ်သည့် ချန်နယ်များကိုသာ စာရင်းသွင်းထားပြီး ၎င်းတို့သည် ဂီတ သို့မဟုတ် အမျိုးသမီးများ၏ အကြောင်းအရာများ ကင်းစင်ကြောင်း သေချာစေရန်အတွက် YouTube တွင် သူ့ကို စာရင်းသွင်းခြင်း မပြုရန်နှင့် ၎င်း၏ဗီဒီယိုများတွင် ဂီတနှင့် အမျိုးသမီးများပါရှိပြီး သင်သေဆုံးပြီးနောက် သင်ဆက်လက်လုပ်ဆောင်နေသည့် မကောင်းမှုများရှိနေပါက သူ့ကို ပံ့ပိုးကူညီပါ။ ဘုရားသခင် သင့်ကို ကူညီပါစေ။",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "အင်တာဖေ့စ်ဘာသာစကားကို ရွေးပါ-",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "မစတင်မီ သတိပေးချက်နှင့် အရေးကြီးသော သတင်းစကား",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "အကြောင်းအရာ အုပ်ထိန်းသူ",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "ဗီဒီယိုများကိုကြည့်ရှုပါ။",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "ကျေးဇူးပြု၍ အရန်ကူးယူထားသော JSON ကို အောက်ဖော်ပြပါအကွက်ထဲသို့ ကူးထည့်ကာ အတည်ပြုတင်သွင်းမှုကို နှိပ်ပါ။",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "အပ်လုဒ်အသစ်စစ်ဆေးသည့်ကာလ",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "ယခု ပြန်လည်စတင်ပါ။",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "ဖိဒ်များကို စစ်ဆေးနေသည်...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "ဖယ်ရှားပါ။",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "ဗီဒီယိုကို ဖယ်ရှားပါ။",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "ပိတ်ဆို့ထားသော ချန်နယ်များကို ရှာဖွေပါ...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "အတည်ပြုထားသော ချန်နယ်များကို ရှာဖွေပါ...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "အတည်ပြုထားသော ဗီဒီယိုများကို ရှာဖွေပါ...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "မူရင်းဗီဒီယိုခေါင်းစဉ်များကို ပြပါ (အလိုအလျောက်ဘာသာပြန်ခြင်းကို ပိတ်ပါ)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "YouTube ၏အလိုအလျောက်ဘာသာပြန်ခြင်းမရှိဘဲ ထုတ်လုပ်သူ၏စစ်မှန်သော မူရင်းခေါင်းစဉ်ကို ပြသပါ။",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "YouTube Shorts များကို နေရာတိုင်းတွင် ဖယ်ရှားပါ။",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Shorts စင်များ၊ တဘ်များ၊ ခလုတ်များကို ဝှက်ပြီး Shorts များကို ပုံမှန် ဗီဒီယိုဖွင့်စက်သို့ ပြန်ညွှန်းပါ။",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "ဆက်တင်များကို အောင်မြင်စွာ သိမ်းဆည်းပြီးပါပြီ။",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "ပိတ်ထားသောချန်နယ်များ",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "အတည်ပြုထားသော ချန်နယ်များ",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "အတည်ပြုထားသော ဗီဒီယိုများ",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "ဆက်တင်များ",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "လွန်ခဲ့သော {count}d",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "လွန်ခဲ့သော {count}နာရီ",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "အခုပဲ",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "ပြန်ဖွင့်ပါ။",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "သင့်ခွင့်ပြုထားသောစာရင်းတွင် ဗီဒီယိုကို ထည့်ထားသည်။",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "အတည်ပြုထားသော ဗီဒီယို ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

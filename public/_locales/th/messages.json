@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "เพิ่มช่อง",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "เพิ่มวิดีโอ",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "เพิ่มในรายการของฉัน",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "เพิ่มวิดีโอ",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "เพิ่มเมื่อ",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "ในรายการที่คุณอนุมัติ ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "วิดีโอที่ได้รับอนุมัติ ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "ช่องทางที่ได้รับอนุมัติ ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "จำนวนช่องที่ถูกบล็อก",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "บล็อกช่องนี้",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "วิดีโอนี้ถูกซ่อนเนื่องจากช่องอยู่ในรายการช่องที่ถูกบล็อกของคุณใน Haris Al-Muhtawa",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "ช่องนี้ถูกบล็อก",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "ถูกบล็อก",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "บล็อกช่อง",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "รายการส่งออก (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "กู้คืนไฟล์ (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "คลิกที่นี่และไปที่หน้าเพื่อกู้คืนไฟล์ (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "บันทึกการตั้งค่า",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "เลิกบล็อก",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "เพิ่ม {name} ในรายการของคุณสำเร็จแล้ว!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "ช่องนี้ถูกบล็อก",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "บล็อกช่องเรียบร้อยแล้ว!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} ช่องที่ได้รับอนุมัติ",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "ถูกบล็อก",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "ปลดล็อคช่องแล้ว!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "คุณแน่ใจหรือไม่ว่าต้องการบล็อกช่องนี้ วิดีโอทั้งหมดจะไม่ปรากฏบน YouTube",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "ยกเลิก",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "ลบ",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "ยืนยันการดำเนินการ",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "คุณแน่ใจหรือไม่ว่าต้องการลบช่องนี้ออกจากรายการของคุณ",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "คุณแน่ใจหรือไม่ว่าต้องการลบวิดีโอนี้ออกจากรายการ",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "คุณแน่ใจหรือไม่ว่าต้องการเลิกบล็อกช่องนี้",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "เพิ่มลงในช่องที่ได้รับอนุมัติ",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "ช่อง YouTube ปัจจุบัน",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "วิดีโอ YouTube ปัจจุบัน",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "ช่องที่เพิ่มที่นี่จะไม่ปรากฏในฟีดหน้าแรก คำแนะนำ หรือการค้นหาของคุณ",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "ไม่มีช่องที่ถูกบล็อก",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "เรียกดู YouTube และคลิก \"เพิ่มลงในรายการของฉัน\" บนช่องหรือหน้าวิดีโอใดๆ เพื่อเพิ่มที่นี่",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "ยังไม่มีช่องที่ได้รับการอนุมัติ",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "เรียกดู YouTube และคลิก (+) บนวิดีโอใดๆ เพื่อเพิ่มลงในรายการที่คุณอนุมัติ",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "ยังไม่มีวิดีโอที่ได้รับอนุมัติ",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "ส่งออกรายการช่องเรียบร้อยแล้ว!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "ตัวกรองเนื้อหา YouTube ส่วนตัวเพื่อติดตามเฉพาะช่องที่ได้รับอนุมัติโดยไม่มีอัลกอริทึมหรือสิ่งรบกวนสมาธิ",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "นำเข้าช่องที่ได้รับการอนุมัติ {channels} ช่องที่ถูกบล็อก {blocked} และวิดีโอ {videos}!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "รูปแบบไฟล์ไม่ถูกต้องหรือไม่มีโครงสร้างช่องที่ได้รับอนุมัติ",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "นำเข้าช่อง {count} สำเร็จแล้ว!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "ในรายการของฉัน ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "ป้อน URL ของช่อง @handle หรือรหัสช่อง...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "ภาษาอินเทอร์เฟซ",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "ทำเครื่องหมายทั้งหมดว่าอ่านแล้ว",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "นาที",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "พบ {count} วิดีโอใหม่!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "ไม่มีช่องที่ตรงกับการค้นหาของคุณ",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "ไม่พบผลลัพธ์",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "ไม่มีรายการที่ตรงกับการค้นหาของคุณ",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "ไม่มีวิดีโอที่ตรงกับการค้นหาของคุณ",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "เป้าหมายและวัตถุประสงค์",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "เข้าใจแล้ว",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "คุณสมัครรับข้อมูลเฉพาะช่องที่คุณรีวิวตัวเองและตรวจสอบให้แน่ใจว่าช่องเหล่านั้นไม่มีเพลงหรือเนื้อหาสำหรับผู้หญิง เพื่อที่คุณจะได้ไม่ต้องติดตามเขาบน YouTube และคุณสนับสนุนเขาหากวิดีโอของเขามีเพลงและผู้หญิง และคุณมีการกระทำที่ไม่ดีอย่างต่อเนื่องหลังจากที่คุณเสียชีวิต ขอพระเจ้าช่วยคุณ",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "เลือกภาษาอินเทอร์เฟซ:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "คำเตือนและข้อความสำคัญก่อนเริ่มต้น",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "ผู้พิทักษ์เนื้อหา",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "ดูวิดีโอ",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "โปรดวาง JSON สำรองลงในช่องด้านล่างแล้วคลิกยืนยันการนำเข้า",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "ช่วงเวลาตรวจสอบการอัปโหลดใหม่",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "รีเฟรชเลย",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "กำลังตรวจสอบฟีด...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "ลบ",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "ลบวิดีโอ",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "ค้นหาช่องที่ถูกบล็อก...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "ค้นหาช่องที่ได้รับอนุมัติ...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "ค้นหาวิดีโอที่ได้รับอนุมัติ...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "แสดงชื่อวิดีโอต้นฉบับ (ปิดใช้งานการแปลอัตโนมัติ)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "แสดงชื่อต้นฉบับที่แท้จริงของผู้สร้างโดยไม่มีการแปลอัตโนมัติของ YouTube",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "ลบ YouTube Shorts ทุกที่",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "ซ่อนชั้นวาง แท็บ ปุ่ม Shorts และเปลี่ยนเส้นทาง Shorts ไปยังโปรแกรมเล่นวิดีโอมาตรฐาน",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "บันทึกการตั้งค่าเรียบร้อยแล้ว!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "ช่องที่ถูกบล็อก",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "ช่องทางที่ได้รับอนุมัติ",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "วิดีโอที่ได้รับอนุมัติ",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "การตั้งค่า",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}d ที่แล้ว",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count}h ที่แล้ว",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "แค่ตอนนี้",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "เลิกบล็อก",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "เพิ่มวิดีโอในรายการอนุมัติของคุณแล้ว!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "วิดีโอที่ได้รับอนุมัติ ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

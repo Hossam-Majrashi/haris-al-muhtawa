@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "Thêm kênh",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "Thêm video",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "Thêm vào danh sách của tôi",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "Thêm video",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "Đã thêm vào",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "Trong danh sách được bạn phê duyệt ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "Video đã được phê duyệt ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "Kênh được phê duyệt ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "Số kênh bị chặn",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "Chặn kênh này",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "Video này bị ẩn vì kênh này nằm trong danh sách Kênh bị chặn của bạn ở Haris Al-Muhtawa.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "Kênh này đã bị chặn",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "Bị chặn",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "Chặn kênh",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "Danh sách xuất (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "Khôi phục tệp (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "Nhấp vào đây và chuyển đến trang để khôi phục tệp (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "Lưu cài đặt",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "Bỏ chặn",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "Đã thêm thành công {name} vào danh sách của bạn!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "Kênh này đã bị chặn",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "Đã chặn kênh thành công!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} kênh được phê duyệt",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "Bị chặn",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "Đã bỏ chặn kênh!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "Bạn có chắc chắn muốn chặn kênh này không? Không có video nào của nó sẽ xuất hiện trên YouTube.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "Hủy bỏ",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "Xóa bỏ",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "Xác nhận hành động",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "Bạn có chắc chắn muốn xóa kênh này khỏi danh sách của mình không?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "Bạn có chắc chắn muốn xóa video này khỏi danh sách không?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "Bạn có chắc chắn muốn bỏ chặn kênh này không?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "Thêm vào các kênh được phê duyệt",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "Kênh YouTube hiện tại",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "Video YouTube hiện tại",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "Các kênh được thêm vào đây sẽ không bao giờ xuất hiện trong nguồn cấp dữ liệu Trang chủ, đề xuất hoặc tìm kiếm của bạn.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "Không có kênh bị chặn",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "Duyệt qua YouTube và nhấp vào \"Thêm vào danh sách của tôi\" trên bất kỳ kênh hoặc trang video nào để thêm vào đây.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "Chưa có kênh nào được phê duyệt",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "Duyệt qua YouTube và nhấp vào (+) trên bất kỳ video nào để thêm video đó vào danh sách được phê duyệt của bạn.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "Chưa có video nào được phê duyệt",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "Danh sách kênh đã được xuất thành công!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "Bộ lọc nội dung YouTube cá nhân để chỉ theo dõi các kênh đã được phê duyệt của bạn mà không có thuật toán hoặc phiền nhiễu.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "Đã nhập {channels} kênh được phê duyệt, {blocked} kênh bị chặn và {videos} video!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "Định dạng tệp không hợp lệ hoặc thiếu cấu trúc kênh được phê duyệt.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "Đã nhập thành công {count} kênh!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "Trong danh sách của tôi ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "Nhập URL kênh, @handle hoặc ID kênh...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "Ngôn ngữ giao diện",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "Đánh dấu tất cả là đã đọc",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "phút",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "Đã tìm thấy {count} video mới!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "Không có kênh nào phù hợp với tìm kiếm của bạn.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "Không tìm thấy kết quả nào",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "Không có mục nào phù hợp với tìm kiếm của bạn.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "Không có video phù hợp với tìm kiếm của bạn.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "Mục tiêu và mục đích",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "đã hiểu",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "Bạn chỉ đăng ký các kênh mà bạn tự đánh giá và đảm bảo rằng chúng không có âm nhạc hoặc nội dung phụ nữ để bạn không đăng ký anh ấy trên YouTube và bạn ủng hộ anh ấy nếu video của anh ấy có nhạc và phụ nữ và bạn tiếp tục có những hành động xấu sau khi chết. Xin Chúa giúp đỡ bạn.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "Chọn ngôn ngữ giao diện:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "Cảnh báo và thông báo quan trọng trước khi bắt đầu",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "Người giám hộ nội dung",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "Xem video",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "Vui lòng dán JSON sao lưu vào hộp bên dưới và nhấp vào Xác nhận nhập",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "Khoảng thời gian kiểm tra tải lên mới",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "Làm mới ngay bây giờ",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "Đang kiểm tra nguồn cấp dữ liệu...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "Xóa",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "Xóa video",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "Tìm kiếm các kênh bị chặn...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "Tìm kiếm các kênh được phê duyệt...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "Tìm kiếm video đã được phê duyệt...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "Hiển thị tiêu đề video gốc (tắt tính năng dịch tự động)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "Hiển thị tiêu đề gốc xác thực của người sáng tạo mà không cần bản dịch tự động của YouTube.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "Xóa video ngắn trên YouTube ở mọi nơi",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Ẩn các kệ, tab, nút Video ngắn và chuyển hướng Video ngắn đến trình phát video tiêu chuẩn.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "Đã lưu cài đặt thành công!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "Kênh bị chặn",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "Kênh được phê duyệt",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "Video được phê duyệt",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "Cài đặt",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}ngày trước",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count}giờ trước",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "Vừa rồi",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "Bỏ chặn",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "Video đã được thêm vào danh sách được phê duyệt của bạn!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "Video đã được phê duyệt ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

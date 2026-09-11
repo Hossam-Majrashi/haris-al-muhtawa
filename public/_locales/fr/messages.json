@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "Ajouter une chaîne",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "Ajouter une vidéo",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "Ajouter à ma liste",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "Ajouter une vidéo",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "Ajouté",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "Dans votre liste approuvée ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "Vidéo approuvée ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Filtre YouTube personnel",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "Canal approuvé ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Sauvegarde et transfert",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "Nombre de chaînes bloquées",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "Bloquer cette chaîne",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "Cette vidéo est masquée car la chaîne figure dans votre liste de chaînes bloquées dans Haris Al-Muhtawa.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "Cette chaîne est bloquée",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "Bloqué",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "Bloquer le canal",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirmer l'importation",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "Exporter la liste (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Cliquez ici pour aller sur la page pour téléverser un fichier",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ Nouveau dossier",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Coller",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "Restaurer le fichier (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "Cliquez ici pour accéder à la page de restauration du fichier (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "Enregistrer les paramètres",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "Débloquer",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "{name} a été ajouté avec succès à votre liste !",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "Cette chaîne est bloquée",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "Chaîne bloquée avec succès !",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} chaînes approuvées",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "Bloqué",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "Chaîne débloquée !",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "Êtes-vous sûr de vouloir bloquer cette chaîne ? Aucune de ses vidéos n'apparaîtra sur YouTube.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Êtes-vous sûr de vouloir supprimer ce dossier ? Les vidéos ne seront pas supprimées.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "Annuler",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "Supprimer",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "Confirmer l'action",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "Êtes-vous sûr de vouloir supprimer cette chaîne de votre liste ?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "Êtes-vous sûr de vouloir supprimer cette vidéo de la liste ?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "Êtes-vous sûr de vouloir débloquer cette chaîne ?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "Ajouter aux chaînes approuvées",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Créer un dossier",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "Chaîne YouTube actuelle",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "Vidéo YouTube actuelle",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Supprimer le dossier",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Tout désélectionner",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "E-mail",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Développeur",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Site web",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Cliquez pour choisir un fichier JSON ou glissez-le ici",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "Les chaînes ajoutées ici n'apparaîtront jamais dans votre flux d'accueil, vos suggestions ou votre recherche.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "Aucune chaîne bloquée",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "Parcourez YouTube et cliquez sur « Ajouter à ma liste » sur n'importe quelle chaîne ou page vidéo pour l'ajouter ici.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "Aucune chaîne approuvée pour l'instant",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "Parcourez YouTube et cliquez (+) sur n'importe quelle vidéo pour l'ajouter à votre liste approuvée.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "Aucune vidéo approuvée pour le moment",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "Liste des chaînes exportée avec succès !",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "Filtre de contenu YouTube personnel pour suivre uniquement vos chaînes approuvées sans algorithmes ni distractions.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Dossier créé avec succès !",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "Nom du nouveau dossier...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "Tous",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Sans dossier",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "Préférences générales",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "Chaînes approuvées {channels} importées, chaînes bloquées {blocked} et vidéos {videos} !",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "Format de fichier invalide ou structure de chaînes approuvées manquante.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Importer des chaînes et vidéos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "{count} chaînes ont été importées avec succès !",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "Dans ma liste ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "Saisissez l'URL de la chaîne, le @handle ou l'ID de la chaîne...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "Langue de l'interface",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "Marquer tout comme lu",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "min",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Déplacer vers un dossier",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "J'ai trouvé {count} nouvelles vidéos !",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "Aucune chaîne ne correspond à votre recherche.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "Aucun résultat trouvé",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "Aucun article ne correspond à votre recherche.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "Aucune vidéo ne correspond à votre recherche.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Veuillez d'abord sélectionner au moins une vidéo.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "But et but",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "Compris",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "Vous vous abonnez uniquement aux chaînes que vous évaluez vous-même et assurez-vous qu'elles sont exemptes de musique ou de contenu féminin afin de ne pas vous abonner à lui sur YouTube et de le soutenir si ses vidéos contiennent de la musique et des femmes et que vous avez de mauvaises actions en cours après votre mort. Que Dieu vous aide.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "Choisissez la langue de l'interface :",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "Avertissement et message important avant de commencer",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "Gardien du contenu",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Ouvrir dans le navigateur",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Ouvrir dans le navigateur ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "Voir les vidéos",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "{count} vidéos ouvertes dans le navigateur",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "Veuillez coller le JSON de sauvegarde dans la case ci-dessous et cliquez sur Confirmer l'importation.",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Ou collez le texte JSON directement ici :",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "Nouvel intervalle de vérification du téléchargement",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Import rapide depuis le presse-papiers (coller JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "Actualiser maintenant",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "Vérification des flux...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "Supprimer",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "Supprimer la vidéo",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "Rechercher les chaînes bloquées...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "Rechercher des chaînes approuvées...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "Rechercher des vidéos approuvées...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Tout sélectionner",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "Afficher les titres vidéo originaux (désactiver la traduction automatique)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "Affichez le titre original authentique du créateur sans la traduction automatique de YouTube.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "Supprimez les courts métrages YouTube partout",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Masquez les étagères, les onglets et les boutons des Shorts et redirigez les Shorts vers un lecteur vidéo standard.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "Paramètres enregistrés avec succès !",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "Chaînes bloquées",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "Canaux approuvés",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "Vidéos approuvées",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "Paramètres",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "Il y a {count}j",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "Il y a {count}h",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "Tout à l' heure",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "Débloquer",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "Vidéo ajoutée à votre liste approuvée !",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "Vidéo approuvée ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Vidéo déplacée avec succès !",
+    "description": "Video moved toast"
+  }
+}

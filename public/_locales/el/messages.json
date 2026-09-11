@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "Προσθήκη καναλιού",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "Προσθήκη βίντεο",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "Προσθήκη στη λίστα μου",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "Προσθήκη βίντεο",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "Προστέθηκε στις",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "Στην εγκεκριμένη λίστα σας ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "Εγκεκριμένο βίντεο ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "Εγκεκριμένο κανάλι ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "Τα αποκλεισμένα κανάλια μετρούν",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "Αποκλεισμός αυτού του καναλιού",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "Αυτό το βίντεο είναι κρυφό επειδή το κανάλι βρίσκεται στη λίστα Αποκλεισμένων καναλιών στο Haris Al-Muhtawa.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "Αυτό το κανάλι είναι αποκλεισμένο",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "Αποκλεισμένος",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "Αποκλεισμός καναλιού",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "Εξαγωγή λίστας (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "Επαναφορά αρχείου (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "Κάντε κλικ εδώ και μεταβείτε στη σελίδα για να επαναφέρετε το αρχείο (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "Αποθήκευση ρυθμίσεων",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "Ξεβουλώνω",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "Προστέθηκε με επιτυχία το {name} στη λίστα σας!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "Αυτό το κανάλι είναι αποκλεισμένο",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "Το κανάλι αποκλείστηκε με επιτυχία!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} εγκεκριμένα κανάλια",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "Αποκλεισμένος",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "Το κανάλι ξεμπλοκαρίστηκε!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "Είστε βέβαιοι ότι θέλετε να αποκλείσετε αυτό το κανάλι; Κανένα από τα βίντεό του δεν θα εμφανιστεί στο YouTube.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "Ματαίωση",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "Διαγράφω",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "Επιβεβαίωση Ενέργειας",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "Είστε βέβαιοι ότι θέλετε να αφαιρέσετε αυτό το κανάλι από τη λίστα σας;",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "Είστε βέβαιοι ότι θέλετε να αφαιρέσετε αυτό το βίντεο από τη λίστα;",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "Είστε βέβαιοι ότι θέλετε να καταργήσετε τον αποκλεισμό αυτού του καναλιού;",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "Προσθήκη σε εγκεκριμένα κανάλια",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "Τρέχον κανάλι YouTube",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "Τρέχον βίντεο YouTube",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "Τα κανάλια που προστέθηκαν εδώ δεν θα εμφανίζονται ποτέ στη ροή Αρχικής σελίδας, τις προτάσεις ή την αναζήτησή σας.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "Δεν υπάρχουν αποκλεισμένα κανάλια",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "Περιηγηθείτε στο YouTube και κάντε κλικ στην \"Προσθήκη στη λίστα μου\" σε οποιοδήποτε κανάλι ή σελίδα βίντεο για να το προσθέσετε εδώ.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "Δεν υπάρχουν ακόμη εγκεκριμένα κανάλια",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "Περιηγηθείτε στο YouTube και κάντε κλικ στο (+) σε οποιοδήποτε βίντεο για να το προσθέσετε στην εγκεκριμένη λίστα σας.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "Δεν υπάρχουν εγκεκριμένα βίντεο ακόμα",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "Η λίστα καναλιών εξήχθη με επιτυχία!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "Προσωπικό φίλτρο περιεχομένου YouTube για παρακολούθηση μόνο των εγκεκριμένων καναλιών σας χωρίς αλγόριθμους ή περισπασμούς.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "Εισήχθησαν {channels} εγκεκριμένα κανάλια, {blocked} αποκλεισμένα κανάλια και {videos} βίντεο!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "Μη έγκυρη μορφή αρχείου ή λείπει η δομή εγκεκριμένων καναλιών.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "Έγινε επιτυχής εισαγωγή {count} καναλιών!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "Στη λίστα μου ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "Εισαγάγετε τη διεύθυνση URL καναλιού, το @handle ή το αναγνωριστικό καναλιού...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "Γλώσσα διεπαφής",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "Επισήμανση όλων ως αναγνωσμένων",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "ελάχ",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "Βρέθηκαν {count} νέα βίντεο!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "Κανένα κανάλι δεν αντιστοιχεί στην αναζήτησή σας.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "Δεν βρέθηκαν αποτελέσματα",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "Δεν υπάρχουν στοιχεία που να αντιστοιχούν στην αναζήτησή σας.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "Κανένα βίντεο δεν ταιριάζει με την αναζήτησή σας.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "Στόχος και σκοπός",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "Κατανοητό",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "Εγγραφείτε μόνο στα κανάλια που αξιολογείτε μόνοι σας και βεβαιωθείτε ότι δεν έχουν μουσική ή γυναικείο περιεχόμενο, ώστε να μην εγγραφείτε σε αυτόν στο YouTube και να τον υποστηρίζετε εάν τα βίντεό του περιέχουν μουσική και γυναίκες και έχετε συνεχείς κακές πράξεις μετά τον θάνατό σας. Ο Θεός να σε βοηθήσει.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "Επιλέξτε γλώσσα διεπαφής:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "Προειδοποίηση και σημαντικό μήνυμα πριν ξεκινήσετε",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "Content Guardian",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "Προβολή βίντεο",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "Επικολλήστε το αντίγραφο ασφαλείας JSON στο παρακάτω πλαίσιο και κάντε κλικ στην Επιβεβαίωση εισαγωγής",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "Νέο διάστημα ελέγχου μεταφόρτωσης",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "Ανανέωση τώρα",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "Έλεγχος ροών...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "Αφαίρεση",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "Κατάργηση βίντεο",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "Αναζήτηση αποκλεισμένων καναλιών...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "Αναζήτηση εγκεκριμένων καναλιών...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "Αναζήτηση εγκεκριμένων βίντεο...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "Εμφάνιση αρχικών τίτλων βίντεο (απενεργοποίηση αυτόματης μετάφρασης)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "Εμφάνιση του αυθεντικού πρωτότυπου τίτλου του δημιουργού χωρίς την αυτόματη μετάφραση του YouTube.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "Καταργήστε το YouTube Shorts παντού",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Απόκρυψη ράφια, καρτέλες, κουμπιά Shorts και ανακατεύθυνση του Shorts στο τυπικό πρόγραμμα αναπαραγωγής βίντεο.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "Οι ρυθμίσεις αποθηκεύτηκαν με επιτυχία!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "Αποκλεισμένα κανάλια",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "Εγκεκριμένα κανάλια",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "Εγκεκριμένα βίντεο",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "Ρυθμίσεις",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "Πριν από {count}ημ",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "Πριν από {count}h",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "Μόλις τώρα",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "Ξεβουλώνω",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "Το βίντεο προστέθηκε στην εγκεκριμένη λίστα σας!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "Εγκεκριμένο βίντεο ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

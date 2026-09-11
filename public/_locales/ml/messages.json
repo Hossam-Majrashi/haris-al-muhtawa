@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "ചാനൽ ചേർക്കുക",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "വീഡിയോ ചേർക്കുക",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "എൻ്റെ ലിസ്റ്റിലേക്ക് ചേർക്കുക",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "വീഡിയോ ചേർക്കുക",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "ചേർത്തു",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "നിങ്ങളുടെ അംഗീകൃത പട്ടികയിൽ ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "അംഗീകൃത വീഡിയോ ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "അംഗീകൃത ചാനൽ ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "തടഞ്ഞ ചാനലുകളുടെ എണ്ണം",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "ഈ ചാനൽ തടയുക",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "ഹാരിസ് അൽ മുഹ്താവയിലെ നിങ്ങളുടെ ബ്ലോക്ക് ചെയ്‌ത ചാനലുകളുടെ പട്ടികയിൽ ചാനൽ ഉള്ളതിനാൽ ഈ വീഡിയോ മറച്ചിരിക്കുന്നു.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "ഈ ചാനൽ തടഞ്ഞു",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "തടഞ്ഞു",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "ചാനൽ തടയുക",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "കയറ്റുമതി ലിസ്റ്റ് (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "ഫയൽ പുനഃസ്ഥാപിക്കുക (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "ഫയൽ പുനഃസ്ഥാപിക്കാൻ ഇവിടെ ക്ലിക്കുചെയ്ത് പേജിലേക്ക് പോകുക (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "ക്രമീകരണങ്ങൾ സംരക്ഷിക്കുക",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "തടഞ്ഞത് മാറ്റുക",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "നിങ്ങളുടെ ലിസ്റ്റിലേക്ക് {name} ചേർത്തു!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "ഈ ചാനൽ തടഞ്ഞു",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "ചാനൽ ബ്ലോക്ക് ചെയ്തു!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} അംഗീകൃത ചാനലുകൾ",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "തടഞ്ഞു",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "ചാനൽ അൺബ്ലോക്ക് ചെയ്തു!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "ഈ ചാനൽ ബ്ലോക്ക് ചെയ്യണമെന്ന് തീർച്ചയാണോ? അതിൻ്റെ വീഡിയോകളൊന്നും YouTube-ൽ ദൃശ്യമാകില്ല.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "റദ്ദാക്കുക",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "ഇല്ലാതാക്കുക",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "പ്രവർത്തനം സ്ഥിരീകരിക്കുക",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "നിങ്ങളുടെ ലിസ്റ്റിൽ നിന്ന് ഈ ചാനൽ നീക്കം ചെയ്യണമെന്ന് തീർച്ചയാണോ?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "ലിസ്റ്റിൽ നിന്ന് ഈ വീഡിയോ നീക്കം ചെയ്യണമെന്ന് തീർച്ചയാണോ?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "ഈ ചാനൽ അൺബ്ലോക്ക് ചെയ്യണമെന്ന് തീർച്ചയാണോ?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "അംഗീകൃത ചാനലുകളിലേക്ക് ചേർക്കുക",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "നിലവിലെ YouTube ചാനൽ",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "നിലവിലെ YouTube വീഡിയോ",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "ഇവിടെ ചേർത്ത ചാനലുകൾ നിങ്ങളുടെ ഹോം ഫീഡിലോ നിർദ്ദേശങ്ങളിലോ തിരയലിലോ ഒരിക്കലും ദൃശ്യമാകില്ല.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "തടഞ്ഞ ചാനലുകളൊന്നുമില്ല",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "YouTube ബ്രൗസ് ചെയ്‌ത് അത് ഇവിടെ ചേർക്കുന്നതിന് ഏതെങ്കിലും ചാനലിലോ വീഡിയോ പേജിലോ \"എൻ്റെ ലിസ്റ്റിലേക്ക് ചേർക്കുക\" ക്ലിക്ക് ചെയ്യുക.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "ഇതുവരെ അംഗീകൃത ചാനലുകളൊന്നുമില്ല",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "നിങ്ങളുടെ അംഗീകൃത ലിസ്റ്റിലേക്ക് ചേർക്കുന്നതിന് YouTube ബ്രൗസ് ചെയ്ത് ഏതെങ്കിലും വീഡിയോയിൽ (+) ക്ലിക്ക് ചെയ്യുക.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "ഇതുവരെ അംഗീകൃത വീഡിയോകളൊന്നുമില്ല",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "ചാനലുകളുടെ ലിസ്റ്റ് കയറ്റുമതി ചെയ്തു!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "നിങ്ങളുടെ അംഗീകൃത ചാനലുകൾ മാത്രം അൽഗോരിതങ്ങളോ ശ്രദ്ധാശൈഥില്യങ്ങളോ ഇല്ലാതെ ട്രാക്ക് ചെയ്യാനുള്ള വ്യക്തിഗത YouTube ഉള്ളടക്ക ഫിൽട്ടർ.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "ഇറക്കുമതി ചെയ്ത {channels} അംഗീകൃത ചാനലുകൾ, {blocked} തടഞ്ഞ ചാനലുകൾ, {videos} വീഡിയോകൾ!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "അസാധുവായ ഫയൽ ഫോർമാറ്റ് അല്ലെങ്കിൽ അംഗീകൃത ചാനലുകളുടെ ഘടന കാണുന്നില്ല.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "{count} ചാനലുകൾ വിജയകരമായി ഇറക്കുമതി ചെയ്തു!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "എൻ്റെ ലിസ്റ്റിൽ ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "ചാനൽ URL, @handle അല്ലെങ്കിൽ ചാനൽ ഐഡി നൽകുക...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "ഇൻ്റർഫേസ് ഭാഷ",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "എല്ലാം വായിച്ചതായി അടയാളപ്പെടുത്തുക",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "മിനിറ്റ്",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "{count} പുതിയ വീഡിയോകൾ കണ്ടെത്തി!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "നിങ്ങളുടെ തിരയലുമായി പൊരുത്തപ്പെടുന്ന ചാനലുകളൊന്നുമില്ല.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "ഫലങ്ങളൊന്നും കണ്ടെത്തിയില്ല",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "നിങ്ങളുടെ തിരയലുമായി പൊരുത്തപ്പെടുന്ന ഇനങ്ങളൊന്നുമില്ല.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "നിങ്ങളുടെ തിരയലുമായി പൊരുത്തപ്പെടുന്ന വീഡിയോകളൊന്നുമില്ല.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "ലക്ഷ്യവും ലക്ഷ്യവും",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "മനസ്സിലായി",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "നിങ്ങൾ സ്വയം അവലോകനം ചെയ്യുന്ന ചാനലുകൾ മാത്രമേ നിങ്ങൾ സബ്‌സ്‌ക്രൈബുചെയ്യൂ, അവ സംഗീതമോ സ്ത്രീകളുടെ ഉള്ളടക്കമോ ഇല്ലാത്തതാണെന്ന് ഉറപ്പാക്കുക, അങ്ങനെ നിങ്ങൾ YouTube-ൽ അവനെ സബ്‌സ്‌ക്രൈബ് ചെയ്യാതിരിക്കുകയും അവൻ്റെ വീഡിയോകളിൽ സംഗീതവും സ്ത്രീകളും അടങ്ങിയിരിക്കുകയും നിങ്ങളുടെ മരണശേഷം മോശമായ പ്രവൃത്തികൾ തുടരുകയും ചെയ്യുന്നുവെങ്കിൽ നിങ്ങൾ അവനെ പിന്തുണയ്‌ക്കുന്നു. ദൈവം നിങ്ങളെ സഹായിക്കട്ടെ.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "ഇൻ്റർഫേസ് ഭാഷ തിരഞ്ഞെടുക്കുക:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "ആരംഭിക്കുന്നതിന് മുമ്പ് മുന്നറിയിപ്പും പ്രധാനപ്പെട്ട സന്ദേശവും",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "ഉള്ളടക്ക ഗാർഡിയൻ",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "വീഡിയോകൾ കാണുക",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "ദയവായി JSON എന്ന ബാക്കപ്പ് താഴെയുള്ള ബോക്സിൽ ഒട്ടിച്ച് ഇറക്കുമതി സ്ഥിരീകരിക്കുക ക്ലിക്കുചെയ്യുക",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "പുതിയ അപ്‌ലോഡ് പരിശോധന ഇടവേള",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "ഇപ്പോൾ പുതുക്കുക",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "ഫീഡുകൾ പരിശോധിക്കുന്നു...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "നീക്കം ചെയ്യുക",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "വീഡിയോ നീക്കം ചെയ്യുക",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "തടഞ്ഞ ചാനലുകൾ തിരയുക...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "അംഗീകൃത ചാനലുകൾ തിരയുക...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "അംഗീകൃത വീഡിയോകൾ തിരയുക...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "യഥാർത്ഥ വീഡിയോ ശീർഷകങ്ങൾ കാണിക്കുക (യാന്ത്രിക വിവർത്തനം പ്രവർത്തനരഹിതമാക്കുക)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "YouTube-ൻ്റെ സ്വയമേവയുള്ള വിവർത്തനം കൂടാതെ സ്രഷ്ടാവിൻ്റെ ആധികാരിക യഥാർത്ഥ ശീർഷകം കാണിക്കുക.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "YouTube Shorts എല്ലായിടത്തും നീക്കം ചെയ്യുക",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "ഷോർട്ട്‌സ് ഷെൽഫുകൾ, ടാബുകൾ, ബട്ടണുകൾ എന്നിവ മറയ്‌ക്കുക, ഷോർട്ട്‌സ് സാധാരണ വീഡിയോ പ്ലെയറിലേക്ക് റീഡയറക്‌ട് ചെയ്യുക.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "ക്രമീകരണങ്ങൾ വിജയകരമായി സംരക്ഷിച്ചു!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "തടഞ്ഞ ചാനലുകൾ",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "അംഗീകൃത ചാനലുകൾ",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "അംഗീകൃത വീഡിയോകൾ",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "ക്രമീകരണങ്ങൾ",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}ദിവസം മുമ്പ്",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count}h മുമ്പ്",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "ഇപ്പോള്",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "തടഞ്ഞത് മാറ്റുക",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "നിങ്ങളുടെ അംഗീകൃത ലിസ്റ്റിലേക്ക് വീഡിയോ ചേർത്തു!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "അംഗീകൃത വീഡിയോ ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "Kanaal toevoegen",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "Video toevoegen",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "Voeg toe aan mijn lijst",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "Video toevoegen",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "Toegevoegd op",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "In uw goedgekeurde lijst ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "Goedgekeurde video ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "Goedgekeurd kanaal ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "Geblokkeerde kanalen tellen mee",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "Blokkeer dit kanaal",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "Deze video is verborgen omdat het kanaal in je lijst met geblokkeerde kanalen in Haris Al-Muhtawa staat.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "Dit kanaal is geblokkeerd",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "Geblokkeerd",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "Kanaal blokkeren",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "Lijst exporteren (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "Bestand herstellen (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "Klik hier en ga naar de pagina om het bestand te herstellen (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "Instellingen opslaan",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "Deblokkeren",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "{name} is succesvol toegevoegd aan je lijst!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "Dit kanaal is geblokkeerd",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "Kanaal succesvol geblokkeerd!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} goedgekeurde kanalen",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "Geblokkeerd",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "Kanaal gedeblokkeerd!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "Weet je zeker dat je dit kanaal wilt blokkeren? Geen van de video's zal op YouTube verschijnen.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "Annuleren",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "Verwijderen",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "Bevestig actie",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "Weet je zeker dat je dit kanaal uit je lijst wilt verwijderen?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "Weet je zeker dat je deze video uit de lijst wilt verwijderen?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "Weet je zeker dat je dit kanaal wilt deblokkeren?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "Voeg toe aan goedgekeurde kanalen",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "Huidig YouTube-kanaal",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "Huidige YouTube-video",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "Kanalen die hier worden toegevoegd, verschijnen nooit in je Home-feed, suggesties of zoekopdracht.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "Geen geblokkeerde kanalen",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "Blader door YouTube en klik op 'Toevoegen aan mijn lijst' op een kanaal of videopagina om het hier toe te voegen.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "Nog geen goedgekeurde kanalen",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "Blader door YouTube en klik (+) op een video om deze aan uw goedgekeurde lijst toe te voegen.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "Nog geen goedgekeurde video's",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "Kanalenlijst succesvol geëxporteerd!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "Persoonlijk YouTube-inhoudsfilter om alleen uw goedgekeurde kanalen bij te houden, zonder algoritmen of afleiding.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "Geïmporteerde {channels} goedgekeurde kanalen, {blocked} geblokkeerde kanalen en {videos} video's!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "Ongeldig bestandsformaat of ontbrekende goedgekeurde kanaalstructuur.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "{count} kanalen succesvol geïmporteerd!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "In mijn lijst ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "Voer de kanaal-URL, @handle of kanaal-ID in...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "Interfacetaal",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "Markeer alles als gelezen",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "min",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "{count} nieuwe video's gevonden!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "Er zijn geen kanalen die overeenkomen met uw zoekopdracht.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "Geen resultaten gevonden",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "Er zijn geen artikelen die overeenkomen met uw zoekopdracht.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "Er zijn geen video's die overeenkomen met uw zoekopdracht.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "Doel en doel",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "Begrepen",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "Je abonneert je alleen op de kanalen die je zelf beoordeelt en zorgt ervoor dat deze vrij zijn van muziek of vrouweninhoud, zodat je je niet op hem op YouTube abonneert en je hem steunt als zijn video's muziek en vrouwen bevatten en je na je overlijden aanhoudende slechte daden hebt. Moge God je helpen.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "Kies interfacetaal:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "Waarschuwing en belangrijke boodschap voordat u begint",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "Inhoudsbewaker",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "Bekijk video's",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "Plak de back-up-JSON in het onderstaande vak en klik op Import bevestigen",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "Nieuw uploadcontrole-interval",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "Vernieuw nu",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "Feeds controleren...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "Verwijderen",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "Video verwijderen",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "Geblokkeerde kanalen zoeken...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "Goedgekeurde kanalen zoeken...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "Goedgekeurde video's zoeken...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "Toon originele videotitels (schakel automatische vertaling uit)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "Toon de authentieke originele titel van de maker zonder de automatische vertaling van YouTube.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "Verwijder YouTube Shorts overal",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Verberg Shorts-planken, tabbladen en knoppen en stuur Shorts door naar de standaardvideospeler.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "Instellingen succesvol opgeslagen!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "Geblokkeerde kanalen",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "Goedgekeurde kanalen",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "Goedgekeurde video's",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "Instellingen",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}d geleden",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count}u geleden",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "Zojuist",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "Deblokkeren",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "Video toegevoegd aan uw goedgekeurde lijst!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "Goedgekeurde video ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

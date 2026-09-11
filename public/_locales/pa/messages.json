@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "ਚੈਨਲ ਸ਼ਾਮਲ ਕਰੋ",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "ਵੀਡੀਓ ਸ਼ਾਮਲ ਕਰੋ",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "ਮੇਰੀ ਸੂਚੀ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "ਵੀਡੀਓ ਸ਼ਾਮਲ ਕਰੋ",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "'ਤੇ ਸ਼ਾਮਲ ਕੀਤਾ ਗਿਆ",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "ਤੁਹਾਡੀ ਪ੍ਰਵਾਨਿਤ ਸੂਚੀ ਵਿੱਚ ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "ਮਨਜ਼ੂਰਸ਼ੁਦਾ ਵੀਡੀਓ ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "ਮਨਜ਼ੂਰਸ਼ੁਦਾ ਚੈਨਲ ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "ਬਲੌਕ ਕੀਤੇ ਚੈਨਲਾਂ ਦੀ ਗਿਣਤੀ",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "ਇਸ ਚੈਨਲ ਨੂੰ ਬਲੌਕ ਕਰੋ",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "ਇਹ ਵੀਡੀਓ ਲੁਕਿਆ ਹੋਇਆ ਹੈ ਕਿਉਂਕਿ ਚੈਨਲ ਹੈਰੀਸ ਅਲ-ਮੁਹਤਵਾ ਵਿੱਚ ਤੁਹਾਡੇ ਬਲੌਕ ਕੀਤੇ ਚੈਨਲਾਂ ਦੀ ਸੂਚੀ ਵਿੱਚ ਹੈ।",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "ਇਹ ਚੈਨਲ ਬਲੌਕ ਕੀਤਾ ਗਿਆ ਹੈ",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "ਬਲੌਕ ਕੀਤਾ",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "ਚੈਨਲ ਨੂੰ ਬਲਾਕ ਕਰੋ",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "ਨਿਰਯਾਤ ਸੂਚੀ (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "ਫ਼ਾਈਲ ਰੀਸਟੋਰ ਕਰੋ (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "ਫ਼ਾਈਲ ਨੂੰ ਰੀਸਟੋਰ ਕਰਨ ਲਈ ਇੱਥੇ ਕਲਿੱਕ ਕਰੋ ਅਤੇ ਪੰਨੇ 'ਤੇ ਜਾਓ (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "ਸੈਟਿੰਗਾਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰੋ",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "ਅਨਬਲੌਕ ਕਰੋ",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "ਤੁਹਾਡੀ ਸੂਚੀ ਵਿੱਚ ਸਫਲਤਾਪੂਰਵਕ {name} ਨੂੰ ਸ਼ਾਮਲ ਕੀਤਾ ਗਿਆ!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "ਇਹ ਚੈਨਲ ਬਲੌਕ ਕੀਤਾ ਗਿਆ ਹੈ",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "ਚੈਨਲ ਨੂੰ ਸਫਲਤਾਪੂਰਵਕ ਬਲੌਕ ਕੀਤਾ ਗਿਆ!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} ਪ੍ਰਵਾਨਿਤ ਚੈਨਲ",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "ਬਲੌਕ ਕੀਤਾ",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "ਚੈਨਲ ਅਨਬਲੌਕ ਕੀਤਾ ਗਿਆ!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਇਸ ਚੈਨਲ ਨੂੰ ਬਲੌਕ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ? ਇਸਦਾ ਕੋਈ ਵੀ ਵੀਡੀਓ YouTube 'ਤੇ ਦਿਖਾਈ ਨਹੀਂ ਦੇਵੇਗਾ।",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "ਰੱਦ ਕਰੋ",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "ਮਿਟਾਓ",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "ਕਾਰਵਾਈ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਤੌਰ 'ਤੇ ਇਸ ਚੈਨਲ ਨੂੰ ਆਪਣੀ ਸੂਚੀ ਵਿੱਚੋਂ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਤੌਰ 'ਤੇ ਇਸ ਵੀਡੀਓ ਨੂੰ ਸੂਚੀ ਵਿੱਚੋਂ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਤੌਰ 'ਤੇ ਇਸ ਚੈਨਲ ਨੂੰ ਅਨਬਲੌਕ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "ਪ੍ਰਵਾਨਿਤ ਚੈਨਲਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "ਮੌਜੂਦਾ YouTube ਚੈਨਲ",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "ਮੌਜੂਦਾ YouTube ਵੀਡੀਓ",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "ਇੱਥੇ ਸ਼ਾਮਲ ਕੀਤੇ ਗਏ ਚੈਨਲ ਕਦੇ ਵੀ ਤੁਹਾਡੀ ਹੋਮ ਫੀਡ, ਸੁਝਾਵਾਂ ਜਾਂ ਖੋਜ ਵਿੱਚ ਦਿਖਾਈ ਨਹੀਂ ਦੇਣਗੇ।",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "ਕੋਈ ਬਲੌਕ ਕੀਤੇ ਚੈਨਲ ਨਹੀਂ ਹਨ",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "YouTube ਬ੍ਰਾਊਜ਼ ਕਰੋ ਅਤੇ ਇਸਨੂੰ ਇੱਥੇ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਕਿਸੇ ਵੀ ਚੈਨਲ ਜਾਂ ਵੀਡੀਓ ਪੰਨੇ 'ਤੇ \"ਮੇਰੀ ਸੂਚੀ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ\" 'ਤੇ ਕਲਿੱਕ ਕਰੋ।",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "ਅਜੇ ਤੱਕ ਕੋਈ ਪ੍ਰਵਾਨਿਤ ਚੈਨਲ ਨਹੀਂ ਹਨ",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "ਯੂਟਿਊਬ ਨੂੰ ਬ੍ਰਾਊਜ਼ ਕਰੋ ਅਤੇ ਕਿਸੇ ਵੀ ਵੀਡੀਓ ਨੂੰ ਆਪਣੀ ਮਨਜ਼ੂਰਸ਼ੁਦਾ ਸੂਚੀ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਉਸ 'ਤੇ (+) ਕਲਿੱਕ ਕਰੋ।",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "ਅਜੇ ਤੱਕ ਕੋਈ ਪ੍ਰਵਾਨਿਤ ਵੀਡੀਓ ਨਹੀਂ ਹਨ",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "ਚੈਨਲਾਂ ਦੀ ਸੂਚੀ ਸਫਲਤਾਪੂਰਵਕ ਨਿਰਯਾਤ ਕੀਤੀ ਗਈ!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "ਐਲਗੋਰਿਦਮ ਜਾਂ ਭਟਕਣਾ ਤੋਂ ਬਿਨਾਂ ਸਿਰਫ਼ ਤੁਹਾਡੇ ਪ੍ਰਵਾਨਿਤ ਚੈਨਲਾਂ ਨੂੰ ਟਰੈਕ ਕਰਨ ਲਈ ਨਿੱਜੀ YouTube ਸਮੱਗਰੀ ਫਿਲਟਰ।",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "ਆਯਾਤ ਕੀਤੇ {channels} ਪ੍ਰਵਾਨਿਤ ਚੈਨਲ, {blocked} ਬਲੌਕ ਕੀਤੇ ਚੈਨਲ, ਅਤੇ {videos} ਵੀਡੀਓ!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "ਅਵੈਧ ਫ਼ਾਈਲ ਫਾਰਮੈਟ ਜਾਂ ਗੁੰਮ ਪ੍ਰਵਾਨਿਤ ਚੈਨਲ ਬਣਤਰ।",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "ਸਫਲਤਾਪੂਰਵਕ {count} ਚੈਨਲਾਂ ਨੂੰ ਆਯਾਤ ਕੀਤਾ ਗਿਆ!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "ਮੇਰੀ ਸੂਚੀ ਵਿੱਚ ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "ਚੈਨਲ URL, @handle, ਜਾਂ ਚੈਨਲ ID ਦਾਖਲ ਕਰੋ...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "ਇੰਟਰਫੇਸ ਭਾਸ਼ਾ",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "ਸਭ ਨੂੰ ਪੜ੍ਹੇ ਵਜੋਂ ਚਿੰਨ੍ਹਿਤ ਕਰੋ",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "ਮਿੰਟ",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "{count} ਨਵੇਂ ਵੀਡੀਓ ਮਿਲੇ!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "ਕੋਈ ਵੀ ਚੈਨਲ ਤੁਹਾਡੀ ਖੋਜ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ।",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "ਕੋਈ ਨਤੀਜੇ ਨਹੀਂ ਮਿਲੇ",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "ਤੁਹਾਡੀ ਖੋਜ ਨਾਲ ਕੋਈ ਵੀ ਆਈਟਮ ਮੇਲ ਨਹੀਂ ਖਾਂਦੀ।",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "ਕੋਈ ਵੀ ਵੀਡੀਓ ਤੁਹਾਡੀ ਖੋਜ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ।",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "ਟੀਚਾ ਅਤੇ ਉਦੇਸ਼",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "ਸਮਝਿਆ",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "ਤੁਸੀਂ ਸਿਰਫ਼ ਉਹਨਾਂ ਚੈਨਲਾਂ ਦੀ ਗਾਹਕੀ ਲੈਂਦੇ ਹੋ ਜਿਨ੍ਹਾਂ ਦੀ ਤੁਸੀਂ ਖੁਦ ਸਮੀਖਿਆ ਕਰਦੇ ਹੋ ਅਤੇ ਇਹ ਸੁਨਿਸ਼ਚਿਤ ਕਰਦੇ ਹੋ ਕਿ ਉਹ ਸੰਗੀਤ ਜਾਂ ਔਰਤਾਂ ਦੀ ਸਮੱਗਰੀ ਤੋਂ ਮੁਕਤ ਹਨ ਤਾਂ ਜੋ ਤੁਸੀਂ YouTube 'ਤੇ ਉਸ ਦੀ ਗਾਹਕੀ ਨਾ ਲਓ ਅਤੇ ਤੁਸੀਂ ਉਸ ਦਾ ਸਮਰਥਨ ਕਰਦੇ ਹੋ ਜੇਕਰ ਉਸ ਦੇ ਵੀਡੀਓ ਵਿੱਚ ਸੰਗੀਤ ਅਤੇ ਔਰਤਾਂ ਸ਼ਾਮਲ ਹਨ ਅਤੇ ਤੁਹਾਡੀ ਮੌਤ ਤੋਂ ਬਾਅਦ ਤੁਹਾਡੇ ਕੋਲ ਲਗਾਤਾਰ ਮਾੜੇ ਕੰਮ ਹਨ। ਰੱਬ ਤੁਹਾਡੀ ਮਦਦ ਕਰੇ।",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "ਇੰਟਰਫੇਸ ਭਾਸ਼ਾ ਚੁਣੋ:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "ਸ਼ੁਰੂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਚੇਤਾਵਨੀ ਅਤੇ ਮਹੱਤਵਪੂਰਨ ਸੁਨੇਹਾ",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "ਸਮੱਗਰੀ ਸਰਪ੍ਰਸਤ",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "ਵੀਡੀਓ ਦੇਖੋ",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "ਕਿਰਪਾ ਕਰਕੇ ਹੇਠਾਂ ਦਿੱਤੇ ਬਾਕਸ ਵਿੱਚ ਬੈਕਅੱਪ JSON ਪੇਸਟ ਕਰੋ ਅਤੇ ਆਯਾਤ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ 'ਤੇ ਕਲਿੱਕ ਕਰੋ",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "ਨਵਾਂ ਅੱਪਲੋਡ ਜਾਂਚ ਅੰਤਰਾਲ",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "ਹੁਣੇ ਤਾਜ਼ਾ ਕਰੋ",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "ਫੀਡਾਂ ਦੀ ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "ਹਟਾਓ",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "ਵੀਡੀਓ ਹਟਾਓ",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "ਬਲੌਕ ਕੀਤੇ ਚੈਨਲ ਖੋਜੋ...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "ਪ੍ਰਵਾਨਿਤ ਚੈਨਲ ਖੋਜੋ...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "ਪ੍ਰਵਾਨਿਤ ਵੀਡੀਓ ਖੋਜੋ...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "ਅਸਲੀ ਵੀਡੀਓ ਸਿਰਲੇਖ ਦਿਖਾਓ (ਸਵੈ-ਅਨੁਵਾਦ ਨੂੰ ਅਸਮਰੱਥ ਕਰੋ)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "YouTube ਦੇ ਸਵੈਚਲਿਤ ਅਨੁਵਾਦ ਤੋਂ ਬਿਨਾਂ ਸਿਰਜਣਹਾਰ ਦਾ ਪ੍ਰਮਾਣਿਕ ​​ਮੂਲ ਸਿਰਲੇਖ ਦਿਖਾਓ।",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "YouTube Shorts ਨੂੰ ਹਰ ਥਾਂ ਤੋਂ ਹਟਾਓ",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Shorts ਦੀਆਂ ਸ਼ੈਲਫਾਂ, ਟੈਬਾਂ, ਬਟਨਾਂ ਨੂੰ ਲੁਕਾਓ ਅਤੇ ਸ਼ਾਰਟਸ ਨੂੰ ਮਿਆਰੀ ਵੀਡੀਓ ਪਲੇਅਰ 'ਤੇ ਰੀਡਾਇਰੈਕਟ ਕਰੋ।",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "ਸੈਟਿੰਗਾਂ ਸਫਲਤਾਪੂਰਵਕ ਸੁਰੱਖਿਅਤ ਕੀਤੀਆਂ ਗਈਆਂ!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "ਬਲੌਕ ਕੀਤੇ ਚੈਨਲ",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "ਪ੍ਰਵਾਨਿਤ ਚੈਨਲ",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "ਪ੍ਰਵਾਨਿਤ ਵੀਡੀਓਜ਼",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "ਸੈਟਿੰਗਾਂ",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}ਦਿਨ ਪਹਿਲਾਂ",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count} ਘੰਟੇ ਪਹਿਲਾਂ",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "ਹੁਣੇ",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "ਅਨਬਲੌਕ ਕਰੋ",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "ਵੀਡੀਓ ਤੁਹਾਡੀ ਮਨਜ਼ੂਰਸ਼ੁਦਾ ਸੂਚੀ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ ਗਿਆ ਹੈ!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "ਮਨਜ਼ੂਰਸ਼ੁਦਾ ਵੀਡੀਓ ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

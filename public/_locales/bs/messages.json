@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "Dodaj kanal",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "Dodaj video",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "Dodaj na moju listu",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "Dodaj video",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "Dodato na",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "Na vašoj odobrenoj listi ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "Odobreni video ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "Odobreni kanal ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "Blokirani kanali se računaju",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "Blokiraj ovaj kanal",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "Ovaj video je sakriven jer je kanal na vašoj listi blokiranih kanala u Haris Al-Muhtawa.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "Ovaj kanal je blokiran",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "Blokirano",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "Blokiraj kanal",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "Izvezi listu (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "Vrati datoteku (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "Kliknite ovdje i idite na stranicu za vraćanje datoteke (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "Sačuvaj postavke",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "Deblokiraj",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "{name} je uspješno dodano na vašu listu!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "Ovaj kanal je blokiran",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "Kanal je uspješno blokiran!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "Odobrenih kanala: {count}",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "Blokirano",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "Kanal je deblokiran!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "Jeste li sigurni da želite blokirati ovaj kanal? Nijedan od njegovih videozapisa se neće pojaviti na YouTubeu.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "Otkaži",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "Izbriši",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "Potvrdite akciju",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "Jeste li sigurni da želite ukloniti ovaj kanal sa svoje liste?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "Jeste li sigurni da želite ukloniti ovaj videozapis sa liste?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "Jeste li sigurni da želite deblokirati ovaj kanal?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "Dodaj odobrenim kanalima",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "Trenutni YouTube kanal",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "Trenutni YouTube video",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "Kanali dodani ovdje se nikada neće pojaviti u sažetku sadržaja, prijedlozima ili pretrazi na početnoj stranici.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "Nema blokiranih kanala",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "Pregledajte YouTube i kliknite na \"Dodaj na moju listu\" na bilo kojem kanalu ili stranici s videozapisom da ga dodate ovdje.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "Još nema odobrenih kanala",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "Pregledajte YouTube i kliknite (+) na bilo koji videozapis da ga dodate na svoju odobrenu listu.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "Još nema odobrenih videozapisa",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "Lista kanala je uspješno izvezena!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "Lični filter YouTube sadržaja za praćenje samo vaših odobrenih kanala bez algoritama ili ometanja.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "Uvezeno {channels} odobrenih kanala, {blocked} blokiranih kanala i {videos} videozapisa!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "Nevažeći format datoteke ili nedostaje struktura odobrenih kanala.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "Uspješno uvezeno {count} kanala!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "Na mojoj listi ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "Unesite URL kanala, @handle ili ID kanala...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "Jezik interfejsa",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "Označi sve kao pročitano",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "min",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "Pronađeno {count} novih videozapisa!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "Nijedan kanal ne odgovara vašoj pretrazi.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "Nema pronađenih rezultata",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "Nijedna stavka ne odgovara vašoj potrazi.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "Nema videozapisa koji odgovaraju vašem pretraživanju.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "Cilj i svrha",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "Razumijem",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "Pretplatite se samo na kanale koje sami recenzirate i vodite računa da ne sadrže muziku ili ženski sadržaj, tako da se ne pretplatite na njega na YouTube-u i podržavate ga ako njegovi video snimci sadrže muziku i žene i ako imate loša djela nakon smrti. Neka ti je Bog u pomoći.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "Odaberite jezik interfejsa:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "Upozorenje i važna poruka prije početka",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "Content Guardian",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "View Videos",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "Zalijepite rezervnu kopiju JSON-a u polje ispod i kliknite na Potvrdi uvoz",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "Novi interval provjere otpremanja",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "Osvježi sada",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "Provjera sadržaja...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "Ukloni",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "Ukloni video",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "Pretraži blokirane kanale...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "Pretraži odobrene kanale...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "Pretraži odobrene videozapise...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "Prikaži originalne naslove videozapisa (onemogući automatski prijevod)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "Prikažite autorov autentičan originalni naslov bez YouTubeovog automatskog prijevoda.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "Uklonite YouTube Shorts svuda",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Sakrij Shorts police, kartice, dugmad i preusmjeri Shorts na standardni video player.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "Postavke su uspješno sačuvane!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "Blokirani kanali",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "Odobreni kanali",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "Odobreni video zapisi",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "Postavke",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "prije {count}d",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "prije {count}h",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "Upravo sada",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "Deblokiraj",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "Video je dodan na vašu odobrenu listu!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "Odobreni video ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

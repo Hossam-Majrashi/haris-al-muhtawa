@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "添加频道",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "添加视频",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "添加到我的列表",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "添加视频",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "添加于",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "在您批准的列表中 ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "批准的视频 ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "认可渠道 ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "阻塞通道数",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "阻止该频道",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "该视频已隐藏，因为该频道位于 Haris Al-Muhtawa 的“阻​​止频道”列表中。",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "该频道已被封锁",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "被阻止",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "块通道",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "导出列表 (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "恢复文件 (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "点击此处前往页面以恢复文件 (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "保存设置",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "解锁",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "已成功将 {name} 添加到您的列表！",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "该频道已被封锁",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "频道封锁成功！",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} 个已批准的频道",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "被阻止",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "渠道畅通！",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "您确定要阻止此频道吗？它的任何视频都不会出现在 YouTube 上。",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "取消",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "删除",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "确认操作",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "您确定要从列表中删除该频道吗？",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "您确定要从列表中删除该视频吗？",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "您确定要解除对该频道的封锁吗？",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "添加到批准的频道",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "当前的 YouTube 频道",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "当前 YouTube 视频",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "此处添加的频道永远不会出现在您的主页、建议或搜索中。",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "无阻塞频道",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "浏览 YouTube 并在任意频道或视频页面上单击“添加到我的列表”以将其添加到此处。",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "尚未批准渠道",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "浏览 YouTube 并点击任意视频上的 (+)，将其添加到您批准的列表中。",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "还没有批准的视频",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "频道列表导出成功！",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "个人 YouTube 内容过滤器仅跟踪您批准的频道，无需算法或干扰。",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "导入了 {channels} 批准的频道、{blocked} 封锁的频道和 {videos} 视频！",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "文件格式无效或缺少批准的渠道结构。",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "已成功导入 {count} 个频道！",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "在我的清单中 ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "输入频道 URL、@handle 或频道 ID...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "界面语言",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "全部标记为已读",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "分钟",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "找到 {count} 个新视频！",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "没有频道符合您的搜索。",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "没有找到结果",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "没有符合您搜索条件的商品。",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "没有视频符合您的搜索。",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "目标和宗旨",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "明白了",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "您只订阅您自己评论的频道，并确保它们没有音乐或女性内容，这样您就不会在 YouTube 上订阅他，并且如果他的视频包含音乐和女性，并且您在死后继续做坏事，您就会支持他。愿上帝帮助你。",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "选择界面语言：",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "开始前的警告和重要消息",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "内容守护者",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "观看视频",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "请将备份的 JSON 粘贴到下面的框中，然后单击“确认导入”",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "新的上传检查间隔",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "立即刷新",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "正在检查供稿...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "删除",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "删除视频",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "搜索被阻止的频道...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "搜索批准的频道...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "搜索批准的视频...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "显示原始视频标题（禁用自动翻译）",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "显示创作者真实的原创标题，无需 YouTube 自动翻译。",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "删除所有地方的 YouTube Shorts",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "隐藏 Shorts 架、选项卡、按钮，并将 Shorts 重定向到标准视频播放器。",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "设置保存成功！",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "封锁的频道",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "认可渠道",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "批准的视频",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "设置",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count} 天前",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count} 小时前",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "现在",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "解锁",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "视频已添加到您批准的列表中！",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "批准的视频 ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

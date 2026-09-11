@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "Tambah Saluran",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "Tambah Video",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "Tambah ke senarai saya",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "Tambah Video",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "Ditambah pada",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "Dalam senarai diluluskan anda ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "Video yang Diluluskan ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "Saluran Diluluskan ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "Kiraan saluran yang disekat",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "Sekat Saluran Ini",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "Video ini disembunyikan kerana saluran itu berada dalam senarai Saluran Tersekat anda di Haris Al-Muhtawa.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "Saluran ini Disekat",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "Disekat",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "Sekat Saluran",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "Senarai eksport (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "Pulihkan Fail (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "Klik di sini dan pergi ke halaman untuk memulihkan fail (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "Simpan Tetapan",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "Nyahsekat",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "Berjaya menambahkan {name} pada senarai anda!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "Saluran ini Disekat",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "Saluran berjaya disekat!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} saluran yang diluluskan",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "Disekat",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "Saluran dinyahsekat!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "Adakah anda pasti mahu menyekat saluran ini? Tiada satu pun videonya akan dipaparkan di YouTube.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "Batal",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "Padam",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "Sahkan Tindakan",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "Adakah anda pasti mahu mengalih keluar saluran ini daripada senarai anda?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "Adakah anda pasti mahu mengalih keluar video ini daripada senarai?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "Adakah anda pasti mahu menyahsekat saluran ini?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "Tambahkan pada saluran yang diluluskan",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "Saluran YouTube semasa",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "Video YouTube semasa",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "Saluran yang ditambahkan di sini tidak akan muncul dalam suapan, cadangan atau carian Laman Utama anda.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "Tiada Saluran Disekat",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "Semak imbas YouTube dan klik \"Tambah ke senarai saya\" pada mana-mana saluran atau halaman video untuk menambahkannya di sini.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "Tiada saluran yang diluluskan lagi",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "Semak imbas YouTube dan klik (+) pada mana-mana video untuk menambahkannya ke senarai diluluskan anda.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "Tiada video yang diluluskan lagi",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "Senarai saluran berjaya dieksport!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "Penapis kandungan YouTube peribadi untuk menjejaki saluran anda yang diluluskan sahaja tanpa algoritma atau gangguan.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "Mengimport {channels} saluran yang diluluskan, {blocked} saluran disekat dan {videos} video!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "Format fail tidak sah atau tiada struktur saluran yang diluluskan.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "Berjaya mengimport {count} saluran!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "Dalam senarai saya ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "Masukkan URL saluran, @handle atau ID saluran...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "Bahasa Antaramuka",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "Tandai semua sebagai dibaca",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "min",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "Menemui {count} video baharu!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "Tiada saluran yang sepadan dengan carian anda.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "Tiada hasil ditemui",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "Tiada item yang sepadan dengan carian anda.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "Tiada video yang sepadan dengan carian anda.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "Matlamat dan tujuan",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "Difahamkan",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "Anda hanya melanggan saluran yang anda semak sendiri dan pastikan ia bebas daripada muzik atau kandungan wanita supaya anda tidak melanggannya di YouTube dan anda menyokongnya jika videonya mengandungi muzik dan wanita dan anda mempunyai perbuatan buruk yang berterusan selepas kematian anda. Semoga Allah menolongmu.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "Pilih bahasa antara muka:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "Amaran dan mesej penting sebelum memulakan",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "Penjaga Kandungan",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "Lihat Video",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "Sila tampalkan JSON sandaran ke dalam kotak di bawah dan klik Sahkan Import",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "Selang semakan muat naik baharu",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "Muat semula sekarang",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "Menyemak suapan...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "Alih keluar",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "Alih keluar video",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "Cari saluran yang disekat...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "Cari saluran yang diluluskan...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "Cari video yang diluluskan...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "Tunjukkan tajuk video asal (lumpuhkan autoterjemah)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "Tunjukkan tajuk asal sahih pencipta tanpa terjemahan automatik YouTube.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "Alih keluar YouTube Shorts di mana-mana sahaja",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Sembunyikan rak, tab, butang dan ubah hala Shorts kepada pemain video standard.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "Tetapan berjaya disimpan!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "Saluran Disekat",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "Saluran yang Diluluskan",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "Video yang Diluluskan",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "tetapan",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}h yang lalu",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count}j lalu",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "tadi",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "Nyahsekat",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "Video ditambahkan pada senarai diluluskan anda!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "Video yang Diluluskan ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

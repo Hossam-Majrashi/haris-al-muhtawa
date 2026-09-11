@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "ચેનલ ઉમેરો",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "વિડિઓ ઉમેરો",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "મારી યાદીમાં ઉમેરો",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "વિડિઓ ઉમેરો",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "પર ઉમેર્યું",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "તમારી માન્ય યાદીમાં ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "મંજૂર વિડિઓ ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "મંજૂર ચેનલ ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "અવરોધિત ચેનલોની ગણતરી",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "આ ચેનલને અવરોધિત કરો",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "આ વિડિયો છુપાયેલો છે કારણ કે આ ચૅનલ તમારી બ્લૉક કરેલી ચૅનલોની યાદીમાં હરિસ અલ-મુહતવામાં છે.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "આ ચેનલ અવરોધિત છે",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "અવરોધિત",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "બ્લોક ચેનલ",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "નિકાસ સૂચિ (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "ફાઇલ પુનઃસ્થાપિત કરો (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "ફાઇલ પુનઃસ્થાપિત કરવા માટે અહીં ક્લિક કરો અને પૃષ્ઠ પર જાઓ (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "સેટિંગ્સ સાચવો",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "અનાવરોધિત કરો",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "તમારી સૂચિમાં સફળતાપૂર્વક {name} ઉમેર્યું!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "આ ચેનલ અવરોધિત છે",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "ચૅનલ સફળતાપૂર્વક અવરોધિત થઈ!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} મંજૂર ચૅનલો",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "અવરોધિત",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "ચેનલ અનાવરોધિત!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "શું તમે ખરેખર આ ચેનલને અવરોધિત કરવા માંગો છો? તેનો કોઈપણ વીડિયો YouTube પર દેખાશે નહીં.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "રદ કરો",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "કાઢી નાખો",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "ક્રિયાની પુષ્ટિ કરો",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "શું તમે ખરેખર આ ચેનલને તમારી સૂચિમાંથી દૂર કરવા માંગો છો?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "શું તમે ખરેખર આ વિડિઓને સૂચિમાંથી દૂર કરવા માંગો છો?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "શું તમે ખરેખર આ ચેનલને અનાવરોધિત કરવા માંગો છો?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "માન્ય ચેનલોમાં ઉમેરો",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "વર્તમાન YouTube ચેનલ",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "વર્તમાન YouTube વિડિઓ",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "અહીં ઉમેરવામાં આવેલી ચૅનલ તમારા હોમ ફીડ, સૂચનો અથવા શોધમાં ક્યારેય દેખાશે નહીં.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "કોઈ અવરોધિત ચેનલો નથી",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "YouTube બ્રાઉઝ કરો અને તેને અહીં ઉમેરવા માટે કોઈપણ ચેનલ અથવા વિડિઓ પૃષ્ઠ પર \"મારી સૂચિમાં ઉમેરો\" ક્લિક કરો.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "હજી સુધી કોઈ મંજૂર ચેનલો નથી",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "YouTube બ્રાઉઝ કરો અને કોઈપણ વિડિઓને તમારી માન્ય સૂચિમાં ઉમેરવા માટે તેના પર (+) ક્લિક કરો.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "હજી સુધી કોઈ મંજૂર વિડિઓઝ નથી",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "ચૅનલોની સૂચિ સફળતાપૂર્વક નિકાસ થઈ!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "અલ્ગોરિધમ્સ અથવા વિક્ષેપો વિના ફક્ત તમારી મંજૂર ચેનલોને ટ્રૅક કરવા માટે વ્યક્તિગત YouTube સામગ્રી ફિલ્ટર.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "આયાત કરેલ {channels} મંજૂર ચેનલો, {blocked} અવરોધિત ચેનલો અને {videos} વિડિઓઝ!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "અમાન્ય ફાઇલ ફોર્મેટ અથવા મંજૂર ચૅનલનું માળખું ખૂટે છે.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "{count} ચેનલ્સ સફળતાપૂર્વક આયાત કરી!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "મારી યાદીમાં ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "ચેનલ URL, @handle અથવા ચેનલ ID દાખલ કરો...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "ઈન્ટરફેસ ભાષા",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "બધાને વાંચેલા તરીકે ચિહ્નિત કરો",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "મિનિટ",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "{count} નવી વિડિઓઝ મળી!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "કોઈ ચેનલ તમારી શોધ સાથે મેળ ખાતી નથી.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "કોઈ પરિણામો મળ્યા નથી",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "કોઈ આઇટમ તમારી શોધ સાથે મેળ ખાતી નથી.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "તમારી શોધ સાથે કોઈ વિડિયો મેળ ખાતી નથી.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "ધ્યેય અને હેતુ",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "સમજાયું",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "તમે ફક્ત તે જ ચેનલોને સબ્સ્ક્રાઇબ કરો છો જેની તમે તમારી જાતને સમીક્ષા કરો છો અને ખાતરી કરો કે તે સંગીત અથવા મહિલાઓની સામગ્રીથી મુક્ત છે જેથી કરીને તમે તેને YouTube પર સબ્સ્ક્રાઇબ ન કરો અને જો તેના વીડિયોમાં સંગીત અને મહિલાઓ હોય અને તમારા મૃત્યુ પછી તમારી પાસે ચાલુ ખરાબ કાર્યો હોય તો તમે તેને સમર્થન આપો. ભગવાન તમારી મદદ કરે.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "ઇન્ટરફેસ ભાષા પસંદ કરો:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "શરૂ કરતા પહેલા ચેતવણી અને મહત્વપૂર્ણ સંદેશ",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "સામગ્રી ગાર્ડિયન",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "વિડિઓઝ જુઓ",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "કૃપા કરીને બેકઅપ JSON ને નીચેના બોક્સમાં પેસ્ટ કરો અને આયાતની પુષ્ટિ કરો પર ક્લિક કરો",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "નવું અપલોડ ચેક અંતરાલ",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "હવે તાજું કરો",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "ફીડ્સ તપાસી રહ્યું છે...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "દૂર કરો",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "વિડિઓ દૂર કરો",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "અવરોધિત ચેનલો શોધો...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "મંજૂર ચેનલો શોધો...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "મંજૂર વિડિઓઝ શોધો...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "મૂળ વિડિઓ શીર્ષકો બતાવો (સ્વતઃ-અનુવાદ અક્ષમ કરો)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "YouTube ના સ્વચાલિત અનુવાદ વિના સર્જકનું અધિકૃત મૂળ શીર્ષક બતાવો.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "દરેક જગ્યાએ YouTube Shorts કાઢી નાખો",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Shorts શેલ્ફ, ટૅબ, બટનો છુપાવો અને Shorts ને માનક વીડિયો પ્લેયર પર રીડાયરેક્ટ કરો.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "સેટિંગ્સ સફળતાપૂર્વક સાચવવામાં આવી!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "અવરોધિત ચેનલો",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "મંજૂર ચેનલો",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "મંજૂર વિડિઓઝ",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "સેટિંગ્સ",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}દિવસ પહેલા",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count} કલાક પહેલા",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "હમણાં જ",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "અનાવરોધિત કરો",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "તમારી મંજૂર સૂચિમાં વિડિઓ ઉમેરવામાં આવી છે!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "મંજૂર વિડિઓ ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

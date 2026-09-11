@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "Kanal zêde bikin",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "Vîdyoyê lê zêde bike",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "Têxe lîsteya min",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "Vîdyoyê lê zêde bike",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "Zêde kirin",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "Di navnîşa weya pejirandî de ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "Vîdyoya pejirandî ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "Kanala pejirandî ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "Kanalên astengkirî têne hejmartin",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "Vê Kanalê Asteng bike",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "Ev vîdyo veşartî ye ji ber ku kanal di navnîşa weya Kanalên Astengkirî de li Haris Al-Muhtawa ye.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "Ev Kanal hatiye Astengkirin",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "Astengkirin",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "Block Channel",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "Lîsteya hinardekirinê (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "Pelê vegerîne (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "Ji bo vegerandina pelê li vir bikirtînin û biçin rûpelê (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "Save Settings",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "Rakirin",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "Bi serketî {name} li lîsteya we hat zêdekirin!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "Ev Kanal hatiye Astengkirin",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "Kanal bi serkeftî hate asteng kirin!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} kanalên pejirandî",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "Astengkirin",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "Kanal hat rakirin!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "Ma tu bi rastî dixwazî ​​vê kanalê asteng bikî? Dê yek ji vîdyoyên wê li ser YouTube xuya neke.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "Bişûndekirin",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "Jêbirin",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "Çalakiyê piştrast bikin",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "Ma hûn pê bawer in ku hûn dixwazin vê kanalê ji navnîşa xwe derxin?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "Ma tu bi rastî dixwazî vê vîdyoyê ji navnîşê derxînî?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "Ma tu bi rastî dixwazî ​​vê kanalê rakî?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "Li kanalên pejirandî zêde bikin",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "Kanala YouTube ya heyî",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "Vîdyoya YouTube ya heyî",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "Kanalên ku li vir hatine zêdekirin dê çu carî di xwarin, pêşniyar, an lêgerîna weya Malê de xuya nebin.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "No Kanalên Astengkirî",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "Li YouTube-ê bigerin û li ser her kanalek an rûpelek vîdyoyê \"Li navnîşa min zêde bike\" bikirtînin da ku wê li vir zêde bikin.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "Hê kanalên pejirandî tune",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "Li YouTube-ê bigerin û li ser vîdyoyek (+) bikirtînin da ku wê li navnîşa xweya pejirandî zêde bikin.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "Hîn vîdyoyên pejirandî tune",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "Lîsteya kanalan bi serkeftî hate hinardekirin!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "Parzûna naveroka kesane ya YouTube-ê ye ku tenê kanalên weyên pejirandî bêyî algorîtma an baldarî bişopîne.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "{channels} kanalên pejirandî, {blocked} qenalên astengkirî, û {videos} vîdyoyên hatin importkirin!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "Forma pelê nederbasdar an strukturên kanalên pejirandî winda ne.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "Bi serketî {count} kanal hatin importkirin!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "Di lîsteya min de ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "URL-ya kanalê, @handle, an ID kanalê têkevin...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "Ziman Interface",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "Hemî wekî xwendin nîşan bide",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "min",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "{count} vîdyoyên nû hatin dîtin!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "Tu kanalên lêgerîna we li hev nakin.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "Encam nehat dîtin",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "Tiştek li ser lêgerîna we tune.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "Vîdyoyên lêgerîna we li hev nakin.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "Armanc û armanc",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "Fêm kirin",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "Hûn tenê dibin aboneyên kanalên ku hûn xwe dinirxînin û piştrast dikin ku ew ji mûzîk an naveroka jinan bêpar in, da ku hûn li ser YouTube-ê bibin aboneya wî û hûn piştgiriyê bidin wî, ger vîdyoyên wî muzîk û jinan hebin û piştî mirina we karên xerab ên berdewam hebin. Xwedê alîkariya te bike.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "Zimanê navberê hilbijêrin:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "Berî destpêkirinê hişyarî û peyamek girîng",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "Content Guardian",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "Vîdyoyan Binêrin",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "Ji kerema xwe JSON-ya hilanînê li qutiya li jêr bixin û bikirtînin Pejirandina Import",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "Navbera kontrolê ya barkirina nû",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "Niha nûve bikin",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "Vedîtin kontrol dike...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "Rakirin",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "Vîdyoyê jêbirin",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "Li kanalên astengkirî bigerin...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "Li kanalên pejirandî bigerin...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "Li vîdyoyên pejirandî bigerin...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "Sernavên vîdyoyê yên orjînal nîşan bide (wergera otomatîkî neçalak bike)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "Sernavê orîjînal ê afirîner bêyî wergera otomatîkî ya YouTube nîşan bide.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "Li her derê YouTube Shorts jê bikin",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Refikên Shorts, tab, bişkokan veşêrin, û Shorts beralî bidin lîstikvana vîdyoya standard.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "Mîhengan bi serkeftî hatin tomarkirin!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "Kanalên Astengkirî",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "Kanalên pejirandî",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "Vîdyoyên pejirandî",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "Settings",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}roj berê",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count}h berê",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "Just now",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "Rakirin",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "Vîdyo li navnîşa weya pejirandî hate zêdekirin!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "Vîdyoya pejirandî ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

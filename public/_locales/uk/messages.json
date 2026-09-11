@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "Додати канал",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "Додати відео",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "Додати до мого списку",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "Додати відео",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "Додано",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "У вашому затвердженому списку ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "Схвалене відео ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "Затверджений канал ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "Кількість заблокованих каналів",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "Заблокувати цей канал",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "Це відео приховано, оскільки канал є у вашому списку заблокованих каналів у Haris Al-Muhtawa.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "Цей канал заблоковано",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "заблоковано",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "Заблокувати канал",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "Експорт списку (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "Відновити файл (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "Натисніть тут, щоб перейти на сторінку відновлення файлу (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "Зберегти налаштування",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "Розблокувати",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "{name} успішно додано до вашого списку!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "Цей канал заблоковано",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "Канал успішно заблоковано!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} затверджених каналів",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "заблоковано",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "Канал розблоковано!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "Ви впевнені, що хочете заблокувати цей канал? Жодне з його відео не з’явиться на YouTube.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "Скасувати",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "Видалити",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "Підтвердити дію",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "Ви впевнені, що хочете видалити цей канал зі свого списку?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "Ви впевнені, що хочете видалити це відео зі списку?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "Ви впевнені, що хочете розблокувати цей канал?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "Додати до затверджених каналів",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "Поточний канал YouTube",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "Актуальне відео YouTube",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "Додані сюди канали ніколи не відображатимуться у вашій домашній стрічці, пропозиціях або пошуку.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "Немає заблокованих каналів",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "Перегляньте YouTube і натисніть «Додати до мого списку» на будь-якому каналі чи сторінці відео, щоб додати його сюди.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "Ще немає затверджених каналів",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "Перегляньте YouTube і натисніть (+) будь-яке відео, щоб додати його до списку схвалених.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "Ще немає схвалених відео",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "Список каналів успішно експортовано!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "Особистий фільтр вмісту YouTube, щоб відстежувати лише ваші схвалені канали без алгоритмів і відволікань.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "Імпортовано {channels} схвалених каналів, {blocked} заблокованих каналів і {videos} відео!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "Недійсний формат файлу або відсутня затверджена структура каналів.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "Успішно імпортовано {count} каналів!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "У моєму списку ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "Введіть URL-адресу каналу, @handle або ідентифікатор каналу...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "Мова інтерфейсу",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "Позначити все як прочитане",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "хв",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "Знайдено {count} нових відео!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "Жоден канал не відповідає вашому пошуку.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "Результатів не знайдено",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "Немає елементів, що відповідають вашому пошуку.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "Жодне відео не відповідає вашому пошуковому запиту.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "Ціль і призначення",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "Зрозумів",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "Ви підписуєтеся лише на ті канали, які переглядаєте самі, і переконаєтеся, що в них немає музики чи жіночого вмісту, щоб ви не підписувалися на нього на YouTube і підтримували його, якщо його відео містять музику та жінок, і після вашої смерті у вас продовжуються погані вчинки. Нехай тобі Бог помагає.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "Виберіть мову інтерфейсу:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "Попередження та важливе повідомлення перед початком роботи",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "Content Guardian",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "Перегляд відео",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "Вставте резервну копію JSON у поле нижче та натисніть Підтвердити імпорт",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "Новий інтервал перевірки завантаження",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "Оновіть зараз",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "Перевірка каналів...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "видалити",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "Видалити відео",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "Пошук заблокованих каналів...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "Пошук затверджених каналів...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "Пошук схвалених відео...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "Показати оригінальні назви відео (вимкнути автоматичний переклад)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "Показувати справжній оригінальний заголовок автора без автоматичного перекладу YouTube.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "Видаліть YouTube Shorts звідусіль",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Сховайте полиці з короткими відео, вкладки, кнопки та перенаправляйте короткі відео в стандартний відеопрогравач.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "Налаштування успішно збережено!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "Заблоковані канали",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "Затверджені канали",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "Схвалені відео",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "Налаштування",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count} дн. тому",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count} год тому",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "Просто зараз",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "Розблокувати",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "Відео додано до списку схвалених!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "Схвалене відео ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

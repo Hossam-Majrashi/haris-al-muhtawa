@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "Magdagdag ng Channel",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "Magdagdag ng Video",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "Idagdag sa aking listahan",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "Magdagdag ng Video",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "Idinagdag sa",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "Sa iyong inaprubahang listahan ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "Naaprubahang Video ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "Inaprubahang Channel ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "Bilang ng mga naka-block na channel",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "I-block ang Channel na ito",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "Nakatago ang video na ito dahil ang channel ay nasa iyong listahan ng Mga Naka-block na Channel sa Haris Al-Muhtawa.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "Naka-block ang Channel na ito",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "Na-block",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "I-block ang Channel",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "Listahan ng pag-export (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "I-restore ang file (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "Mag-click dito at pumunta sa pahina upang i-restore ang file (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "I-save ang Mga Setting",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "I-unblock",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "Matagumpay na naidagdag si {name} sa iyong listahan!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "Naka-block ang Channel na ito",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "Matagumpay na na-block ang channel!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} mga naaprubahang channel",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "Na-block",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "Na-unblock ang channel!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "Sigurado ka bang gusto mong i-block ang channel na ito? Wala sa mga video nito ang lalabas sa YouTube.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "Kanselahin",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "Tanggalin",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "Kumpirmahin ang Aksyon",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "Sigurado ka bang gusto mong alisin ang channel na ito sa iyong listahan?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "Sigurado ka bang gusto mong alisin ang video na ito sa listahan?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "Sigurado ka bang gusto mong i-unblock ang channel na ito?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "Idagdag sa mga naaprubahang channel",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "Kasalukuyang Channel sa YouTube",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "Kasalukuyang YouTube Video",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "Ang mga channel na idinagdag dito ay hindi kailanman lalabas sa iyong Home feed, mga mungkahi, o paghahanap.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "Walang Mga Naka-block na Channel",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "Mag-browse sa YouTube at i-click ang \"Idagdag sa aking listahan\" sa anumang channel o pahina ng video upang idagdag ito dito.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "Wala pang naaprubahang channel",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "Mag-browse sa YouTube at i-click ang (+) sa anumang video upang idagdag ito sa iyong naaprubahang listahan.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "Wala pang naaprubahang video",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "Matagumpay na na-export ang listahan ng mga channel!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "Filter ng personal na nilalaman ng YouTube upang subaybayan lamang ang iyong mga naaprubahang channel nang walang mga algorithm o nakakagambala.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "Nag-import ng {channels} na inaprubahang channel, {blocked} na naka-block na channel, at {videos} na video!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "Di-wastong format ng file o nawawalang naaprubahang istraktura ng mga channel.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "Matagumpay na na-import ang {count} na channel!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "Sa aking listahan ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "Ilagay ang URL ng channel, @handle, o channel ID...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "Wika ng Interface",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "Markahan ang lahat bilang nabasa na",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "min",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "Nakakita ng {count} bagong video!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "Walang channel na tumutugma sa iyong paghahanap.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "Walang nakitang resulta",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "Walang mga item na tumutugma sa iyong paghahanap.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "Walang mga video na tumutugma sa iyong paghahanap.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "Layunin at layunin",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "Naintindihan",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "Mag-subscribe ka lang sa mga channel na ikaw mismo ang nagre-review at siguraduhing walang musika o pambabae ang mga ito para hindi ka mag-subscribe sa kanya sa YouTube at suportahan mo siya kung ang kanyang mga video ay naglalaman ng musika at mga babae at mayroon kang patuloy na masamang gawain pagkatapos ng iyong kamatayan. Nawa'y tulungan ka ng Diyos.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "Pumili ng wika ng interface:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "Babala at mahalagang mensahe bago magsimula",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "Tagapangalaga ng Nilalaman",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "Tingnan ang Mga Video",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "Paki-paste ang backup na JSON sa kahon sa ibaba at i-click ang Kumpirmahin ang Pag-import",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "Bagong upload check interval",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "I-refresh ngayon",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "Sinusuri ang mga feed...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "Alisin",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "Alisin ang video",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "Maghanap ng mga naka-block na channel...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "Maghanap ng mga naaprubahang channel...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "Maghanap ng mga aprubadong video...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "Ipakita ang mga orihinal na pamagat ng video (huwag paganahin ang awtomatikong pagsasalin)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "Ipakita ang tunay na orihinal na pamagat ng tagalikha nang walang awtomatikong pagsasalin ng YouTube.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "Alisin ang YouTube Shorts kahit saan",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Itago ang mga shelf, tab, button, at i-redirect ang Shorts sa karaniwang video player.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "Matagumpay na na-save ang mga setting!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "Mga Naka-block na Channel",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "Mga Naaprubahang Channel",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "Mga Naaprubahang Video",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "Mga setting",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}d ang nakalipas",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count}h ang nakalipas",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "Ngayon lang",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "I-unblock",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "Idinagdag ang video sa iyong naaprubahang listahan!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "Naaprubahang Video ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

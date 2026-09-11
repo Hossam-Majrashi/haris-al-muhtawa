@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "ఛానెల్‌ని జోడించండి",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "వీడియోని జోడించండి",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "నా జాబితాకు జోడించండి",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "వీడియోని జోడించండి",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "జోడించబడింది",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "మీ ఆమోదించబడిన జాబితాలో ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "ఆమోదించబడిన వీడియో ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "ఆమోదించబడిన ఛానెల్ ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "బ్లాక్ చేయబడిన ఛానెల్‌ల సంఖ్య",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "ఈ ఛానెల్‌ని బ్లాక్ చేయండి",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "హారిస్ అల్-ముహ్తావాలోని మీ బ్లాక్ చేయబడిన ఛానెల్‌ల జాబితాలో ఛానెల్ ఉన్నందున ఈ వీడియో దాచబడింది.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "ఈ ఛానెల్ బ్లాక్ చేయబడింది",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "నిరోధించబడింది",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "ఛానెల్‌ని బ్లాక్ చేయండి",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "ఎగుమతి జాబితా (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "ఫైల్‌ను పునరుద్ధరించండి (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "ఫైల్‌ను పునరుద్ధరించడానికి ఇక్కడ క్లిక్ చేసి పేజీకి వెళ్లండి (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "సెట్టింగ్‌లను సేవ్ చేయండి",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "అన్‌బ్లాక్ చేయండి",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "మీ జాబితాకు {name} విజయవంతంగా జోడించబడింది!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "ఈ ఛానెల్ బ్లాక్ చేయబడింది",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "ఛానెల్ విజయవంతంగా బ్లాక్ చేయబడింది!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} ఆమోదించబడిన ఛానెల్‌లు",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "నిరోధించబడింది",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "ఛానెల్ అన్‌బ్లాక్ చేయబడింది!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "మీరు ఖచ్చితంగా ఈ ఛానెల్‌ని బ్లాక్ చేయాలనుకుంటున్నారా? దాని వీడియోలు ఏవీ YouTubeలో కనిపించవు.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "రద్దు చేయి",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "తొలగించు",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "చర్యను నిర్ధారించండి",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "మీరు ఖచ్చితంగా ఈ ఛానెల్‌ని మీ జాబితా నుండి తీసివేయాలనుకుంటున్నారా?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "మీరు ఖచ్చితంగా ఈ వీడియోను జాబితా నుండి తీసివేయాలనుకుంటున్నారా?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "మీరు ఖచ్చితంగా ఈ ఛానెల్‌ని అన్‌బ్లాక్ చేయాలనుకుంటున్నారా?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "ఆమోదించబడిన ఛానెల్‌లకు జోడించండి",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "ప్రస్తుత YouTube ఛానెల్",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "ప్రస్తుత YouTube వీడియో",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "ఇక్కడ జోడించిన ఛానెల్‌లు మీ హోమ్ ఫీడ్, సూచనలు లేదా శోధనలో ఎప్పటికీ కనిపించవు.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "బ్లాక్ చేయబడిన ఛానెల్‌లు లేవు",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "YouTubeని బ్రౌజ్ చేయండి మరియు దానిని ఇక్కడ జోడించడానికి ఏదైనా ఛానెల్ లేదా వీడియో పేజీలో \"నా జాబితాకు జోడించు\" క్లిక్ చేయండి.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "ఇంకా ఆమోదించబడిన ఛానెల్‌లు లేవు",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "YouTubeని బ్రౌజ్ చేయండి మరియు ఏదైనా వీడియోని మీ ఆమోదించిన జాబితాకు జోడించడానికి (+) క్లిక్ చేయండి.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "ఇంకా ఆమోదించబడిన వీడియోలు ఏవీ లేవు",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "ఛానెల్‌ల జాబితా విజయవంతంగా ఎగుమతి చేయబడింది!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "అల్గారిథమ్‌లు లేదా అంతరాయాలు లేకుండా మీ ఆమోదించబడిన ఛానెల్‌లను మాత్రమే ట్రాక్ చేయడానికి వ్యక్తిగత YouTube కంటెంట్ ఫిల్టర్.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "దిగుమతి చేయబడిన {channels} ఆమోదించబడిన ఛానెల్‌లు, {blocked} నిరోధించబడిన ఛానెల్‌లు మరియు {videos} వీడియోలు!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "చెల్లని ఫైల్ ఫార్మాట్ లేదా ఆమోదించబడిన ఛానెల్‌ల నిర్మాణం లేదు.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "{count} ఛానెల్‌లు విజయవంతంగా దిగుమతి చేయబడ్డాయి!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "నా జాబితాలో ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "ఛానెల్ URL, @హ్యాండిల్ లేదా ఛానెల్ IDని నమోదు చేయండి...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "ఇంటర్ఫేస్ భాష",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "అన్నింటినీ చదివినట్లుగా గుర్తించండి",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "నిమి",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "{count} కొత్త వీడియోలు కనుగొనబడ్డాయి!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "మీ శోధనకు సరిపోలే ఛానెల్‌లు లేవు.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "ఫలితాలు ఏవీ కనుగొనబడలేదు",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "మీ శోధనకు సరిపోలే అంశాలు ఏవీ లేవు.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "మీ శోధనకు సరిపోలే వీడియోలు ఏవీ లేవు.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "లక్ష్యం మరియు ప్రయోజనం",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "అర్థమైంది",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "మీరు మీరే సమీక్షించుకునే ఛానెల్‌లకు మాత్రమే మీరు సబ్‌స్క్రయిబ్ చేస్తారు మరియు వారు సంగీతం లేదా మహిళల కంటెంట్ లేకుండా ఉండేలా చూసుకోండి, తద్వారా మీరు అతనిని YouTubeలో సబ్‌స్క్రయిబ్ చేయరు మరియు అతని వీడియోలలో సంగీతం మరియు మహిళలు ఉంటే మరియు మీ మరణం తర్వాత మీకు చెడు పనులు ఉంటే మీరు అతనికి మద్దతు ఇస్తారు. దేవుడు మీకు సహాయం చేయును గాక.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "ఇంటర్ఫేస్ భాషను ఎంచుకోండి:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "ప్రారంభించడానికి ముందు హెచ్చరిక మరియు ముఖ్యమైన సందేశం",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "కంటెంట్ గార్డియన్",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "వీడియోలను వీక్షించండి",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "దయచేసి దిగువ పెట్టెలో బ్యాకప్ JSONని అతికించి, దిగుమతిని నిర్ధారించు క్లిక్ చేయండి",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "కొత్త అప్‌లోడ్ చెక్ విరామం",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "ఇప్పుడే రిఫ్రెష్ చేయండి",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "ఫీడ్‌లను తనిఖీ చేస్తోంది...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "తొలగించు",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "వీడియోను తీసివేయండి",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "బ్లాక్ చేయబడిన ఛానెల్‌లను శోధించండి...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "ఆమోదించబడిన ఛానెల్‌లను శోధించండి...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "ఆమోదించబడిన వీడియోలను శోధించండి...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "అసలు వీడియో శీర్షికలను చూపు (స్వీయ-అనువాదాన్ని నిలిపివేయి)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "YouTube స్వయంచాలక అనువాదం లేకుండా సృష్టికర్త యొక్క ప్రామాణికమైన అసలైన శీర్షికను చూపండి.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "YouTube Shortsని ప్రతిచోటా తీసివేయండి",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Shorts షెల్ఫ్‌లు, ట్యాబ్‌లు, బటన్‌లను దాచిపెట్టి, షార్ట్‌లను ప్రామాణిక వీడియో ప్లేయర్‌కి మళ్లించండి.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "సెట్టింగ్‌లు విజయవంతంగా సేవ్ చేయబడ్డాయి!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "బ్లాక్ చేయబడిన ఛానెల్‌లు",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "ఆమోదించబడిన ఛానెల్‌లు",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "ఆమోదించబడిన వీడియోలు",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "సెట్టింగ్‌లు",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}d క్రితం",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count}గం క్రితం",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "ఇప్పుడే",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "అన్‌బ్లాక్ చేయండి",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "మీ ఆమోదించబడిన జాబితాకు వీడియో జోడించబడింది!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "ఆమోదించబడిన వీడియో ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

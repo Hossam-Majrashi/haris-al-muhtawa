@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "چينل شامل ڪريو",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "وڊيو شامل ڪريو",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "منهنجي لسٽ ۾ شامل ڪريو",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "وڊيو شامل ڪريو",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "تي شامل ڪيو ويو",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "توھان جي منظور ٿيل لسٽ ۾ ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "منظور ٿيل وڊيو ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "منظور ٿيل چينل ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "بند ٿيل چينل شمار",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "ھن چينل کي بلاڪ ڪريو",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "هي وڊيو لڪيل آهي ڇو ته هي چينل توهان جي بلاڪ ڪيل چينلز جي لسٽ ۾ حارث المحتوا ۾ آهي.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "هي چينل بلاڪ ڪيو ويو آهي",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "بند ٿيل",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "بلاڪ چينل",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "برآمد جي فهرست (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "فائيل بحال ڪريو (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "فائيل کي بحال ڪرڻ لاءِ هتي ڪلڪ ڪريو ۽ صفحي تي وڃو (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "سيٽنگون محفوظ ڪريو",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "بلاڪ ڪريو",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "ڪاميابيءَ سان {name} کي توھان جي لسٽ ۾ شامل ڪيو ويو!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "هي چينل بلاڪ ڪيو ويو آهي",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "چينل ڪاميابي سان بلاڪ ڪيو ويو!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} منظور ٿيل چينل",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "بند ٿيل",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "چينل کوليو ويو!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "ڇا توھان واقعي ھن چينل کي بلاڪ ڪرڻ چاھيو ٿا؟ ان جي وڊيوز مان ڪوبه يوٽيوب تي ظاهر نه ٿيندو.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "منسوخ ڪريو",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "حذف ڪريو",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "عمل جي تصديق ڪريو",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "ڇا توھان واقعي ھن چينل کي پنھنجي لسٽ مان ڪڍڻ چاھيو ٿا؟",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "ڇا توھان واقعي ھن وڊيو کي لسٽ مان ڪڍڻ چاھيو ٿا؟",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "ڇا توهان واقعي هن چينل کي بلاڪ ڪرڻ چاهيو ٿا؟",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "منظور ٿيل چينلز ۾ شامل ڪريو",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "موجوده يوٽيوب چينل",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "موجوده يوٽيوب وڊيو",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "هتي شامل ڪيل چينل ڪڏهن به توهان جي گهر جي فيڊ، تجويزون، يا ڳولا ۾ ظاهر نه ٿيندا.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "ڪو به بلاڪ ٿيل چينل",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "يوٽيوب کي براؤز ڪريو ۽ \"منهنجي لسٽ ۾ شامل ڪريو\" تي ڪلڪ ڪريو ڪنهن به چينل يا وڊيو صفحي تي ان کي هتي شامل ڪرڻ لاء.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "اڃان تائين ڪو به منظور ٿيل چينل ناهي",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "يوٽيوب براؤز ڪريو ۽ ڪلڪ ڪريو (+) ڪنهن به وڊيو تي ان کي پنهنجي منظور ٿيل فهرست ۾ شامل ڪرڻ لاءِ.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "اڃان تائين ڪا به منظور ٿيل وڊيو ناهي",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "چينلن جي لسٽ ڪاميابي سان برآمد ڪئي وئي!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "ذاتي يوٽيوب مواد فلٽر صرف توهان جي منظور ٿيل چينلز کي ٽريڪ ڪرڻ لاءِ بغير الورورٿمز يا پريشانين جي.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "درآمد ٿيل {channels} منظور ٿيل چينل، {blocked} بلاڪ ٿيل چينل، ۽ {videos} وڊيوز!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "غلط فائل فارميٽ يا منظور ٿيل چينل جي جوڙجڪ غائب.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "ڪاميابيءَ سان درآمد ڪيا ويا {count} چينل!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "منهنجي لسٽ ۾ ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "داخل ڪريو چينل URL، @handle، يا چينل ID...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "انٽرفيس ٻولي",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "سڀني کي پڙهيل طور نشان لڳايو",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "منٽ",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "مليا {count} نوان وڊيوز!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "ڪوبه چينل توهان جي ڳولها سان ملندو ناهي.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "ڪي به نتيجا نه مليا",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "ڪابه شيون توهان جي ڳولا سان ملن ٿيون.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "ڪابه وڊيو توهان جي ڳولا سان نه ملندي آهي.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "مقصد ۽ مقصد",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "سمجهي ويو",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "توهان صرف انهن چينلن کي سبسڪرائب ڪريو جن جو توهان پاڻ جائزو وٺو ۽ پڪ ڪريو ته اهي ميوزڪ يا عورتن جي مواد کان خالي آهن ته جيئن توهان هن کي يوٽيوب تي سبسڪرائب نه ڪيو ۽ توهان ان کي سپورٽ ڪيو جيڪڏهن هن جي وڊيوز ۾ ميوزڪ ۽ عورتون آهن ۽ توهان جي مرڻ کان پوءِ توهان جا بڇڙا ڪم جاري آهن. خدا توهان جي مدد ڪري.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "انٽرفيس ٻولي چونڊيو:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "شروع ڪرڻ کان اڳ خبردار ۽ اهم پيغام",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "مواد سنڀاليندڙ",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "وڊيوز ڏسو",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "مھرباني ڪري ھيٺ ڏنل دٻي ۾ بيڪ اپ JSON پيسٽ ڪريو ۽ ڪلڪ ڪريو درآمد جي تصديق ڪريو",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "نئون اپ لوڊ چيڪ وقفو",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "هاڻي تازو ڪريو",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "فيڊ چيڪ ڪيو پيو وڃي...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "هٽايو",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "وڊيو هٽايو",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "بند ٿيل چينلز ڳولھيو...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "منظور ٿيل چينل ڳولھيو...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "منظور ٿيل وڊيوز ڳولھيو...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "اصل وڊيو عنوان ڏيکاريو (خودڪار ترجمو بند ڪريو)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "يوٽيوب جي خودڪار ترجمي کان سواءِ خالق جو مستند اصل عنوان ڏيکاريو.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "هٽايو يوٽيوب شارٽس هر هنڌ",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "شارٽس جون شيلفون، ٽيب، بٽڻ لڪايو ۽ شارٽس کي معياري وڊيو پليئر ڏانھن ريڊائريڪٽ ڪريو.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "سيٽنگون ڪاميابيءَ سان محفوظ ٿي ويون!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "بلاڪ ٿيل چينلز",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "منظور ٿيل چينلز",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "منظور ٿيل وڊيوز",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "سيٽنگون",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count} ڏينهن اڳ",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count} ڪلاڪ اڳ",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "بلڪل ھاڻي ئي",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "بلاڪ ڪريو",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "وڊيو توهان جي منظور ٿيل لسٽ ۾ شامل ڪئي وئي!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "منظور ٿيل وڊيو ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

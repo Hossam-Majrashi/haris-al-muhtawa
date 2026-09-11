@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "ቻናል አክል",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "ቪዲዮ ያክሉ",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "ወደ ዝርዝሬ ጨምር",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "ቪዲዮ ያክሉ",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "ታክሏል።",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "በተፈቀደልዎ ዝርዝር ✓ ውስጥ",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "የጸደቀ ቪዲዮ ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "የተፈቀደ ቻናል ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "የታገዱ ቻናሎች ብዛት",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "ይህን ቻናል አግድ",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "ይህ ቪዲዮ ተደብቋል ምክንያቱም ቻናሉ በታገዱ ቻናሎች ዝርዝርዎ ውስጥ በሐሪስ አል-ሙህታዋ።",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "ይህ ቻናል ታግዷል",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "ታግዷል",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "ቻናል አግድ",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "ወደ ውጭ መላኪያ ዝርዝር (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "ፋይል ወደነበረበት መልስ (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "ፋይሉን ወደነበረበት ለመመለስ እዚህ ጠቅ ያድርጉ እና ወደ ገጹ ይሂዱ (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "ቅንብሮችን አስቀምጥ",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "እገዳ አንሳ",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "በተሳካ ሁኔታ {name}ን ወደ ዝርዝርዎ አክለዋል!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "ይህ ቻናል ታግዷል",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "ቻናል በተሳካ ሁኔታ ታግዷል!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} የጸደቁ ሰርጦች",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "ታግዷል",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "የሰርጡ እገዳ ተቋርጧል!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "እርግጠኛ ነዎት ይህን ቻናል ማገድ ይፈልጋሉ? የትኛውም ቪዲዮዎቹ በዩቲዩብ ላይ አይታዩም።",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "ሰርዝ",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "ሰርዝ",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "እርምጃን ያረጋግጡ",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "እርግጠኛ ነዎት ይህን ቻናል ከዝርዝርዎ ማስወገድ ይፈልጋሉ?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "እርግጠኛ ነዎት ይህን ቪዲዮ ከዝርዝሩ ማስወገድ ይፈልጋሉ?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "እርግጠኛ ነዎት የዚህን ቻናል እገዳ ማንሳት ይፈልጋሉ?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "ወደ የጸደቁ ሰርጦች ያክሉ",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "የአሁኑ የዩቲዩብ ቻናል",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "የአሁኑ የዩቲዩብ ቪዲዮ",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "እዚህ የታከሉ ቻናሎች በእርስዎ የቤት ምግብ፣ ጥቆማዎች ወይም ፍለጋ ላይ በጭራሽ አይታዩም።",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "ምንም የታገዱ ቻናሎች የሉም",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "ዩቲዩብን ያስሱ እና እዚህ ለመጨመር በማንኛውም ቻናል ወይም ቪዲዮ ገጽ ላይ \"ወደ ዝርዝሬ አክል\" ን ጠቅ ያድርጉ።",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "እስካሁን ምንም የጸደቁ ቻናሎች የሉም",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "ዩቲዩብን ያስሱ እና በማንኛውም ቪድዮ ላይ (+) ን ጠቅ ያድርጉ ወደ የጸደቁት ዝርዝርዎ ያክሉት።",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "እስካሁን ምንም የጸደቁ ቪዲዮዎች የሉም",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "የቻናሎች ዝርዝር በተሳካ ሁኔታ ወደ ውጭ ተልኳል!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "የግል የዩቲዩብ ይዘት ማጣሪያ የእርስዎን የጸደቁ ቻናሎች ያለ ስልተ ቀመር ወይም ትኩረት የሚከፋፍሉ ነገሮች ብቻ ለመከታተል።",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "ከውጪ የመጡ {channels} የጸደቁ ሰርጦች፣ {blocked} የታገዱ ቻናሎች እና {videos} ቪዲዮዎች!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "ልክ ያልሆነ የፋይል ቅርጸት ወይም የተፈቀደ የሰርጥ መዋቅር ይጎድላል።",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "በተሳካ ሁኔታ {count} ሰርጦች ገብተዋል!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "በእኔ ዝርዝር ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "የሰርጥ URL፣ @handle ወይም የሰርጥ መታወቂያ አስገባ...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "የበይነገጽ ቋንቋ",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "ሁሉንም እንደተነበቡ ምልክት ያድርጉበት",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "ደቂቃ",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "{count} አዲስ ቪዲዮዎች ተገኝተዋል!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "ከፍለጋህ ጋር የሚዛመድ ምንም ቻናል የለም።",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "ምንም ውጤቶች አልተገኙም።",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "ከፍለጋህ ጋር የሚዛመድ ምንም ንጥል የለም።",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "ከፍለጋህ ጋር የሚዛመድ ምንም ቪዲዮዎች የሉም።",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "ዓላማ እና ዓላማ",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "ተረድቷል።",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "እርስዎ የሚገመግሟቸውን ቻናሎች ብቻ ሰብስክራይብ ያድርጉ እና ከሙዚቃ ወይም ከሴቶች ይዘት የፀዱ መሆናቸውን ያረጋግጡ በዩቲዩብ ላይ ሰብስክራይብ እንዳያደርጉት እና የእሱ ቪዲዮዎች ሙዚቃ እና ሴቶች ከያዙ እና ከሞቱ በኋላ ቀጣይ መጥፎ ስራዎች ካሉ እሱን ይደግፉታል። እግዚአብሔር ይርዳችሁ።",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "የበይነገጽ ቋንቋ ይምረጡ፡",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "ከመጀመርዎ በፊት ማስጠንቀቂያ እና ጠቃሚ መልእክት",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "የይዘት ጠባቂ",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "ቪዲዮዎችን ይመልከቱ",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "እባኮትን ምትኬ JSON ከታች ባለው ሳጥን ውስጥ ይለጥፉ እና አስመጣን አረጋግጥ የሚለውን ጠቅ ያድርጉ",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "አዲስ የሰቀላ ፍተሻ ክፍተት",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "አሁን አድስ",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "ምግቦችን በማጣራት ላይ...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "አስወግድ",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "ቪዲዮ አስወግድ",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "የታገዱ ቻናሎችን ፈልግ...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "የጸደቁ ቻናሎችን ፈልግ...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "የጸደቁ ቪዲዮዎችን ፈልግ...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "ኦሪጅናል የቪዲዮ ርዕሶችን አሳይ (ራስ-መተርጎምን አሰናክል)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "ያለ YouTube አውቶማቲክ ትርጉም የፈጣሪን ትክክለኛ አርእስት አሳይ።",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "YouTube Shortsን በሁሉም ቦታ ያስወግዱ",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "ሾርትስ መደርደሪያዎችን፣ ታቦችን፣ አዝራሮችን ደብቅ እና ሾርትን ወደ መደበኛ የቪዲዮ ማጫወቻ አዙር።",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "ቅንብሮች በተሳካ ሁኔታ ተቀምጠዋል!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "የታገዱ ቻናሎች",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "የጸደቁ ቻናሎች",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "የጸደቁ ቪዲዮዎች",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "ቅንብሮች",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}d በፊት",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count}ሰ በፊት",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "ልክ አሁን",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "እገዳ አንሳ",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "ቪዲዮ ወደ የጸደቀ ዝርዝርዎ ታክሏል!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "የጸደቀ ቪዲዮ ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

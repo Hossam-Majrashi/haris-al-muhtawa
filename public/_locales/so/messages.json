@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "Kudar kanaalka",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "Kudar Video",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "Ku dar liiskayga",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "Kudar Video",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "Lagu daray",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "Liiskaaga la ansixiyay ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "Fiidiyowga La ansixiyay ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "Kanaalka la ansixiyay ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "Kanaalka la xiray ayaa tirinaya",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "Xidho Channelkan",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "Muuqaalkan waa qarsoon yahay sababtoo ah kanaalka wuxuu ku jiraa liiska kanaaladaada la xannibay ee Haris Al-Muhtawa.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "Kanaalkaan waa la xiray",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "xannibay",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "Kanaalka xannib",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "Liiska dhoofinta (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "Soo celi faylka (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "Guji halkan oo tag bogga si aad u soo celiso faylka (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "Keydi Settings",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "Furi",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "Si guul leh ayaa loogu daray {name} liiskaaga!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "Kanaalkaan waa la xiray",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "Kanaalka si guul leh ayaa loo xannibay!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} kanaalada la ansixiyay",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "xannibay",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "Kanaalka waa la xiray!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "Ma hubtaa inaad doonayso inaad xidho kanaalkan? Fiidyowyadeeda midkoodna kama soo bixi doono YouTube.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "Jooji",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "Tirtir",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "Xaqiiji Ficil",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "Ma hubtaa inaad doonayso inaad kanaalkan ka saarto liiskaaga?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "Ma hubtaa inaad doonayso inaad liiska ka saarto muqaalkan?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "Ma hubtaa inaad doonayso inaad xidhidhiyaha ka saarto kanaalkan?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "Kudar kanaalada la ansixiyay",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "Kanaalka YouTube ee hadda",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "Fiidiyowga YouTube-ka ee hadda",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "Kanaalka halkan lagu daray weligood kama soo bixi doonaan quudintaada guriga, soo jeedinta, ama raadintaada.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "Ma jiro kanaalo Xiran",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "Ka baadh YouTube oo dhagsii \"ku dar liiskayga\" kanaal kasta ama bog fiidiyoow ah si aad halkan ugu darto.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "Wali ma jiro kanaalo la ansixiyay",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "Baadh YouTube oo guji (+) muuqaal kasta si aad ugu darto liiskaaga la ansixiyay.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "Weli ma jiro muuqaallo la ansixiyay",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "Liiska kanaalada si guul leh ayaa loo dhoofiyay!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "Shaandhaynta shakhsi ahaaneed ee YouTube-ka si ay ula socoto oo keliya kanaalada aad ogolaatay iyada oo aan lahayn algorithms ama wax jeedinta.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "La soo dejiyay {channels} kanaalada la ansixiyay, {blocked} kanaalada la xiray, iyo {videos} fiidyow!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "Qaab faylal aan sax ahayn ama qaab dhismeedka kanaalada la ansixiyay ee maqan.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "Si guul leh loo soo dejiyay {count} kanaalada!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "Liiskayga ku jira ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "Geli URL kanaalka, @handle, ama kanaalka aqoonsiga...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "Luqadda Interface",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "Ku calaamadee dhammaan sida loo akhriyay",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "min",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "La helay {count} fiidiyowyo cusub!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "Ma jiro kanaalo ku habboon raadintaada.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "Wax natiijooyin ah lama helin",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "Ma jiraan wax u dhigma raadintaada.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "Ma jiro fiidiyow ku habboon raadintaada.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "Hadafka iyo ujeedada",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "La fahmay",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "Waxa kaliya oo aad ku xidhan tahay channel-ka aad naftaada dib u eegto oo hubi in ay ka xor yihiin muusiga ama waxyaabaha dumarka si aanad isaga ku xidhin YouTube-ka oo aad u taageerto haddii muuqaalladiisu muusiko iyo dumar ku jiraan oo aad samaynayso camal xun dhimashaada ka dib. Alle ha ku garab galo.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "Dooro luqadda is-dhexgalka:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "Digniin iyo fariin muhiim ah ka hor inta aanad bilaabin",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "ilaaliyaha nuxurka",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "Daawo Muqaal",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "Fadlan ku dheji kaydka JSON sanduuqa hoose oo guji Xaqiiji Import",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "Muddada hubinta soo dejinta cusub",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "Hadda dib u cusboonaysii",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "Hubinta quudinta...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "Ka saar",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "Ka saar muuqaalka",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "Raadi kanaalada la xiray...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "Raadi kanaalada la ansixiyay...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "Raadi fiidiyowyada la ansixiyay...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "Tus cinwaanada muuqaalka asalka ah (dami turjumaada tooska ah)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "Tus ciwaanka asalka ah ee abuuraha iyada oo aan YouTube-ka turjumaada tooska ah",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "Ka saar YouTube Shorts meel walba",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Qari khaanadaha gaaban, tab-yada, badhamada, oo u jiheeyaha Gaaban ciyaartoyga caadiga ah.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "Dejinta si guul leh ayaa loo keydiyay!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "Kanaalka la xiray",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "Kanaalka la ansixiyay",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "Fiidyowyada la ansixiyay",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "Dejinta",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}d kahor",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count}h kahor",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "Hadda uun",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "Furi",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "Fiidiyowga ayaa lagu daray liiskaaga la ansixiyay!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "Fiidiyowga La ansixiyay ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "افزودن کانال",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "افزودن ویدئو",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "به لیست من اضافه کنید",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "افزودن ویدئو",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "اضافه شد",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "در لیست تایید شده شما ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "ویدیوی تایید شده ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "فیلتر شخصی یوتیوب",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "کانال تایید شده ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "پشتیبان‌گیری و انتقال",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "تعداد کانال های مسدود شده",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "این کانال را مسدود کنید",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "این ویدیو پنهان است زیرا کانال در لیست کانال های مسدود شده شما در حریس المحطوا قرار دارد.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "این کانال مسدود شده است",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "مسدود شده است",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "کانال را مسدود کنید",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "تأیید وارد کردن",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "لیست صادرات (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "برای رفتن به صفحه بارگذاری فایل اینجا کلیک کنید",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ پوشه جدید",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "جای‌گذاری",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "بازیابی فایل (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "برای بازیابی فایل اینجا کلیک کنید و به صفحه بروید (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "تنظیمات را ذخیره کنید",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "رفع انسداد",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "{name} با موفقیت به لیست شما اضافه شد!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "این کانال مسدود شده است",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "کانال با موفقیت مسدود شد!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} کانال تایید شده",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "مسدود شده است",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "کانال رفع انسداد شد",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "آیا مطمئن هستید که می خواهید این کانال را مسدود کنید؟ هیچ یک از ویدیوهای آن در یوتیوب ظاهر نمی شود.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "آیا از حذف این پوشه مطمئن هستید؟ ویدیوهای درون آن حذف نخواهند شد.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "لغو کنید",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "حذف کنید",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "اقدام را تأیید کنید",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "آیا مطمئنید که می خواهید این کانال را از لیست خود حذف کنید؟",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "آیا مطمئن هستید که می خواهید این ویدیو را از لیست حذف کنید؟",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "آیا مطمئنید که می خواهید این کانال را رفع انسداد کنید؟",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "به کانال های تایید شده اضافه کنید",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "ایجاد پوشه",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "کانال فعلی یوتیوب",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "ویدیوی فعلی یوتیوب",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "حذف پوشه",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "لغو انتخاب همه",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "ایمیل",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "توسعه دهنده",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "وب‌سایت",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "برای انتخاب فایل JSON کلیک کنید یا آن را به اینجا بکشید",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "کانال های اضافه شده در اینجا هرگز در فید صفحه اصلی، پیشنهادات یا جستجوی شما ظاهر نمی شوند.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "بدون کانال مسدود شده",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "یوتیوب را مرور کنید و روی «افزودن به فهرست من» در هر کانال یا صفحه ویدیویی کلیک کنید تا آن را در اینجا اضافه کنید.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "هنوز کانال تایید شده ای وجود ندارد",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "یوتیوب را مرور کنید و روی (+) هر ویدیویی کلیک کنید تا آن را به لیست تایید شده خود اضافه کنید.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "هنوز ویدیوی تایید شده ای وجود ندارد",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "لیست کانال ها با موفقیت صادر شد!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "فیلتر محتوای شخصی YouTube برای ردیابی تنها کانال های مورد تایید شما بدون الگوریتم یا حواس پرتی.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "پوشه با موفقیت ایجاد شد!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "نام پوشه جدید...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "همه",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "بدون پوشه",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "تنظیمات عمومی",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "{channels} کانال های تایید شده، {blocked} کانال های مسدود شده، و {videos} ویدئو وارد شده است!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "قالب فایل نامعتبر یا ساختار کانال‌های تایید شده وجود ندارد.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "وارد کردن کانال‌ها و ویدیوها",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "{count} کانال با موفقیت وارد شد!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "در لیست من ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "URL کانال، @handle یا شناسه کانال را وارد کنید...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "زبان رابط",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "همه را به عنوان خوانده شده علامت گذاری کنید",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "دقیقه",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "انتقال به پوشه",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "{count} ویدیوهای جدید پیدا شد!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "هیچ کانالی با جستجوی شما مطابقت ندارد.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "هیچ نتیجه ای یافت نشد",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "هیچ موردی با جستجوی شما مطابقت ندارد.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "هیچ ویدیویی با جستجوی شما مطابقت ندارد.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "لطفاً ابتدا حداقل یک ویدیو را انتخاب کنید.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "هدف و هدف",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "فهمیده شد",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "شما فقط در کانال‌هایی مشترک می‌شوید که خودتان آن‌ها را بررسی می‌کنید و مطمئن می‌شوید که آنها فاقد موسیقی یا محتوای زنانه هستند تا در یوتیوب مشترک او نشوید و اگر ویدیوهایش حاوی موسیقی و زنان باشد و کارهای بدی در حال انجام پس از مرگتان داشته باشید، از او حمایت می‌کنید. خدا کمکت کنه",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "انتخاب زبان رابط:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "هشدار و پیام مهم قبل از شروع",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "نگهبان محتوا",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "باز کردن در مرورگر",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "باز کردن در مرورگر ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "مشاهده ویدیوها",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "{count} ویدیو در مرورگر باز شد",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "لطفاً JSON پشتیبان را در کادر زیر قرار دهید و روی تأیید واردات کلیک کنید",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "یا متن JSON را مستقیماً اینجا جای‌گذاری کنید:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "فاصله بررسی آپلود جدید",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "وارد کردن سریع از کلیپ‌بورد (چسباندن JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "اکنون بازخوانی کنید",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "در حال بررسی فیدها...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "حذف کنید",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "حذف ویدیو",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "جستجوی کانال های مسدود شده...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "جستجوی کانال های تایید شده...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "جستجوی ویدیوهای تایید شده...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "انتخاب همه",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "نمایش عناوین اصلی ویدیو (غیرفعال کردن ترجمه خودکار)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "عنوان اصلی معتبر سازنده را بدون ترجمه خودکار YouTube نشان دهید.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "YouTube Shorts را همه جا حذف کنید",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "قفسه‌ها، زبانه‌ها، دکمه‌های Shorts را مخفی کنید و Shorts را به پخش‌کننده ویدیوی استاندارد هدایت کنید.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "تنظیمات با موفقیت ذخیره شد!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "کانال های مسدود شده",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "کانال های تایید شده",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "ویدئوهای تایید شده",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "تنظیمات",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}روز پیش",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count}ساعت قبل",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "همین الان",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "رفع انسداد",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "ویدئو به لیست تایید شده شما اضافه شد!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "ویدیوی تایید شده ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "ویدیو با موفقیت منتقل شد!",
+    "description": "Video moved toast"
+  }
+}

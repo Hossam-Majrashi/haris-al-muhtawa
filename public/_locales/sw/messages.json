@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "Ongeza Kituo",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "Ongeza Video",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "Ongeza kwenye orodha yangu",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "Ongeza Video",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "Imeongezwa",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "Katika orodha yako iliyoidhinishwa ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "Video Imeidhinishwa ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "Kituo Kilichoidhinishwa ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "Idadi ya vituo vilivyozuiwa",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "Zuia Chaneli Hii",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "Video hii imefichwa kwa sababu chaneli iko kwenye orodha ya Vituo Vilivyozuiwa katika Haris Al-Muhtawa.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "Kituo hiki kimezuiwa",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "Imezuiwa",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "Zuia Kituo",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "Hamisha orodha (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "Rejesha faili (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "Bofya hapa na uende kwenye ukurasa ili kurejesha faili (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "Hifadhi Mipangilio",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "Ondoa kizuizi",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "Umeongeza {name} kwenye orodha yako!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "Kituo hiki kimezuiwa",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "Kituo kimezuiwa!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "vituo {count} vilivyoidhinishwa",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "Imezuiwa",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "Kituo kimefunguliwa!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "Je, una uhakika unataka kuzuia kituo hiki? Hakuna video yake yoyote itakayoonekana kwenye YouTube.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "Ghairi",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "Futa",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "Thibitisha Kitendo",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "Je, una uhakika unataka kuondoa kituo hiki kwenye orodha yako?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "Je, una uhakika unataka kuondoa video hii kwenye orodha?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "Je, una uhakika unataka kuondolea kizuizi cha kituo hiki?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "Ongeza kwa vituo vilivyoidhinishwa",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "Kituo cha sasa cha YouTube",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "Video ya Sasa ya YouTube",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "Vituo vilivyoongezwa hapa havitaonekana kamwe kwenye mpasho wako wa Nyumbani, mapendekezo au utafutaji.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "Hakuna Vituo Vilivyozuiwa",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "Vinjari YouTube na ubofye \"Ongeza kwenye orodha yangu\" kwenye kituo chochote au ukurasa wa video ili kuiongeza hapa.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "Bado hakuna chaneli zilizoidhinishwa",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "Vinjari YouTube na ubofye (+) kwenye video yoyote ili kuiongeza kwenye orodha uliyoidhinisha.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "Bado hakuna video zilizoidhinishwa",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "Orodha ya vituo imetumwa kwa mafanikio!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "Kichujio cha maudhui ya kibinafsi ya YouTube ili kufuatilia tu vituo vyako vilivyoidhinishwa bila kanuni au vikwazo.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "Imeingiza {channels} vituo vilivyoidhinishwa, {blocked} vituo vilivyozuiwa, na video {videos}!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "Umbizo batili la faili au kukosa muundo wa vituo vilivyoidhinishwa.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "Imefaulu kuleta vituo {count}!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "Katika orodha yangu ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "Weka URL ya kituo, @handle, au kitambulisho cha kituo...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "Lugha ya Kiolesura",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "Weka alama zote kama zimesomwa",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "min",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "Imepata {count} video mpya!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "Hakuna chaneli zinazolingana na utafutaji wako.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "Hakuna matokeo yaliyopatikana",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "Hakuna vipengee vinavyolingana na utafutaji wako.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "Hakuna video zinazolingana na utafutaji wako.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "Lengo na kusudi",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "Kueleweka",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "Unajiandikisha tu kwa chaneli ambazo unajihakiki na hakikisha kuwa hazina muziki au maudhui ya wanawake ili usijisajili naye kwenye YouTube na unamuunga mkono ikiwa video zake zina muziki na wanawake na una matendo mabaya yanayoendelea baada ya kifo chako. Mungu akusaidie.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "Chagua lugha ya kiolesura:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "Onyo na ujumbe muhimu kabla ya kuanza",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "Mlinzi wa Maudhui",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "Tazama Video",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "Tafadhali bandika nakala rudufu ya JSON kwenye kisanduku kilicho hapa chini na ubofye Thibitisha Uingizaji",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "Muda mpya wa kuangalia upakiaji",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "Onyesha upya sasa",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "Inakagua milisho...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "Ondoa",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "Ondoa video",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "Tafuta vituo vilivyozuiwa...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "Tafuta vituo vilivyoidhinishwa...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "Tafuta video zilizoidhinishwa...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "Onyesha vichwa vya video asili (lemaza utafsiri otomatiki)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "Onyesha jina halisi la mtayarishi bila tafsiri ya kiotomatiki ya YouTube.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "Ondoa Shorts za YouTube kila mahali",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Ficha rafu za Shorts, vichupo, vitufe na uelekeze upya Shorts hadi kicheza video cha kawaida.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "Mipangilio imehifadhiwa!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "Vituo Vilivyozuiwa",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "Vituo Vilivyoidhinishwa",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "Video Zilizoidhinishwa",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "Mipangilio",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "Siku {count} zilizopita",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "Saa {count} zilizopita",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "Sasa hivi",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "Ondoa kizuizi",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "Video imeongezwa kwenye orodha yako iliyoidhinishwa!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "Video Imeidhinishwa ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

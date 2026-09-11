@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "Adăugați un canal",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "Adăugați un videoclip",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "Adaugă la lista mea",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "Adăugați un videoclip",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "Adăugat pe",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "În lista dvs. aprobată ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "Video aprobat ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "Canal aprobat ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "Canalele blocate sunt în număr",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "Blocați acest canal",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "Acest videoclip este ascuns deoarece canalul se află în lista dvs. de canale blocate din Haris Al-Muhtawa.",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "Acest canal este blocat",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "Blocat",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "Blocați canalul",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "Exportați lista (JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "Restaurează fișierul (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "Faceți clic aici și accesați pagina pentru a restaura fișierul (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "Salvați setările",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "Deblocați",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "A fost adăugat cu succes {name} în lista dvs.!",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "Acest canal este blocat",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "Canal blocat cu succes!",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} canale aprobate",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "Blocat",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "Canal deblocat!",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "Sigur vrei să blochezi acest canal? Niciunul dintre videoclipurile sale nu va apărea pe YouTube.",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "Anula",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "Şterge",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "Confirmați acțiunea",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "Sigur doriți să eliminați acest canal din lista dvs.?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "Sigur doriți să eliminați acest videoclip din listă?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "Sigur vrei să deblochezi acest canal?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "Adaugă la canalele aprobate",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "Canalul YouTube curent",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "Videoclip YouTube curent",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "Canalele adăugate aici nu vor apărea niciodată în feedul dvs. Acasă, sugestii sau căutare.",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "Fără canale blocate",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "Răsfoiți YouTube și faceți clic pe „Adăugați la lista mea” pe orice canal sau pagină video pentru a-l adăuga aici.",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "Niciun canal aprobat încă",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "Răsfoiți YouTube și faceți clic pe (+) pe orice videoclip pentru a-l adăuga la lista dvs. aprobată.",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "Niciun videoclip aprobat încă",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "Lista de canale a fost exportată cu succes!",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "Filtru personal de conținut YouTube pentru a urmări numai canalele dvs. aprobate, fără algoritmi sau distrageri.",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "Au importat {channels} canale aprobate, {blocked} canale blocate și {videos} videoclipuri!",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "Format de fișier nevalid sau structura canalelor aprobată lipsește.",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "Au fost importate cu succes {count} canale!",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "În lista mea ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "Introdu URL-ul canalului, @handle-ul sau ID-ul canalului...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "Limbajul interfeței",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "Marcați totul ca citit",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "min",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "S-au găsit {count} videoclipuri noi!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "Niciun canal nu corespunde căutării tale.",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "Nu s-au găsit rezultate",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "Niciun articol nu corespunde căutării dvs.",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "Niciun videoclip nu corespunde căutării tale.",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "Scop și scop",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "Înțeles",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "Vă abonați doar la canalele pe care le revizuiți singur și vă asigurați că acestea sunt lipsite de muzică sau de conținut feminin, astfel încât să nu vă abonați la el pe YouTube și să-l susțineți dacă videoclipurile lui conțin muzică și femei și aveți fapte rele în desfășurare după moartea dvs. Dumnezeu sa te ajute.",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "Alegeți limba interfeței:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "Avertisment și mesaj important înainte de a începe",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "Gardian de conținut",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "Vizualizați videoclipuri",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "Lipiți JSON de rezervă în caseta de mai jos și faceți clic pe Confirmare import",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "Nou interval de verificare a încărcării",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "Actualizează acum",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "Se verifică fluxurile...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "Eliminați",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "Eliminați videoclipul",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "Căutați canale blocate...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "Căutați canale aprobate...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "Căutați videoclipuri aprobate...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "Afișați titlurile video originale (dezactivați traducerea automată)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "Afișează titlul original autentic al creatorului fără traducerea automată YouTube.",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "Eliminați scurtmetraje YouTube de peste tot",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "Ascundeți rafturile, filele, butoanele pentru Shorts și redirecționați Shorts-urile către playerul video standard.",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "Setările au fost salvate cu succes!",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "Canale blocate",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "Canale aprobate",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "Videoclipuri aprobate",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "Setări",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "acum {count}d",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "acum {count}h",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "Chiar acum",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "Deblocați",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "Videoclipul adăugat la lista dvs. aprobată!",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "Video aprobat ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}

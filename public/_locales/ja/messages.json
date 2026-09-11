@@ -1,0 +1,474 @@
+{
+  "addThisChannel": {
+    "message": "チャンネルの追加",
+    "description": "Add current channel button"
+  },
+  "addThisVideo": {
+    "message": "ビデオを追加",
+    "description": "Add video button text"
+  },
+  "addToList": {
+    "message": "マイリストに追加",
+    "description": "Content script button: add channel"
+  },
+  "addVideoToList": {
+    "message": "ビデオを追加",
+    "description": "Content script button: add video to approved list"
+  },
+  "addedOn": {
+    "message": "追加日",
+    "description": "Added on date prefix"
+  },
+  "alreadyApproved": {
+    "message": "承認済みリストに含まれています ✓",
+    "description": "Current channel already approved status"
+  },
+  "alreadyApprovedVideo": {
+    "message": "承認されたビデオ ✓",
+    "description": "Already approved video tag"
+  },
+  "appSubtitle": {
+    "message": "Personal YouTube Filter",
+    "description": "App subtitle"
+  },
+  "approvedBadge": {
+    "message": "承認されたチャネル ✓",
+    "description": "Thumbnail badge tooltip"
+  },
+  "backupSettings": {
+    "message": "Backup & Transfer",
+    "description": "Backup settings group title"
+  },
+  "badgeBlockedCount": {
+    "message": "ブロックされたチャンネル数",
+    "description": "Count pill for blocked channels"
+  },
+  "blockCurrentChannel": {
+    "message": "このチャンネルをブロックする",
+    "description": "Button to block active YouTube channel"
+  },
+  "blockedOverlayDesc": {
+    "message": "このチャンネルは Haris Al-Muhtawa のブロックされたチャンネル リストに含まれているため、この動画は非表示になっています。",
+    "description": "Blocked channel overlay description"
+  },
+  "blockedOverlayTitle": {
+    "message": "このチャンネルはブロックされています",
+    "description": "Blocked channel overlay title on YouTube"
+  },
+  "blockedTag": {
+    "message": "ブロックされました",
+    "description": "Tag indicating channel is blocked"
+  },
+  "btnBlockChannel": {
+    "message": "ブロックチャンネル",
+    "description": "Button to block a channel"
+  },
+  "btnConfirmImport": {
+    "message": "Confirm Import",
+    "description": "Confirm import button"
+  },
+  "btnExport": {
+    "message": "エクスポートリスト(JSON)",
+    "description": "Export channels button"
+  },
+  "btnImport": {
+    "message": "Click here to go to a page to upload a file",
+    "description": "Import channels button"
+  },
+  "btnNewFolder": {
+    "message": "+ New Folder",
+    "description": "New folder button"
+  },
+  "btnPasteClip": {
+    "message": "Paste",
+    "description": "Paste clipboard button"
+  },
+  "btnRestoreList": {
+    "message": "ファイルを復元 (JSON)",
+    "description": "Restore list button in page"
+  },
+  "btnRestoreListPopup": {
+    "message": "ここをクリックして復元ページに移動 (JSON)",
+    "description": "Restore list button in extension popup (click to go to page)"
+  },
+  "btnSaveSettings": {
+    "message": "設定の保存",
+    "description": "Save settings button"
+  },
+  "btnUnblockChannel": {
+    "message": "ブロックを解除する",
+    "description": "Button to unblock a channel"
+  },
+  "channelAddedSuccess": {
+    "message": "{name} をリストに追加しました。",
+    "description": "Channel added confirmation"
+  },
+  "channelBlockedMsg": {
+    "message": "このチャンネルはブロックされています",
+    "description": "Blocked channel overlay title"
+  },
+  "channelBlockedSuccess": {
+    "message": "チャンネルは正常にブロックされました。",
+    "description": "Channel blocked toast"
+  },
+  "channelCount": {
+    "message": "{count} 件の承認済みチャンネル",
+    "description": "Approved channel count summary"
+  },
+  "channelIsBlocked": {
+    "message": "ブロックされました",
+    "description": "Tag indicating channel is blocked"
+  },
+  "channelUnblockedSuccess": {
+    "message": "チャンネルのブロックが解除されました！",
+    "description": "Channel unblocked toast"
+  },
+  "confirmBlockChannel": {
+    "message": "このチャンネルをブロックしてもよろしいですか?そのビデオはいずれも YouTube に表示されません。",
+    "description": "Confirm dialog when blocking a channel"
+  },
+  "confirmDeleteFolder": {
+    "message": "Are you sure you want to delete this folder? Videos inside will not be deleted.",
+    "description": "Confirm delete folder"
+  },
+  "confirmModalCancel": {
+    "message": "キャンセル",
+    "description": "Cancel button in custom modal"
+  },
+  "confirmModalDelete": {
+    "message": "消去",
+    "description": "Confirm delete button in custom modal"
+  },
+  "confirmModalTitle": {
+    "message": "アクションの確認",
+    "description": "Title of custom confirmation modal"
+  },
+  "confirmRemove": {
+    "message": "このチャンネルをリストから削除してもよろしいですか?",
+    "description": "Confirmation message before removing channel"
+  },
+  "confirmRemoveVideo": {
+    "message": "このビデオをリストから削除してもよろしいですか?",
+    "description": "Confirmation message before removing video"
+  },
+  "confirmUnblockChannel": {
+    "message": "このチャンネルのブロックを解除してもよろしいですか?",
+    "description": "Confirm dialog when unblocking a channel"
+  },
+  "contextMenuAdd": {
+    "message": "承認されたチャンネルに追加する",
+    "description": "Context menu action to add current channel"
+  },
+  "createFolder": {
+    "message": "Create Folder",
+    "description": "Create folder title"
+  },
+  "currentChannelTitle": {
+    "message": "現在の YouTube チャンネル",
+    "description": "Current active channel bar title"
+  },
+  "currentVideoTitle": {
+    "message": "現在の YouTube 動画",
+    "description": "Current active video title banner"
+  },
+  "deleteFolder": {
+    "message": "Delete Folder",
+    "description": "Delete folder"
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Deselect all videos"
+  },
+  "developerEmailLabel": {
+    "message": "Email",
+    "description": "Developer email label"
+  },
+  "developerName": {
+    "message": "حسام حسن مجرشي",
+    "description": "Developer name"
+  },
+  "developerTitle": {
+    "message": "Developer",
+    "description": "Developer section title"
+  },
+  "developerWebsiteLabel": {
+    "message": "Website",
+    "description": "Developer website label"
+  },
+  "dropzoneLabel": {
+    "message": "Click to choose JSON file or drag here",
+    "description": "Dropzone label"
+  },
+  "emptyBlockedDesc": {
+    "message": "ここに追加されたチャンネルは、ホーム フィード、提案、検索には表示されません。",
+    "description": "Empty state description for blocked channels"
+  },
+  "emptyBlockedTitle": {
+    "message": "ブロックされたチャンネルはありません",
+    "description": "Empty state title for blocked channels"
+  },
+  "emptyChannelsDesc": {
+    "message": "YouTube を閲覧し、任意のチャンネルまたはビデオ ページで [マイ リストに追加] をクリックして、ここに追加します。",
+    "description": "Empty channels description"
+  },
+  "emptyChannelsTitle": {
+    "message": "まだ承認されたチャンネルはありません",
+    "description": "Empty channels list heading"
+  },
+  "emptyUploadsDesc": {
+    "message": "YouTube を閲覧し、任意のビデオをクリックして (+) をクリックし、承認済みリストに追加します。",
+    "description": "Empty approved videos description"
+  },
+  "emptyUploadsTitle": {
+    "message": "まだ承認されたビデオはありません",
+    "description": "Empty approved videos heading"
+  },
+  "exportSuccess": {
+    "message": "チャンネルリストが正常にエクスポートされました。",
+    "description": "Export success message"
+  },
+  "extDescription": {
+    "message": "アルゴリズムや邪魔をせずに、承認されたチャンネルのみを追跡する個人用 YouTube コンテンツ フィルター。",
+    "description": "Extension Description"
+  },
+  "extName": {
+    "message": "Haris Al-Muhtawa",
+    "description": "Extension Name"
+  },
+  "folderAdded": {
+    "message": "Folder created successfully!",
+    "description": "Folder created toast"
+  },
+  "folderNamePlaceholder": {
+    "message": "New folder name...",
+    "description": "Folder name placeholder"
+  },
+  "foldersAll": {
+    "message": "All",
+    "description": "All folders"
+  },
+  "foldersUncategorized": {
+    "message": "Uncategorized",
+    "description": "Uncategorized videos"
+  },
+  "generalPreferences": {
+    "message": "General Preferences",
+    "description": "General preferences group title"
+  },
+  "importFullSuccess": {
+    "message": "{channels} 承認されたチャンネル、{blocked} ブロックされたチャンネル、{videos} ビデオをインポートしました。",
+    "description": "Toast when full backup import succeeds"
+  },
+  "importInvalidFile": {
+    "message": "ファイル形式が無効であるか、承認されたチャネル構造が欠落しています。",
+    "description": "Invalid import file error"
+  },
+  "importPanelTitle": {
+    "message": "Import Channels & Videos",
+    "description": "Import panel title"
+  },
+  "importSuccess": {
+    "message": "{count} 個のチャンネルが正常にインポートされました。",
+    "description": "Import success message"
+  },
+  "inMyList": {
+    "message": "私のリストにある ✓",
+    "description": "Content script button: channel already added"
+  },
+  "inputBlockedPlaceholder": {
+    "message": "チャンネル URL、@ハンドル、またはチャンネル ID を入力してください...",
+    "description": "Input placeholder to block channel"
+  },
+  "languageLabel": {
+    "message": "インターフェース言語",
+    "description": "Language setting label"
+  },
+  "markAllAsRead": {
+    "message": "すべて既読としてマークする",
+    "description": "Button to mark all new uploads as read"
+  },
+  "minutesUnit": {
+    "message": "分",
+    "description": "Minutes unit"
+  },
+  "moveToFolder": {
+    "message": "Move to folder",
+    "description": "Move video to folder"
+  },
+  "newVideosFound": {
+    "message": "{count} 件の新しい動画を見つけました!",
+    "description": "Toast when new videos found"
+  },
+  "noChannelsFound": {
+    "message": "検索に一致するチャンネルはありません。",
+    "description": "No search results for channels"
+  },
+  "noResults": {
+    "message": "結果が見つかりませんでした",
+    "description": "Empty search state heading"
+  },
+  "noResultsDesc": {
+    "message": "検索に一致する項目はありません。",
+    "description": "Empty search state description"
+  },
+  "noVideosFound": {
+    "message": "検索に一致する動画はありません。",
+    "description": "No search results for videos"
+  },
+  "noVideosSelected": {
+    "message": "Please select at least one video first.",
+    "description": "No videos selected warning"
+  },
+  "onboardingBadge": {
+    "message": "目標と目的",
+    "description": "Onboarding onboardingBadge"
+  },
+  "onboardingBtnUnderstand": {
+    "message": "理解した",
+    "description": "Onboarding onboardingBtnUnderstand"
+  },
+  "onboardingDesc": {
+    "message": "あなたは自分でレビューしたチャンネルのみを購読し、そのチャンネルに音楽や女性のコンテンツが含まれていないことを確認して、YouTube で彼を購読しないようにし、彼のビデオに音楽や女性が含まれており、死後も悪行が続いている場合は彼をサポートします。神があなたを助けてくださいますように。",
+    "description": "Onboarding onboardingDesc"
+  },
+  "onboardingLangLabel": {
+    "message": "インターフェース言語を選択してください:",
+    "description": "Onboarding onboardingLangLabel"
+  },
+  "onboardingSubtitle": {
+    "message": "開始前の警告と重要なメッセージ",
+    "description": "Onboarding onboardingSubtitle"
+  },
+  "onboardingTitle": {
+    "message": "コンテンツガーディアン",
+    "description": "Onboarding onboardingTitle"
+  },
+  "openInBrowser": {
+    "message": "Open in Browser",
+    "description": "Open selected videos in browser"
+  },
+  "openSelectedInBrowser": {
+    "message": "Open in Browser ({count})",
+    "description": "Open selected videos count in browser"
+  },
+  "openVideos": {
+    "message": "ビデオを見る",
+    "description": "Button to open channel videos"
+  },
+  "openedVideosInBrowser": {
+    "message": "Opened {count} videos in browser",
+    "description": "Toast when videos opened in browser"
+  },
+  "pasteBackupPrompt": {
+    "message": "バックアップ JSON を下のボックスに貼り付け、「インポートの確認」をクリックしてください。",
+    "description": "Toast when clipboard does not have valid JSON"
+  },
+  "pastePrompt": {
+    "message": "Or paste JSON text directly here:",
+    "description": "Paste prompt"
+  },
+  "pollIntervalLabel": {
+    "message": "新しいアップロードチェック間隔",
+    "description": "Interval setting label"
+  },
+  "quickPasteImport": {
+    "message": "Quick Paste Import (JSON)",
+    "description": "Quick paste import button"
+  },
+  "refreshNow": {
+    "message": "今すぐ更新してください",
+    "description": "Button to trigger immediate feed check"
+  },
+  "refreshing": {
+    "message": "フィードをチェックしています...",
+    "description": "Refreshing status"
+  },
+  "removeChannel": {
+    "message": "削除する",
+    "description": "Button to remove channel"
+  },
+  "removeVideo": {
+    "message": "ビデオを削除する",
+    "description": "Button to remove video from uploads list"
+  },
+  "searchBlockedPlaceholder": {
+    "message": "ブロックされたチャンネルを検索...",
+    "description": "Search placeholder for blocked channels"
+  },
+  "searchPlaceholder": {
+    "message": "承認されたチャンネルを検索...",
+    "description": "Placeholder for searching approved channels"
+  },
+  "searchVideosPlaceholder": {
+    "message": "承認されたビデオを検索...",
+    "description": "Placeholder for video search input"
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Select all videos"
+  },
+  "settingDisableTranslation": {
+    "message": "元のビデオのタイトルを表示 (自動翻訳を無効にする)",
+    "description": "Setting to disable YouTube auto-translation"
+  },
+  "settingDisableTranslationDesc": {
+    "message": "YouTube の自動翻訳を使わずに、クリエイターの本物のオリジナルのタイトルを表示します。",
+    "description": "Setting description for title untranslation"
+  },
+  "settingHideShorts": {
+    "message": "YouTube ショートをあらゆる場所から削除する",
+    "description": "Setting to hide and remove all shorts"
+  },
+  "settingHideShortsDesc": {
+    "message": "ショート動画のシェルフ、タブ、ボタンを非表示にし、ショート動画を標準の動画プレーヤーにリダイレクトします。",
+    "description": "Setting description for shorts removal"
+  },
+  "settingsSaved": {
+    "message": "設定が正常に保存されました。",
+    "description": "Settings saved notification"
+  },
+  "tabBlocked": {
+    "message": "ブロックされたチャンネル",
+    "description": "Blocked channels tab label"
+  },
+  "tabChannels": {
+    "message": "承認されたチャンネル",
+    "description": "Approved channels tab title"
+  },
+  "tabNewUploads": {
+    "message": "承認されたビデオ",
+    "description": "Approved videos tab title"
+  },
+  "tabSettings": {
+    "message": "設定",
+    "description": "Settings tab title"
+  },
+  "timeDaysAgo": {
+    "message": "{count}日前",
+    "description": "Relative time: days ago"
+  },
+  "timeHoursAgo": {
+    "message": "{count}時間前",
+    "description": "Relative time: hours ago"
+  },
+  "timeJustNow": {
+    "message": "ちょうど今",
+    "description": "Relative time: just now"
+  },
+  "unblockChannel": {
+    "message": "ブロックを解除する",
+    "description": "Button to unblock a channel"
+  },
+  "videoAddedSuccess": {
+    "message": "動画が承認済みリストに追加されました。",
+    "description": "Toast when video is added"
+  },
+  "videoInMyList": {
+    "message": "承認されたビデオ ✓",
+    "description": "Content script button: video already approved"
+  },
+  "videoMoved": {
+    "message": "Video moved successfully!",
+    "description": "Video moved toast"
+  }
+}
