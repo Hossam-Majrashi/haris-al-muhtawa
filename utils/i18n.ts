@@ -6,102 +6,57 @@ import type { AppLanguage } from './types';
 export type SupportedLanguage = string;
 
 export const supportedLanguages: AppLanguage[] = [
-  // 1
-  { nativeLanguageName: 'Arabic', code: 'ar', isRtl: true },
-  // 2
-  { nativeLanguageName: 'English', code: 'en', isRtl: false },
-  // 3
-  { nativeLanguageName: 'Urdu', code: 'ur', isRtl: true },
-  // 4
-  { nativeLanguageName: 'Indonesian', code: 'id', isRtl: false },
-  // 5
-  { nativeLanguageName: 'Bengali', code: 'bn', isRtl: false },
-  // 6
-  { nativeLanguageName: 'Turkish', code: 'tr', isRtl: false },
-  // 7
-  { nativeLanguageName: 'Persian', code: 'fa', isRtl: true },
-  // 8
-  { nativeLanguageName: 'Malay', code: 'ms', isRtl: false },
-  // 9
-  { nativeLanguageName: 'Pashto', code: 'ps', isRtl: true },
-  // 10
-  { nativeLanguageName: 'Punjabi', code: 'pa', isRtl: false },
-  // 11
-  { nativeLanguageName: 'Sindhi', code: 'sd', isRtl: true },
-  // 12
-  { nativeLanguageName: 'Hindi', code: 'hi', isRtl: false },
-  // 13
-  { nativeLanguageName: 'Malayalam', code: 'ml', isRtl: false },
-  // 14
-  { nativeLanguageName: 'Tamil', code: 'ta', isRtl: false },
-  // 15
-  { nativeLanguageName: 'Telugu', code: 'te', isRtl: false },
-  // 16
-  { nativeLanguageName: 'Somali', code: 'so', isRtl: false },
-  // 17
-  { nativeLanguageName: 'Hausa', code: 'ha', isRtl: false },
-  // 18
-  { nativeLanguageName: 'Swahili', code: 'sw', isRtl: false },
-  // 19
-  { nativeLanguageName: 'Azerbaijani', code: 'az', isRtl: false },
-  // 20
-  { nativeLanguageName: 'Uzbek', code: 'uz', isRtl: false },
-  // 21
-  { nativeLanguageName: 'Kazakh', code: 'kk', isRtl: false },
-  // 22
-  { nativeLanguageName: 'Kyrgyz', code: 'ky', isRtl: false },
-  // 23
-  { nativeLanguageName: 'Bosnian', code: 'bs', isRtl: false },
-  // 24
-  { nativeLanguageName: 'French', code: 'fr', isRtl: false },
-  // 25
-  { nativeLanguageName: 'Russian', code: 'ru', isRtl: false },
-  // 26
-  { nativeLanguageName: 'German', code: 'de', isRtl: false },
-  // 27
-  { nativeLanguageName: 'Spanish', code: 'es', isRtl: false },
-  // 28
-  { nativeLanguageName: 'Italian', code: 'it', isRtl: false },
-  // 29
-  { nativeLanguageName: 'Portuguese', code: 'pt', isRtl: false },
-  // 30
-  { nativeLanguageName: 'Chinese (Simplified)', code: 'zh', isRtl: false },
-  // 31
-  { nativeLanguageName: 'Chinese (Traditional)', code: 'zh-TW', isRtl: false },
-  // 32
-  { nativeLanguageName: 'Japanese', code: 'ja', isRtl: false },
-  // 33
-  { nativeLanguageName: 'Korean', code: 'ko', isRtl: false },
-  // 34
-  { nativeLanguageName: 'Kurdish', code: 'ku', isRtl: true },
-  // 35
-  { nativeLanguageName: 'Gujarati', code: 'gu', isRtl: false },
-  // 36
-  { nativeLanguageName: 'Marathi', code: 'mr', isRtl: false },
-  // 37
-  { nativeLanguageName: 'Dutch', code: 'nl', isRtl: false },
-  // 38
-  { nativeLanguageName: 'Polish', code: 'pl', isRtl: false },
-  // 39
-  { nativeLanguageName: 'Romanian', code: 'ro', isRtl: false },
-  // 40
-  { nativeLanguageName: 'Greek', code: 'el', isRtl: false },
-  // 41
+  // 1. Arabic (Always first)
+  { nativeLanguageName: 'العربية (Arabic)', code: 'ar', isRtl: true },
+
+  // Remaining languages sorted alphabetically (A-Z)
   { nativeLanguageName: 'Amharic', code: 'am', isRtl: false },
-  // 42
-  { nativeLanguageName: 'Nepali', code: 'ne', isRtl: false },
-  // 43
-  { nativeLanguageName: 'Yoruba', code: 'yo', isRtl: false },
-  // 44
-  { nativeLanguageName: 'Filipino', code: 'fil', isRtl: false },
-  // 45
+  { nativeLanguageName: 'Azerbaijani', code: 'az', isRtl: false },
+  { nativeLanguageName: 'Bengali', code: 'bn', isRtl: false },
+  { nativeLanguageName: 'Bosnian', code: 'bs', isRtl: false },
   { nativeLanguageName: 'Burmese', code: 'my', isRtl: false },
-  // 46
-  { nativeLanguageName: 'Vietnamese', code: 'vi', isRtl: false },
-  // 47
+  { nativeLanguageName: 'Chinese (Simplified)', code: 'zh', isRtl: false },
+  { nativeLanguageName: 'Chinese (Traditional)', code: 'zh-TW', isRtl: false },
+  { nativeLanguageName: 'Dutch', code: 'nl', isRtl: false },
+  { nativeLanguageName: 'English', code: 'en', isRtl: false },
+  { nativeLanguageName: 'Filipino', code: 'fil', isRtl: false },
+  { nativeLanguageName: 'French', code: 'fr', isRtl: false },
+  { nativeLanguageName: 'German', code: 'de', isRtl: false },
+  { nativeLanguageName: 'Greek', code: 'el', isRtl: false },
+  { nativeLanguageName: 'Gujarati', code: 'gu', isRtl: false },
+  { nativeLanguageName: 'Hausa', code: 'ha', isRtl: false },
+  { nativeLanguageName: 'Hindi', code: 'hi', isRtl: false },
+  { nativeLanguageName: 'Indonesian', code: 'id', isRtl: false },
+  { nativeLanguageName: 'Italian', code: 'it', isRtl: false },
+  { nativeLanguageName: 'Japanese', code: 'ja', isRtl: false },
+  { nativeLanguageName: 'Kazakh', code: 'kk', isRtl: false },
+  { nativeLanguageName: 'Korean', code: 'ko', isRtl: false },
+  { nativeLanguageName: 'Kurdish', code: 'ku', isRtl: true },
+  { nativeLanguageName: 'Kyrgyz', code: 'ky', isRtl: false },
+  { nativeLanguageName: 'Malay', code: 'ms', isRtl: false },
+  { nativeLanguageName: 'Malayalam', code: 'ml', isRtl: false },
+  { nativeLanguageName: 'Marathi', code: 'mr', isRtl: false },
+  { nativeLanguageName: 'Nepali', code: 'ne', isRtl: false },
+  { nativeLanguageName: 'Pashto', code: 'ps', isRtl: true },
+  { nativeLanguageName: 'Persian', code: 'fa', isRtl: true },
+  { nativeLanguageName: 'Polish', code: 'pl', isRtl: false },
+  { nativeLanguageName: 'Portuguese', code: 'pt', isRtl: false },
+  { nativeLanguageName: 'Punjabi', code: 'pa', isRtl: false },
+  { nativeLanguageName: 'Romanian', code: 'ro', isRtl: false },
+  { nativeLanguageName: 'Russian', code: 'ru', isRtl: false },
+  { nativeLanguageName: 'Sindhi', code: 'sd', isRtl: true },
+  { nativeLanguageName: 'Somali', code: 'so', isRtl: false },
+  { nativeLanguageName: 'Spanish', code: 'es', isRtl: false },
+  { nativeLanguageName: 'Swahili', code: 'sw', isRtl: false },
+  { nativeLanguageName: 'Tamil', code: 'ta', isRtl: false },
+  { nativeLanguageName: 'Telugu', code: 'te', isRtl: false },
   { nativeLanguageName: 'Thai', code: 'th', isRtl: false },
-  // 48
+  { nativeLanguageName: 'Turkish', code: 'tr', isRtl: false },
   { nativeLanguageName: 'Ukrainian', code: 'uk', isRtl: false },
+  { nativeLanguageName: 'Urdu', code: 'ur', isRtl: true },
+  { nativeLanguageName: 'Uzbek', code: 'uz', isRtl: false },
+  { nativeLanguageName: 'Vietnamese', code: 'vi', isRtl: false },
+  { nativeLanguageName: 'Yoruba', code: 'yo', isRtl: false },
 ];
 
 /**

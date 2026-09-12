@@ -45,6 +45,7 @@ export interface AppSettings {
   hasSeenOnboarding?: boolean;
   hideShorts?: boolean;
   disableTitleTranslation?: boolean;
+  whitelistOnlyMode?: boolean;
 }
 
 export interface ChannelInfo {

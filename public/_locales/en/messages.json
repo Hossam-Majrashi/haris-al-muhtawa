@@ -428,15 +428,15 @@
     "description": "Settings saved notification"
   },
   "tabBlocked": {
-    "message": "Blocked Channels",
+    "message": "Blocked",
     "description": "Blocked channels tab label"
   },
   "tabChannels": {
-    "message": "Approved Channels",
+    "message": "Channels",
     "description": "Approved channels tab title"
   },
   "tabNewUploads": {
-    "message": "Approved Videos",
+    "message": "Videos",
     "description": "Approved videos tab title"
   },
   "tabSettings": {
@@ -470,5 +470,85 @@
   "videoMoved": {
     "message": "Video moved successfully!",
     "description": "Video moved toast"
+  },
+  "tabWhitelist": {
+    "message": "Whitelist",
+    "description": "Whitelist tab title"
+  },
+  "whitelistModeTitle": {
+    "message": "Block all channels (Whitelist only mode)",
+    "description": "Whitelist only mode toggle title"
+  },
+  "whitelistModeDesc": {
+    "message": "Block all channels on homepage and recommendations, showing only whitelisted channels.",
+    "description": "Whitelist only mode toggle description"
+  },
+  "inputWhitelistPlaceholder": {
+    "message": "Enter channel name, handle (@handle) or URL...",
+    "description": "Input placeholder for adding channel to whitelist"
+  },
+  "btnSearchChannel": {
+    "message": "Search",
+    "description": "Search channel button"
+  },
+  "btnAddToWhitelist": {
+    "message": "Add to list",
+    "description": "Add channel to whitelist button"
+  },
+  "searchingChannel": {
+    "message": "Searching for channel...",
+    "description": "Searching channel status"
+  },
+  "channelNotFound": {
+    "message": "Channel not found. Please verify the name or handle.",
+    "description": "Channel not found error"
+  },
+  "channelAlreadyInWhitelist": {
+    "message": "This channel is already in the whitelist!",
+    "description": "Channel already in whitelist message"
+  },
+  "channelAddedToWhitelist": {
+    "message": "\"{name}\" added to whitelist successfully!",
+    "description": "Channel added to whitelist success toast"
+  },
+  "searchWhitelistPlaceholder": {
+    "message": "Search whitelist...",
+    "description": "Search inside whitelist placeholder"
+  },
+  "emptyWhitelistTitle": {
+    "message": "No whitelisted channels yet",
+    "description": "Empty whitelist title"
+  },
+  "emptyWhitelistDesc": {
+    "message": "Search and add channels using (+) above to make only them appear on your homepage and recommendations.",
+    "description": "Empty whitelist description"
+  },
+  "unapprovedOverlayTitle": {
+    "message": "Channel not in Whitelist",
+    "description": "Watch page overlay for unapproved channel in strict mode"
+  },
+  "unapprovedOverlayDesc": {
+    "message": "Whitelist mode is enabled. You can watch by adding this channel to the whitelist.",
+    "description": "Watch page overlay description for unapproved channel"
+  },
+  "whitelistHomeFeedTitle": {
+    "message": "Approved Channels Feed",
+    "description": "Whitelist home feed section title"
+  },
+  "whitelistSearchResultsTitle": {
+    "message": "Results from Approved Channels",
+    "description": "Approved channels search results title"
+  },
+  "whitelistSearchNoResults": {
+    "message": "No approved channels match this search",
+    "description": "No search results from approved channels"
+  },
+  "whitelistRelatedTitle": {
+    "message": "Approved Channel Recommendations",
+    "description": "Sidebar recommendations title for approved channels"
+  },
+  "allApprovedChannels": {
+    "message": "All Approved Channels",
+    "description": "All approved channels chip"
   }
 }

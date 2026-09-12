@@ -8,6 +8,7 @@ import {
   recordVideoUpload,
   getSettings,
   updateBadgeCount,
+  saveWhitelistFeedVideos,
 } from '@/utils/storage';
 import { fetchChannelUploads, resolveChannelIdFromHandle, isValidChannelAvatar } from '@/utils/youtube';
 import type { ApprovedChannel, NewUploadVideo } from '@/utils/types';
@@ -91,6 +92,9 @@ async function addChannelFromActiveTab(tab?: Browser.tabs.Tab): Promise<void> {
         avatarUrl: info.avatarUrl,
       });
 
+      // Fetch uploads immediately in background
+      checkAllApprovedChannels().catch(() => {});
+
       // Visual confirmation on badge
       await browser.action.setBadgeText({ text: '✓' });
       await browser.action.setBadgeBackgroundColor({ color: '#16a34a' });
@@ -124,6 +128,8 @@ async function addChannelFromActiveTab(tab?: Browser.tabs.Tab): Promise<void> {
         name: resolved.name || handle,
         avatarUrl: resolved.avatarUrl,
       });
+
+      checkAllApprovedChannels().catch(() => {});
 
       await browser.action.setBadgeText({ text: '✓' });
       await browser.action.setBadgeBackgroundColor({ color: '#16a34a' });
@@ -215,6 +221,7 @@ async function checkAllApprovedChannels(): Promise<number> {
   const channels = await getApprovedChannels();
   if (channels.length === 0) {
     await updateBadgeCount(0);
+    await saveWhitelistFeedVideos([]);
     return 0;
   }
 
@@ -222,6 +229,8 @@ async function checkAllApprovedChannels(): Promise<number> {
   const existingVideoIds = new Set(existingUploads.map((v) => v.videoId));
   const newVideosFound: NewUploadVideo[] = [];
   const updatedChannels: ApprovedChannel[] = [];
+  const allFeedVideos: NewUploadVideo[] = [];
+  const feedVideoIds = new Set<string>();
   let channelsModified = false;
 
   for (const channel of channels) {
@@ -254,10 +263,28 @@ async function checkAllApprovedChannels(): Promise<number> {
 
     try {
       const videos = await fetchChannelUploads(channelId);
+
+      // Collect uploads for the dedicated Whitelist Home Feed (does not pollute the popup's approved videos list)
+      for (const vid of videos) {
+        if (!feedVideoIds.has(vid.videoId)) {
+          feedVideoIds.add(vid.videoId);
+          allFeedVideos.push({
+            videoId: vid.videoId,
+            title: vid.title,
+            channelId,
+            channelName: channel.name || channel.handle || 'Approved Channel',
+            publishedAt: vid.publishedAt,
+            url: vid.url,
+            thumbnail: vid.thumbnail,
+            isRead: true,
+          });
+        }
+      }
+
       const latest = videos[0];
       if (latest) {
         if (!channel.lastKnownVideoId) {
-          // First time tracking this channel: record the latest video ID so we don't alert on old videos
+          // First time tracking this channel: record the latest video ID so we only alert on future uploads
           channel.lastKnownVideoId = latest.videoId;
           channelsModified = true;
         } else if (channel.lastKnownVideoId !== latest.videoId) {
@@ -293,6 +320,16 @@ async function checkAllApprovedChannels(): Promise<number> {
 
   if (channelsModified) {
     await saveApprovedChannels(updatedChannels);
+  }
+
+  // Save Whitelist Home Feed videos (sorted newest first)
+  if (allFeedVideos.length > 0) {
+    allFeedVideos.sort((a, b) => {
+      const timeA = a.publishedAt ? new Date(a.publishedAt).getTime() : 0;
+      const timeB = b.publishedAt ? new Date(b.publishedAt).getTime() : 0;
+      return timeB - timeA;
+    });
+    await saveWhitelistFeedVideos(allFeedVideos);
   }
 
   if (newVideosFound.length > 0) {

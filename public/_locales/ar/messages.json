@@ -428,15 +428,15 @@
     "description": "Settings saved notification"
   },
   "tabBlocked": {
-    "message": "القنوات المحظورة",
+    "message": "المحظورة",
     "description": "Blocked channels tab label"
   },
   "tabChannels": {
-    "message": "القنوات المعتمدة",
+    "message": "القنوات",
     "description": "Approved channels tab title"
   },
   "tabNewUploads": {
-    "message": "الفيديوهات المعتمدة",
+    "message": "الفيديوهات",
     "description": "Approved videos tab title"
   },
   "tabSettings": {
@@ -470,5 +470,85 @@
   "videoMoved": {
     "message": "تم نقل الفيديو بنجاح!",
     "description": "Video moved toast"
+  },
+  "tabWhitelist": {
+    "message": "القائمة البيضاء",
+    "description": "Whitelist tab title"
+  },
+  "whitelistModeTitle": {
+    "message": "حظر جميع القنوات (وضع القائمة البيضاء فقط)",
+    "description": "Whitelist only mode toggle title"
+  },
+  "whitelistModeDesc": {
+    "message": "حظر جميع القنوات في الصفحة الرئيسية والمقترحات، وإظهار قنوات القائمة البيضاء فقط.",
+    "description": "Whitelist only mode toggle description"
+  },
+  "inputWhitelistPlaceholder": {
+    "message": "أدخل اسم القناة أو المعرف (@handle أو الرابط)...",
+    "description": "Input placeholder for adding channel to whitelist"
+  },
+  "btnSearchChannel": {
+    "message": "بحث",
+    "description": "Search channel button"
+  },
+  "btnAddToWhitelist": {
+    "message": "إضافة للقائمة",
+    "description": "Add channel to whitelist button"
+  },
+  "searchingChannel": {
+    "message": "جارٍ البحث عن القناة...",
+    "description": "Searching channel status"
+  },
+  "channelNotFound": {
+    "message": "لم يتم العثور على القناة، يرجى التحقق من الاسم أو المعرف.",
+    "description": "Channel not found error"
+  },
+  "channelAlreadyInWhitelist": {
+    "message": "هذه القناة موجودة بالفعل في القائمة البيضاء!",
+    "description": "Channel already in whitelist message"
+  },
+  "channelAddedToWhitelist": {
+    "message": "تمت إضافة \"{name}\" إلى القائمة البيضاء بنجاح!",
+    "description": "Channel added to whitelist success toast"
+  },
+  "searchWhitelistPlaceholder": {
+    "message": "ابحث في القائمة البيضاء...",
+    "description": "Search inside whitelist placeholder"
+  },
+  "emptyWhitelistTitle": {
+    "message": "لا توجد قنوات في القائمة البيضاء بعد",
+    "description": "Empty whitelist title"
+  },
+  "emptyWhitelistDesc": {
+    "message": "ابحث عن قنوات وأضفها بالزر (+) أعلاه لتظهر هي فقط في صفحتك الرئيسية والمقترحات.",
+    "description": "Empty whitelist description"
+  },
+  "unapprovedOverlayTitle": {
+    "message": "قناة غير موجودة في القائمة البيضاء",
+    "description": "Watch page overlay for unapproved channel in strict mode"
+  },
+  "unapprovedOverlayDesc": {
+    "message": "وضع القائمة البيضاء مفعل. يمكنك مشاهدة الفيديو بإضافة هذه القناة إلى القائمة البيضاء.",
+    "description": "Watch page overlay description for unapproved channel"
+  },
+  "whitelistHomeFeedTitle": {
+    "message": "محتوى قنواتك المعتمدة",
+    "description": "Whitelist home feed section title"
+  },
+  "whitelistSearchResultsTitle": {
+    "message": "نتائج البحث من القنوات المعتمدة",
+    "description": "Approved channels search results title"
+  },
+  "whitelistSearchNoResults": {
+    "message": "لا توجد نتائج من قنواتك المعتمدة لهذا البحث",
+    "description": "No search results from approved channels"
+  },
+  "whitelistRelatedTitle": {
+    "message": "مقترحات من قنواتك المعتمدة",
+    "description": "Sidebar recommendations title for approved channels"
+  },
+  "allApprovedChannels": {
+    "message": "جميع القنوات المعتمدة",
+    "description": "All approved channels chip"
   }
 }

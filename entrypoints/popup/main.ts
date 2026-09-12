@@ -34,7 +34,7 @@ import type { SupportedLanguage } from '@/utils/i18n';
 import type { ApprovedChannel, NewUploadVideo, AppSettings, VideoFolder, BlockedChannel } from '@/utils/types';
 
 // State variables
-let currentTab: 'channels' | 'uploads' | 'blocked' | 'settings' = 'channels';
+let currentTab: 'channels' | 'uploads' | 'blocked' | 'whitelist' | 'settings' = 'channels';
 let approvedChannels: ApprovedChannel[] = [];
 let blockedChannels: BlockedChannel[] = [];
 let newUploads: NewUploadVideo[] = [];
@@ -45,6 +45,7 @@ let currentSettings: AppSettings;
 let searchQuery = '';
 let videoSearchQuery = '';
 let blockedSearchQuery = '';
+let whitelistSearchQuery = '';
 
 // DOM Elements
 const txtAppTitle = document.getElementById('txt-app-title')!;
@@ -52,19 +53,23 @@ const txtAppSubtitle = document.getElementById('txt-app-subtitle')!;
 const txtTabChannels = document.getElementById('txt-tab-channels')!;
 const txtTabUploads = document.getElementById('txt-tab-uploads')!;
 const txtTabBlocked = document.getElementById('txt-tab-blocked');
+const txtTabWhitelist = document.getElementById('txt-tab-whitelist');
 const txtTabSettings = document.getElementById('txt-tab-settings')!;
 const badgeChannelCount = document.getElementById('badge-channel-count')!;
 const badgeBlockedCount = document.getElementById('badge-blocked-count') as HTMLElement | null;
+const badgeWhitelistCount = document.getElementById('badge-whitelist-count') as HTMLElement | null;
 const badgeUnreadCount = document.getElementById('badge-unread-count')!;
 
 const tabBtnChannels = document.getElementById('tab-btn-channels')!;
 const tabBtnUploads = document.getElementById('tab-btn-uploads')!;
 const tabBtnBlocked = document.getElementById('tab-btn-blocked') as HTMLElement | null;
+const tabBtnWhitelist = document.getElementById('tab-btn-whitelist') as HTMLElement | null;
 const tabBtnSettings = document.getElementById('tab-btn-settings')!;
 
 const panelChannels = document.getElementById('panel-channels')!;
 const panelUploads = document.getElementById('panel-uploads')!;
 const panelBlocked = document.getElementById('panel-blocked') as HTMLElement | null;
+const panelWhitelist = document.getElementById('panel-whitelist') as HTMLElement | null;
 const panelSettings = document.getElementById('panel-settings')!;
 
 const currentChannelCard = document.getElementById('current-channel-card')!;
@@ -92,6 +97,22 @@ const inputBlockedSearch = document.getElementById('input-blocked-search') as HT
 const btnClearBlockedSearch = document.getElementById('btn-clear-blocked-search') as HTMLElement | null;
 const blockedChannelsListEl = document.getElementById('blocked-channels-list') as HTMLElement | null;
 const blockedChannelsEmptyEl = document.getElementById('blocked-channels-empty') as HTMLElement | null;
+
+// Whitelist Tab Elements
+const toggleWhitelistMode = document.getElementById('toggle-whitelist-mode') as HTMLInputElement | null;
+const txtWhitelistModeTitle = document.getElementById('txt-whitelist-mode-title');
+const txtWhitelistModeDesc = document.getElementById('txt-whitelist-mode-desc');
+const inputWhitelistChannel = document.getElementById('input-whitelist-channel') as HTMLInputElement | null;
+const btnSearchWhitelistChannel = document.getElementById('btn-search-whitelist-channel') as HTMLButtonElement | null;
+const txtBtnSearchChannel = document.getElementById('txt-btn-search-channel');
+const whitelistSearchLoading = document.getElementById('whitelist-search-loading') as HTMLElement | null;
+const txtWhitelistSearching = document.getElementById('txt-whitelist-searching');
+const whitelistSearchError = document.getElementById('whitelist-search-error') as HTMLElement | null;
+const whitelistPreviewCard = document.getElementById('whitelist-preview-card') as HTMLElement | null;
+const inputWhitelistSearch = document.getElementById('input-whitelist-search') as HTMLInputElement | null;
+const btnClearWhitelistSearch = document.getElementById('btn-clear-whitelist-search') as HTMLElement | null;
+const whitelistChannelsListEl = document.getElementById('whitelist-channels-list') as HTMLElement | null;
+const whitelistChannelsEmptyEl = document.getElementById('whitelist-channels-empty') as HTMLElement | null;
 
 // Settings Toggles Elements
 const chkHideShorts = document.getElementById('chk-hide-shorts') as HTMLInputElement | null;
@@ -198,6 +219,40 @@ function showToast(message: string, type: 'success' | 'error' = 'success') {
     statusToast.style.display = 'none';
   }, 3500);
 }
+
+function createSvg(
+  viewBox: string,
+  width: string,
+  height: string,
+  strokeWidth: string,
+  children: SVGElement[] = []
+): SVGSVGElement {
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('viewBox', viewBox);
+  svg.setAttribute('width', width);
+  svg.setAttribute('height', height);
+  svg.setAttribute('fill', 'none');
+  svg.setAttribute('stroke', 'currentColor');
+  svg.setAttribute('stroke-width', strokeWidth);
+  svg.setAttribute('stroke-linecap', 'round');
+  svg.setAttribute('stroke-linejoin', 'round');
+  for (const child of children) {
+    svg.appendChild(child);
+  }
+  return svg;
+}
+
+function createSvgChild<K extends keyof SVGElementTagNameMap>(
+  tag: K,
+  attrs: Record<string, string>
+): SVGElementTagNameMap[K] {
+  const el = document.createElementNS('http://www.w3.org/2000/svg', tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    el.setAttribute(k, v);
+  }
+  return el;
+}
+
 
 /**
  * Custom in-popup confirmation modal that completely avoids the native window.confirm() dialog.
@@ -334,7 +389,12 @@ async function applyLocalization(lang: SupportedLanguage) {
   txtTabChannels.textContent = t('tabChannels', lang);
   txtTabUploads.textContent = t('tabNewUploads', lang);
   if (txtTabBlocked) txtTabBlocked.textContent = t('tabBlocked', lang);
+  if (txtTabWhitelist) txtTabWhitelist.textContent = t('tabWhitelist', lang);
   txtTabSettings.textContent = t('tabSettings', lang);
+
+  if (badgeWhitelistCount) {
+    badgeWhitelistCount.textContent = String(approvedChannels.length);
+  }
 
   inputSearch.placeholder = t('searchPlaceholder', lang);
   if (inputVideoSearch) {
@@ -349,6 +409,12 @@ async function applyLocalization(lang: SupportedLanguage) {
   if (txtBtnAddBlocked) {
     txtBtnAddBlocked.textContent = t('btnBlockChannel', lang);
   }
+  if (txtWhitelistModeTitle) txtWhitelistModeTitle.textContent = t('whitelistModeTitle', lang);
+  if (txtWhitelistModeDesc) txtWhitelistModeDesc.textContent = t('whitelistModeDesc', lang);
+  if (inputWhitelistChannel) inputWhitelistChannel.placeholder = t('inputWhitelistPlaceholder', lang);
+  if (txtBtnSearchChannel) txtBtnSearchChannel.textContent = t('btnSearchChannel', lang);
+  if (txtWhitelistSearching) txtWhitelistSearching.textContent = t('searchingChannel', lang);
+  if (inputWhitelistSearch) inputWhitelistSearch.placeholder = t('searchWhitelistPlaceholder', lang);
   if (txtLabelHideShorts) txtLabelHideShorts.textContent = t('settingHideShorts', lang);
   if (txtDescHideShorts) txtDescHideShorts.textContent = t('settingHideShortsDesc', lang);
   if (txtLabelDisableTranslation) txtLabelDisableTranslation.textContent = t('settingDisableTranslation', lang);
@@ -546,49 +612,99 @@ function renderCurrentChannelCard() {
   const initial = displayName.charAt(0).toUpperCase();
 
   currentChannelCard.style.display = 'block';
-  currentChannelCard.innerHTML = `
-    <div class="current-channel-header">
-      <span class="current-channel-title">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <circle cx="12" cy="12" r="10"></circle>
-          <polygon points="10 8 16 12 10 16 10 8"></polygon>
-        </svg>
-        ${t('currentChannelTitle', lang)}
-      </span>
-    </div>
-    <div class="current-channel-body">
-      <a href="${channelUrl}" target="_blank" rel="noopener" class="current-channel-main" title="${displayName}">
-        <div class="channel-avatar-wrapper">
-          ${
-            info.avatarUrl && isValidChannelAvatar(info.avatarUrl)
-              ? `<img src="${info.avatarUrl}" alt="${displayName}" class="channel-avatar-img" referrerpolicy="no-referrer" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" /><div class="channel-avatar-pill current-pill" style="display: none;">${initial}</div>`
-              : `<div class="channel-avatar-pill current-pill">${initial}</div>`
-          }
-        </div>
-        <div class="channel-meta">
-          <div class="channel-name" title="${displayName}">${displayName}</div>
-          <div class="channel-handle">${displayHandle}</div>
-        </div>
-      </a>
-      <div class="current-channel-action">
-        ${
-          isApproved
-            ? `<span class="approved-tag">✓ ${t('alreadyApproved', lang)}</span>`
-            : `<button type="button" id="btn-add-current" class="action-btn small-btn add-btn">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="12" y1="5" x2="12" y2="19"></line>
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-                <span>${t('addThisChannel', lang)}</span>
-              </button>`
-        }
-      </div>
-    </div>
-  `;
+  currentChannelCard.replaceChildren();
 
-  if (!isApproved) {
-    const btnAdd = document.getElementById('btn-add-current');
-    btnAdd?.addEventListener('click', async (e) => {
+  const headerDiv = document.createElement('div');
+  headerDiv.className = 'current-channel-header';
+  const titleSpan = document.createElement('span');
+  titleSpan.className = 'current-channel-title';
+  const headerSvg = createSvg('0 0 24 24', '13', '13', '2.5', [
+    createSvgChild('circle', { cx: '12', cy: '12', r: '10' }),
+    createSvgChild('polygon', { points: '10 8 16 12 10 16 10 8' }),
+  ]);
+  titleSpan.appendChild(headerSvg);
+  titleSpan.appendChild(document.createTextNode(' ' + t('currentChannelTitle', lang)));
+  headerDiv.appendChild(titleSpan);
+
+  const bodyDiv = document.createElement('div');
+  bodyDiv.className = 'current-channel-body';
+
+  const mainLink = document.createElement('a');
+  mainLink.href = channelUrl;
+  mainLink.target = '_blank';
+  mainLink.rel = 'noopener';
+  mainLink.className = 'current-channel-main';
+  mainLink.title = displayName;
+
+  const avatarWrapper = document.createElement('div');
+  avatarWrapper.className = 'channel-avatar-wrapper';
+  const avatarPill = document.createElement('div');
+  avatarPill.className = 'channel-avatar-pill current-pill';
+  avatarPill.textContent = initial;
+
+  if (info.avatarUrl && isValidChannelAvatar(info.avatarUrl)) {
+    const avatarImg = document.createElement('img');
+    avatarImg.src = info.avatarUrl;
+    avatarImg.alt = displayName;
+    avatarImg.className = 'channel-avatar-img';
+    avatarImg.setAttribute('referrerpolicy', 'no-referrer');
+    avatarPill.style.display = 'none';
+    avatarImg.onerror = () => {
+      avatarImg.style.display = 'none';
+      avatarPill.style.display = 'flex';
+    };
+    avatarWrapper.appendChild(avatarImg);
+  }
+  avatarWrapper.appendChild(avatarPill);
+
+  const metaDiv = document.createElement('div');
+  metaDiv.className = 'channel-meta';
+  const nameDiv = document.createElement('div');
+  nameDiv.className = 'channel-name';
+  nameDiv.title = displayName;
+  nameDiv.textContent = displayName;
+  const handleDiv = document.createElement('div');
+  handleDiv.className = 'channel-handle';
+  handleDiv.textContent = displayHandle;
+  metaDiv.appendChild(nameDiv);
+  metaDiv.appendChild(handleDiv);
+
+  mainLink.appendChild(avatarWrapper);
+  mainLink.appendChild(metaDiv);
+
+  const actionDiv = document.createElement('div');
+  actionDiv.className = 'current-channel-action';
+
+  let btnAdd: HTMLButtonElement | null = null;
+  if (isApproved) {
+    const approvedTag = document.createElement('span');
+    approvedTag.className = 'approved-tag';
+    approvedTag.textContent = `✓ ${t('alreadyApproved', lang)}`;
+    actionDiv.appendChild(approvedTag);
+  } else {
+    btnAdd = document.createElement('button');
+    btnAdd.type = 'button';
+    btnAdd.id = 'btn-add-current';
+    btnAdd.className = 'action-btn small-btn add-btn';
+    const addSvg = createSvg('0 0 24 24', '13', '13', '2.5', [
+      createSvgChild('line', { x1: '12', y1: '5', x2: '12', y2: '19' }),
+      createSvgChild('line', { x1: '5', y1: '12', x2: '19', y2: '12' }),
+    ]);
+    const addSpan = document.createElement('span');
+    addSpan.textContent = t('addThisChannel', lang);
+    btnAdd.appendChild(addSvg);
+    btnAdd.appendChild(addSpan);
+    actionDiv.appendChild(btnAdd);
+  }
+
+  bodyDiv.appendChild(mainLink);
+  bodyDiv.appendChild(actionDiv);
+
+  currentChannelCard.appendChild(headerDiv);
+  currentChannelCard.appendChild(bodyDiv);
+
+  if (!isApproved && btnAdd) {
+    btnAdd.addEventListener('click', async (e) => {
       e.stopPropagation();
       let finalId = info.id || '';
       let finalAvatar = info.avatarUrl;
@@ -642,45 +758,97 @@ function renderCurrentVideoCard() {
   const isApproved = isVideoApproved(info.videoId, newUploads);
 
   currentVideoCard.style.display = 'block';
-  currentVideoCard.innerHTML = `
-    <div class="current-channel-header">
-      <span class="current-channel-title">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <polygon points="23 7 16 12 23 17 23 7"></polygon>
-          <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-        </svg>
-        ${t('currentVideoTitle', lang)}
-      </span>
-    </div>
-    <div class="current-channel-body">
-      <a href="${info.url}" target="_blank" rel="noopener" class="current-channel-main" title="${info.title}">
-        <div class="video-thumb-wrap" style="width: 60px; height: 36px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0;">
-          <img src="${info.thumbnail}" alt="${info.title}" class="video-thumb" />
-        </div>
-        <div class="channel-meta" style="min-width: 0; flex: 1;">
-          <div class="channel-name" title="${info.title}">${info.title}</div>
-          <div class="channel-handle">${info.channelName}</div>
-        </div>
-      </a>
-      <div class="current-channel-action">
-        ${
-          isApproved
-            ? `<span class="approved-tag">✓ ${t('alreadyApprovedVideo', lang)}</span>`
-            : `<button type="button" id="btn-add-current-video" class="action-btn small-btn add-btn">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="12" y1="5" x2="12" y2="19"></line>
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-                <span>${t('addThisVideo', lang)}</span>
-              </button>`
-        }
-      </div>
-    </div>
-  `;
+  currentVideoCard.replaceChildren();
 
-  if (!isApproved) {
-    const btnAdd = document.getElementById('btn-add-current-video');
-    btnAdd?.addEventListener('click', async (e) => {
+  const headerDiv = document.createElement('div');
+  headerDiv.className = 'current-channel-header';
+  const titleSpan = document.createElement('span');
+  titleSpan.className = 'current-channel-title';
+  const headerSvg = createSvg('0 0 24 24', '13', '13', '2.5', [
+    createSvgChild('polygon', { points: '23 7 16 12 23 17 23 7' }),
+    createSvgChild('rect', { x: '1', y: '5', width: '15', height: '14', rx: '2', ry: '2' }),
+  ]);
+  titleSpan.appendChild(headerSvg);
+  titleSpan.appendChild(document.createTextNode(' ' + t('currentVideoTitle', lang)));
+  headerDiv.appendChild(titleSpan);
+
+  const bodyDiv = document.createElement('div');
+  bodyDiv.className = 'current-channel-body';
+
+  const mainLink = document.createElement('a');
+  mainLink.href = info.url;
+  mainLink.target = '_blank';
+  mainLink.rel = 'noopener';
+  mainLink.className = 'current-channel-main';
+  mainLink.title = info.title;
+
+  const thumbWrap = document.createElement('div');
+  thumbWrap.className = 'video-thumb-wrap';
+  thumbWrap.style.width = '60px';
+  thumbWrap.style.height = '36px';
+  thumbWrap.style.borderRadius = 'var(--radius-sm)';
+  thumbWrap.style.overflow = 'hidden';
+  thumbWrap.style.flexShrink = '0';
+
+  const thumbImg = document.createElement('img');
+  thumbImg.src = info.thumbnail;
+  thumbImg.alt = info.title;
+  thumbImg.className = 'video-thumb';
+  thumbWrap.appendChild(thumbImg);
+
+  const metaDiv = document.createElement('div');
+  metaDiv.className = 'channel-meta';
+  metaDiv.style.minWidth = '0';
+  metaDiv.style.flex = '1';
+
+  const titleDiv = document.createElement('div');
+  titleDiv.className = 'channel-name';
+  titleDiv.title = info.title;
+  titleDiv.textContent = info.title;
+
+  const handleDiv = document.createElement('div');
+  handleDiv.className = 'channel-handle';
+  handleDiv.textContent = info.channelName;
+
+  metaDiv.appendChild(titleDiv);
+  metaDiv.appendChild(handleDiv);
+
+  mainLink.appendChild(thumbWrap);
+  mainLink.appendChild(metaDiv);
+
+  const actionDiv = document.createElement('div');
+  actionDiv.className = 'current-channel-action';
+
+  let btnAdd: HTMLButtonElement | null = null;
+  if (isApproved) {
+    const approvedTag = document.createElement('span');
+    approvedTag.className = 'approved-tag';
+    approvedTag.textContent = `✓ ${t('alreadyApprovedVideo', lang)}`;
+    actionDiv.appendChild(approvedTag);
+  } else {
+    btnAdd = document.createElement('button');
+    btnAdd.type = 'button';
+    btnAdd.id = 'btn-add-current-video';
+    btnAdd.className = 'action-btn small-btn add-btn';
+    const addSvg = createSvg('0 0 24 24', '13', '13', '2.5', [
+      createSvgChild('line', { x1: '12', y1: '5', x2: '12', y2: '19' }),
+      createSvgChild('line', { x1: '5', y1: '12', x2: '19', y2: '12' }),
+    ]);
+    const addSpan = document.createElement('span');
+    addSpan.textContent = t('addThisVideo', lang);
+    btnAdd.appendChild(addSvg);
+    btnAdd.appendChild(addSpan);
+    actionDiv.appendChild(btnAdd);
+  }
+
+  bodyDiv.appendChild(mainLink);
+  bodyDiv.appendChild(actionDiv);
+
+  currentVideoCard.appendChild(headerDiv);
+  currentVideoCard.appendChild(bodyDiv);
+
+  if (!isApproved && btnAdd) {
+    btnAdd.addEventListener('click', async (e) => {
       e.stopPropagation();
       newUploads = await addApprovedVideo(info);
       renderUploads();
@@ -706,86 +874,160 @@ function renderChannels() {
   });
 
   badgeChannelCount.textContent = String(approvedChannels.length);
+  if (badgeWhitelistCount) badgeWhitelistCount.textContent = String(approvedChannels.length);
 
   if (approvedChannels.length === 0) {
-    channelsListEl.innerHTML = '';
+    channelsListEl.replaceChildren();
     channelsEmptyEl.style.display = 'block';
-    channelsEmptyEl.innerHTML = `
-      <div class="empty-icon">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          <line x1="12" y1="8" x2="12" y2="12"></line>
-          <line x1="12" y1="16" x2="12.01" y2="16"></line>
-        </svg>
-      </div>
-      <h3 class="empty-title">${t('emptyChannelsTitle', lang)}</h3>
-      <p class="empty-desc">${t('emptyChannelsDesc', lang)}</p>
-    `;
+    channelsEmptyEl.replaceChildren();
+
+    const emptyIcon = document.createElement('div');
+    emptyIcon.className = 'empty-icon';
+    const emptySvg = createSvg('0 0 24 24', '48', '48', '1.5', [
+      createSvgChild('path', { d: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z' }),
+      createSvgChild('line', { x1: '12', y1: '8', x2: '12', y2: '12' }),
+      createSvgChild('line', { x1: '12', y1: '16', x2: '12.01', y2: '16' }),
+    ]);
+    emptyIcon.appendChild(emptySvg);
+
+    const emptyTitle = document.createElement('h3');
+    emptyTitle.className = 'empty-title';
+    emptyTitle.textContent = t('emptyChannelsTitle', lang);
+
+    const emptyDesc = document.createElement('p');
+    emptyDesc.className = 'empty-desc';
+    emptyDesc.textContent = t('emptyChannelsDesc', lang);
+
+    channelsEmptyEl.appendChild(emptyIcon);
+    channelsEmptyEl.appendChild(emptyTitle);
+    channelsEmptyEl.appendChild(emptyDesc);
     return;
   }
 
   if (filtered.length === 0) {
-    channelsListEl.innerHTML = '';
+    channelsListEl.replaceChildren();
     channelsEmptyEl.style.display = 'block';
-    channelsEmptyEl.innerHTML = `
-      <div class="empty-icon">🔍</div>
-      <h3 class="empty-title">${t('noChannelsFound', lang)}</h3>
-    `;
+    channelsEmptyEl.replaceChildren();
+
+    const emptyIcon = document.createElement('div');
+    emptyIcon.className = 'empty-icon';
+    emptyIcon.textContent = '🔍';
+
+    const emptyTitle = document.createElement('h3');
+    emptyTitle.className = 'empty-title';
+    emptyTitle.textContent = t('noChannelsFound', lang);
+
+    channelsEmptyEl.appendChild(emptyIcon);
+    channelsEmptyEl.appendChild(emptyTitle);
     return;
   }
 
   channelsEmptyEl.style.display = 'none';
+  channelsListEl.replaceChildren();
 
-  channelsListEl.innerHTML = filtered
-    .map((ch) => {
-      const rawName = ch.name?.trim() || '';
-      const displayName = (rawName && !rawName.startsWith('@'))
+  for (const ch of filtered) {
+    const rawName = ch.name?.trim() || '';
+    const displayName =
+      rawName && !rawName.startsWith('@')
         ? rawName
-        : (rawName.replace(/^@/, '') || ch.handle?.replace(/^@/, '') || ch.id || 'Channel');
+        : rawName.replace(/^@/, '') || ch.handle?.replace(/^@/, '') || ch.id || 'Channel';
 
-      const displayHandle = ch.handle
-        ? (ch.handle.startsWith('@') ? ch.handle : `@${ch.handle}`)
-        : (ch.id || '');
+    const displayHandle = ch.handle ? (ch.handle.startsWith('@') ? ch.handle : `@${ch.handle}`) : ch.id || '';
 
-      const initial = displayName.charAt(0).toUpperCase();
-      const channelUrl = ch.handle
-        ? `https://www.youtube.com/${ch.handle.startsWith('@') ? ch.handle : '@' + ch.handle}`
-        : `https://www.youtube.com/channel/${ch.id}`;
-      const videosUrl = `${channelUrl}/videos`;
+    const initial = displayName.charAt(0).toUpperCase();
+    const channelUrl = ch.handle
+      ? `https://www.youtube.com/${ch.handle.startsWith('@') ? ch.handle : '@' + ch.handle}`
+      : `https://www.youtube.com/channel/${ch.id}`;
+    const videosUrl = `${channelUrl}/videos`;
 
-      return `
-        <div class="channel-card" data-id="${ch.id}" data-handle="${ch.handle}">
-          <a href="${channelUrl}" target="_blank" rel="noopener" class="channel-info" title="${displayName}">
-            <div class="channel-avatar-wrapper">
-              ${
-                ch.avatarUrl && isValidChannelAvatar(ch.avatarUrl)
-                  ? `<img src="${ch.avatarUrl}" alt="${displayName}" class="channel-avatar-img" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" /><div class="channel-avatar-pill" style="display: none;">${initial}</div>`
-                  : `<div class="channel-avatar-pill">${initial}</div>`
-              }
-            </div>
-            <div class="channel-meta">
-              <div class="channel-name" title="${displayName}">${displayName}</div>
-              <div class="channel-handle">${displayHandle}</div>
-            </div>
-          </a>
-          <div class="channel-actions">
-            <a href="${videosUrl}" target="_blank" rel="noopener" class="channel-action-btn view-btn" title="${t('openVideos', lang)}">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-              </svg>
-              <span>${t('openVideos', lang)}</span>
-            </a>
-            <button type="button" class="channel-action-btn delete-btn btn-remove-channel" data-identifier="${ch.id || ch.handle}" title="${t('removeChannel', lang)}">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="3 6 5 6 21 6"></polyline>
-                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-      `;
-    })
-    .join('');
+    const card = document.createElement('div');
+    card.className = 'channel-card';
+    card.setAttribute('data-id', ch.id);
+    card.setAttribute('data-handle', ch.handle);
+
+    const infoLink = document.createElement('a');
+    infoLink.href = channelUrl;
+    infoLink.target = '_blank';
+    infoLink.rel = 'noopener';
+    infoLink.className = 'channel-info';
+    infoLink.title = displayName;
+
+    const avatarWrapper = document.createElement('div');
+    avatarWrapper.className = 'channel-avatar-wrapper';
+
+    const pill = document.createElement('div');
+    pill.className = 'channel-avatar-pill';
+    pill.textContent = initial;
+
+    if (ch.avatarUrl && isValidChannelAvatar(ch.avatarUrl)) {
+      const img = document.createElement('img');
+      img.src = ch.avatarUrl;
+      img.alt = displayName;
+      img.className = 'channel-avatar-img';
+      img.setAttribute('referrerpolicy', 'no-referrer');
+      img.loading = 'lazy';
+      pill.style.display = 'none';
+      img.onerror = () => {
+        img.style.display = 'none';
+        pill.style.display = 'flex';
+      };
+      avatarWrapper.appendChild(img);
+    }
+    avatarWrapper.appendChild(pill);
+
+    const meta = document.createElement('div');
+    meta.className = 'channel-meta';
+    const nameDiv = document.createElement('div');
+    nameDiv.className = 'channel-name';
+    nameDiv.title = displayName;
+    nameDiv.textContent = displayName;
+    const handleDiv = document.createElement('div');
+    handleDiv.className = 'channel-handle';
+    handleDiv.textContent = displayHandle;
+    meta.appendChild(nameDiv);
+    meta.appendChild(handleDiv);
+
+    infoLink.appendChild(avatarWrapper);
+    infoLink.appendChild(meta);
+
+    const actions = document.createElement('div');
+    actions.className = 'channel-actions';
+
+    const viewBtn = document.createElement('a');
+    viewBtn.href = videosUrl;
+    viewBtn.target = '_blank';
+    viewBtn.rel = 'noopener';
+    viewBtn.className = 'channel-action-btn view-btn';
+    viewBtn.title = t('openVideos', lang);
+    const viewSvg = createSvg('0 0 24 24', '12', '12', '2.5', [
+      createSvgChild('polygon', { points: '5 3 19 12 5 21 5 3' }),
+    ]);
+    const viewSpan = document.createElement('span');
+    viewSpan.textContent = t('openVideos', lang);
+    viewBtn.appendChild(viewSvg);
+    viewBtn.appendChild(viewSpan);
+
+    const delBtn = document.createElement('button');
+    delBtn.type = 'button';
+    delBtn.className = 'channel-action-btn delete-btn btn-remove-channel';
+    const identifier = ch.id || ch.handle;
+    delBtn.setAttribute('data-identifier', identifier);
+    delBtn.title = t('removeChannel', lang);
+    const delSvg = createSvg('0 0 24 24', '15', '15', '2', [
+      createSvgChild('polyline', { points: '3 6 5 6 21 6' }),
+      createSvgChild('path', {
+        d: 'M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2',
+      }),
+    ]);
+    delBtn.appendChild(delSvg);
+
+    actions.appendChild(viewBtn);
+    actions.appendChild(delBtn);
+
+    card.appendChild(infoLink);
+    card.appendChild(actions);
+    channelsListEl.appendChild(card);
+  }
 
   // Attach delete handlers
   channelsListEl.querySelectorAll('.btn-remove-channel').forEach((btn) => {
@@ -911,42 +1153,72 @@ function renderFolderNav() {
   const totalCount = newUploads.length;
   const uncategorizedCount = newUploads.filter((v) => !v.folderId).length;
 
-  const chips: string[] = [];
+  folderChipsList.replaceChildren();
 
   // All chip
-  chips.push(`
-    <button type="button" class="folder-chip ${currentFolderId === 'all' ? 'active' : ''}" data-folder-id="all">
-      <span>${t('foldersAll', lang)}</span>
-      <span class="folder-count">${totalCount}</span>
-    </button>
-  `);
+  const allBtn = document.createElement('button');
+  allBtn.type = 'button';
+  allBtn.className = `folder-chip ${currentFolderId === 'all' ? 'active' : ''}`;
+  allBtn.setAttribute('data-folder-id', 'all');
+  const allSpan = document.createElement('span');
+  allSpan.textContent = t('foldersAll', lang);
+  const allCount = document.createElement('span');
+  allCount.className = 'folder-count';
+  allCount.textContent = String(totalCount);
+  allBtn.appendChild(allSpan);
+  allBtn.appendChild(allCount);
+  folderChipsList.appendChild(allBtn);
 
   // Uncategorized chip
-  chips.push(`
-    <button type="button" class="folder-chip ${currentFolderId === 'uncategorized' ? 'active' : ''}" data-folder-id="uncategorized">
-      <span>${t('foldersUncategorized', lang)}</span>
-      <span class="folder-count">${uncategorizedCount}</span>
-    </button>
-  `);
+  const uncatBtn = document.createElement('button');
+  uncatBtn.type = 'button';
+  uncatBtn.className = `folder-chip ${currentFolderId === 'uncategorized' ? 'active' : ''}`;
+  uncatBtn.setAttribute('data-folder-id', 'uncategorized');
+  const uncatSpan = document.createElement('span');
+  uncatSpan.textContent = t('foldersUncategorized', lang);
+  const uncatCount = document.createElement('span');
+  uncatCount.className = 'folder-count';
+  uncatCount.textContent = String(uncategorizedCount);
+  uncatBtn.appendChild(uncatSpan);
+  uncatBtn.appendChild(uncatCount);
+  folderChipsList.appendChild(uncatBtn);
 
   // Custom user folders
   for (const f of videoFolders) {
     const count = newUploads.filter((v) => v.folderId === f.id).length;
     const isActive = currentFolderId === f.id;
-    chips.push(`
-      <div class="folder-chip-group ${isActive ? 'active' : ''}">
-        <button type="button" class="folder-chip ${isActive ? 'active' : ''}" data-folder-id="${f.id}" title="${f.name}">
-          <span class="folder-name-text">${f.name}</span>
-          <span class="folder-count">${count}</span>
-        </button>
-        <button type="button" class="folder-delete-btn" data-delete-folder-id="${f.id}" title="${t('deleteFolder', lang)}">
-          ✕
-        </button>
-      </div>
-    `);
-  }
 
-  folderChipsList.innerHTML = chips.join('');
+    const groupDiv = document.createElement('div');
+    groupDiv.className = `folder-chip-group ${isActive ? 'active' : ''}`;
+
+    const chipBtn = document.createElement('button');
+    chipBtn.type = 'button';
+    chipBtn.className = `folder-chip ${isActive ? 'active' : ''}`;
+    chipBtn.setAttribute('data-folder-id', f.id);
+    chipBtn.title = f.name;
+
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'folder-name-text';
+    nameSpan.textContent = f.name;
+
+    const countSpan = document.createElement('span');
+    countSpan.className = 'folder-count';
+    countSpan.textContent = String(count);
+
+    chipBtn.appendChild(nameSpan);
+    chipBtn.appendChild(countSpan);
+
+    const delBtn = document.createElement('button');
+    delBtn.type = 'button';
+    delBtn.className = 'folder-delete-btn';
+    delBtn.setAttribute('data-delete-folder-id', f.id);
+    delBtn.title = t('deleteFolder', lang);
+    delBtn.textContent = '✕';
+
+    groupDiv.appendChild(chipBtn);
+    groupDiv.appendChild(delBtn);
+    folderChipsList.appendChild(groupDiv);
+  }
 
   // Attach click listener for chips
   folderChipsList.querySelectorAll<HTMLButtonElement>('.folder-chip').forEach((chip) => {
@@ -1016,87 +1288,165 @@ function renderUploads() {
   updateSelectionBarUI(filteredVideos);
 
   if (newUploads.length === 0) {
-    uploadsListEl.innerHTML = '';
+    uploadsListEl.replaceChildren();
     uploadsEmptyEl.style.display = 'block';
-    uploadsEmptyEl.innerHTML = `
-      <div class="empty-icon">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <polygon points="23 7 16 12 23 17 23 7"></polygon>
-          <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-        </svg>
-      </div>
-      <h3 class="empty-title">${t('emptyUploadsTitle', lang)}</h3>
-      <p class="empty-desc">${t('emptyUploadsDesc', lang)}</p>
-    `;
+    uploadsEmptyEl.replaceChildren();
+
+    const emptyIcon = document.createElement('div');
+    emptyIcon.className = 'empty-icon';
+    const emptySvg = createSvg('0 0 24 24', '48', '48', '1.5', [
+      createSvgChild('polygon', { points: '23 7 16 12 23 17 23 7' }),
+      createSvgChild('rect', { x: '1', y: '5', width: '15', height: '14', rx: '2', ry: '2' }),
+    ]);
+    emptyIcon.appendChild(emptySvg);
+
+    const emptyTitle = document.createElement('h3');
+    emptyTitle.className = 'empty-title';
+    emptyTitle.textContent = t('emptyUploadsTitle', lang);
+
+    const emptyDesc = document.createElement('p');
+    emptyDesc.className = 'empty-desc';
+    emptyDesc.textContent = t('emptyUploadsDesc', lang);
+
+    uploadsEmptyEl.appendChild(emptyIcon);
+    uploadsEmptyEl.appendChild(emptyTitle);
+    uploadsEmptyEl.appendChild(emptyDesc);
     return;
   }
 
   if (filteredVideos.length === 0) {
-    uploadsListEl.innerHTML = '';
+    uploadsListEl.replaceChildren();
     uploadsEmptyEl.style.display = 'block';
-    uploadsEmptyEl.innerHTML = `
-      <div class="empty-icon">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </div>
-      <h3 class="empty-title">${t('noVideosFound', lang)}</h3>
-    `;
+    uploadsEmptyEl.replaceChildren();
+
+    const emptyIcon = document.createElement('div');
+    emptyIcon.className = 'empty-icon';
+    const emptySvg = createSvg('0 0 24 24', '48', '48', '1.5', [
+      createSvgChild('circle', { cx: '11', cy: '11', r: '8' }),
+      createSvgChild('line', { x1: '21', y1: '21', x2: '16.65', y2: '16.65' }),
+    ]);
+    emptyIcon.appendChild(emptySvg);
+
+    const emptyTitle = document.createElement('h3');
+    emptyTitle.className = 'empty-title';
+    emptyTitle.textContent = t('noVideosFound', lang);
+
+    uploadsEmptyEl.appendChild(emptyIcon);
+    uploadsEmptyEl.appendChild(emptyTitle);
     return;
   }
 
   uploadsEmptyEl.style.display = 'none';
+  uploadsListEl.replaceChildren();
 
-  uploadsListEl.innerHTML = filteredVideos
-    .map((vid) => {
-      const formattedDate = formatDate(vid.publishedAt, lang);
-      const isChecked = selectedVideoIds.has(vid.videoId);
+  for (const vid of filteredVideos) {
+    const formattedDate = formatDate(vid.publishedAt, lang);
+    const isChecked = selectedVideoIds.has(vid.videoId);
 
-      const folderOptions = [
-        `<option value="" ${!vid.folderId ? 'selected' : ''}>📁 ${t('foldersUncategorized', lang)}</option>`,
-        ...videoFolders.map(
-          (f) => `<option value="${f.id}" ${vid.folderId === f.id ? 'selected' : ''}>📁 ${f.name}</option>`
-        ),
-      ].join('');
+    const card = document.createElement('div');
+    card.className = `video-card ${isChecked ? 'selected' : ''}`;
 
-      return `
-        <div class="video-card ${isChecked ? 'selected' : ''}">
-          <div class="video-select-cell">
-            <label class="checkbox-wrapper">
-              <input type="checkbox" class="chk-video-item" data-video-id="${vid.videoId}" ${isChecked ? 'checked' : ''} />
-              <span class="custom-checkbox"></span>
-            </label>
-          </div>
-          <a href="${vid.url}" target="_blank" rel="noopener" class="video-main-link" data-video-id="${vid.videoId}">
-            <div class="video-thumb-wrap">
-              <img src="${vid.thumbnail}" alt="${vid.title}" class="video-thumb" loading="lazy" />
-            </div>
-            <div class="video-info">
-              <div class="video-title" title="${vid.title}">${vid.title}</div>
-              <div class="video-subinfo">
-                <span class="video-channel">${vid.channelName}</span>
-                <span class="video-date">${formattedDate}</span>
-              </div>
-            </div>
-          </a>
-          <div class="video-actions">
-            <div class="video-folder-select-wrap">
-              <select class="styled-select-xs select-video-folder" data-video-id="${vid.videoId}" title="${t('moveToFolder', lang)}">
-                ${folderOptions}
-              </select>
-            </div>
-            <button type="button" class="channel-action-btn delete-btn btn-remove-video" data-video-id="${vid.videoId}" title="${t('removeVideo', lang)}">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="3 6 5 6 21 6"></polyline>
-                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-      `;
-    })
-    .join('');
+    const selectCell = document.createElement('div');
+    selectCell.className = 'video-select-cell';
+    const label = document.createElement('label');
+    label.className = 'checkbox-wrapper';
+    const inputChk = document.createElement('input');
+    inputChk.type = 'checkbox';
+    inputChk.className = 'chk-video-item';
+    inputChk.setAttribute('data-video-id', vid.videoId);
+    inputChk.checked = isChecked;
+    const customChk = document.createElement('span');
+    customChk.className = 'custom-checkbox';
+    label.appendChild(inputChk);
+    label.appendChild(customChk);
+    selectCell.appendChild(label);
+
+    const mainLink = document.createElement('a');
+    mainLink.href = vid.url;
+    mainLink.target = '_blank';
+    mainLink.rel = 'noopener';
+    mainLink.className = 'video-main-link';
+    mainLink.setAttribute('data-video-id', vid.videoId);
+
+    const thumbWrap = document.createElement('div');
+    thumbWrap.className = 'video-thumb-wrap';
+    const thumbImg = document.createElement('img');
+    thumbImg.src = vid.thumbnail;
+    thumbImg.alt = vid.title;
+    thumbImg.className = 'video-thumb';
+    thumbImg.loading = 'lazy';
+    thumbWrap.appendChild(thumbImg);
+
+    const videoInfo = document.createElement('div');
+    videoInfo.className = 'video-info';
+    const titleDiv = document.createElement('div');
+    titleDiv.className = 'video-title';
+    titleDiv.title = vid.title;
+    titleDiv.textContent = vid.title;
+
+    const subinfo = document.createElement('div');
+    subinfo.className = 'video-subinfo';
+    const channelSpan = document.createElement('span');
+    channelSpan.className = 'video-channel';
+    channelSpan.textContent = vid.channelName;
+    const dateSpan = document.createElement('span');
+    dateSpan.className = 'video-date';
+    dateSpan.textContent = formattedDate;
+    subinfo.appendChild(channelSpan);
+    subinfo.appendChild(dateSpan);
+
+    videoInfo.appendChild(titleDiv);
+    videoInfo.appendChild(subinfo);
+
+    mainLink.appendChild(thumbWrap);
+    mainLink.appendChild(videoInfo);
+
+    const actions = document.createElement('div');
+    actions.className = 'video-actions';
+
+    const folderWrap = document.createElement('div');
+    folderWrap.className = 'video-folder-select-wrap';
+    const select = document.createElement('select');
+    select.className = 'styled-select-xs select-video-folder';
+    select.setAttribute('data-video-id', vid.videoId);
+    select.title = t('moveToFolder', lang);
+
+    const uncatOpt = document.createElement('option');
+    uncatOpt.value = '';
+    uncatOpt.selected = !vid.folderId;
+    uncatOpt.textContent = `📁 ${t('foldersUncategorized', lang)}`;
+    select.appendChild(uncatOpt);
+
+    for (const f of videoFolders) {
+      const opt = document.createElement('option');
+      opt.value = f.id;
+      opt.selected = vid.folderId === f.id;
+      opt.textContent = `📁 ${f.name}`;
+      select.appendChild(opt);
+    }
+    folderWrap.appendChild(select);
+
+    const delBtn = document.createElement('button');
+    delBtn.type = 'button';
+    delBtn.className = 'channel-action-btn delete-btn btn-remove-video';
+    delBtn.setAttribute('data-video-id', vid.videoId);
+    delBtn.title = t('removeVideo', lang);
+    const delSvg = createSvg('0 0 24 24', '15', '15', '2', [
+      createSvgChild('polyline', { points: '3 6 5 6 21 6' }),
+      createSvgChild('path', {
+        d: 'M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2',
+      }),
+    ]);
+    delBtn.appendChild(delSvg);
+
+    actions.appendChild(folderWrap);
+    actions.appendChild(delBtn);
+
+    card.appendChild(selectCell);
+    card.appendChild(mainLink);
+    card.appendChild(actions);
+    uploadsListEl.appendChild(card);
+  }
 
   // Item checkboxes
   uploadsListEl.querySelectorAll<HTMLInputElement>('.chk-video-item').forEach((chk) => {
@@ -1185,70 +1535,143 @@ function renderBlockedChannels() {
   }
 
   if (blockedChannels.length === 0) {
-    blockedChannelsListEl.innerHTML = '';
+    blockedChannelsListEl.replaceChildren();
     blockedChannelsEmptyEl.style.display = 'block';
-    blockedChannelsEmptyEl.innerHTML = `
-      <div class="empty-icon">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
-        </svg>
-      </div>
-      <div class="empty-title">${t('emptyBlockedTitle', lang)}</div>
-      <div class="empty-desc">${t('emptyBlockedDesc', lang)}</div>
-    `;
+    blockedChannelsEmptyEl.replaceChildren();
+
+    const emptyIcon = document.createElement('div');
+    emptyIcon.className = 'empty-icon';
+    const emptySvg = createSvg('0 0 24 24', '48', '48', '1.5', [
+      createSvgChild('circle', { cx: '12', cy: '12', r: '10' }),
+      createSvgChild('line', { x1: '4.93', y1: '4.93', x2: '19.07', y2: '19.07' }),
+    ]);
+    emptyIcon.appendChild(emptySvg);
+
+    const emptyTitle = document.createElement('div');
+    emptyTitle.className = 'empty-title';
+    emptyTitle.textContent = t('emptyBlockedTitle', lang);
+
+    const emptyDesc = document.createElement('div');
+    emptyDesc.className = 'empty-desc';
+    emptyDesc.textContent = t('emptyBlockedDesc', lang);
+
+    blockedChannelsEmptyEl.appendChild(emptyIcon);
+    blockedChannelsEmptyEl.appendChild(emptyTitle);
+    blockedChannelsEmptyEl.appendChild(emptyDesc);
     return;
   }
 
   if (filtered.length === 0) {
-    blockedChannelsListEl.innerHTML = '';
+    blockedChannelsListEl.replaceChildren();
     blockedChannelsEmptyEl.style.display = 'block';
-    blockedChannelsEmptyEl.innerHTML = `
-      <div class="empty-icon">🔍</div>
-      <div class="empty-title">${t('noResults', lang)}</div>
-      <div class="empty-desc">${t('noResultsDesc', lang)}</div>
-    `;
+    blockedChannelsEmptyEl.replaceChildren();
+
+    const emptyIcon = document.createElement('div');
+    emptyIcon.className = 'empty-icon';
+    emptyIcon.textContent = '🔍';
+
+    const emptyTitle = document.createElement('div');
+    emptyTitle.className = 'empty-title';
+    emptyTitle.textContent = t('noResults', lang);
+
+    const emptyDesc = document.createElement('div');
+    emptyDesc.className = 'empty-desc';
+    emptyDesc.textContent = t('noResultsDesc', lang);
+
+    blockedChannelsEmptyEl.appendChild(emptyIcon);
+    blockedChannelsEmptyEl.appendChild(emptyTitle);
+    blockedChannelsEmptyEl.appendChild(emptyDesc);
     return;
   }
 
   blockedChannelsEmptyEl.style.display = 'none';
-  blockedChannelsListEl.innerHTML = filtered
-    .map((ch) => {
-      const avatarSrc = isValidChannelAvatar(ch.avatarUrl) ? ch.avatarUrl : null;
-      const initial = (ch.name || ch.handle || '?').charAt(0).toUpperCase();
-      const blockedDate = formatDate(new Date(ch.blockedAt).toISOString(), lang);
+  blockedChannelsListEl.replaceChildren();
 
-      return `
-        <div class="channel-card" data-identifier="${ch.id || ch.handle}">
-          <div class="channel-info-main">
-            <div class="channel-avatar">
-              ${
-                avatarSrc
-                  ? `<img src="${avatarSrc}" alt="${ch.name}" class="avatar-img" />`
-                  : `<div class="avatar-placeholder" style="background: rgba(239, 68, 68, 0.2); color: #f87171;">${initial}</div>`
-              }
-            </div>
-            <div class="channel-details">
-              <span class="channel-name" title="${ch.name}">${ch.name}</span>
-              <div class="channel-meta-row">
-                <span class="channel-handle">${ch.handle || ch.id}</span>
-                <span class="channel-meta-dot">•</span>
-                <span class="channel-date">${blockedDate}</span>
-              </div>
-            </div>
-          </div>
-          <div class="channel-actions">
-            <button type="button" class="btn-unblock-channel" data-identifier="${ch.id || ch.handle}" title="${t('btnUnblockChannel', lang)}">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>${t('btnUnblockChannel', lang)}</span>
-            </button>
-          </div>
-        </div>
-      `;
-    })
-    .join('');
+  for (const ch of filtered) {
+    const avatarSrc = isValidChannelAvatar(ch.avatarUrl) ? ch.avatarUrl : null;
+    const initial = (ch.name || ch.handle || '?').charAt(0).toUpperCase();
+    const blockedDate = formatDate(new Date(ch.blockedAt).toISOString(), lang);
+    const identifier = ch.id || ch.handle;
+
+    const card = document.createElement('div');
+    card.className = 'channel-card';
+    card.setAttribute('data-identifier', identifier);
+
+    const infoMain = document.createElement('div');
+    infoMain.className = 'channel-info-main';
+
+    const avatarDiv = document.createElement('div');
+    avatarDiv.className = 'channel-avatar';
+    if (avatarSrc) {
+      const img = document.createElement('img');
+      img.src = avatarSrc;
+      img.alt = ch.name;
+      img.className = 'avatar-img';
+      avatarDiv.appendChild(img);
+    } else {
+      const placeholder = document.createElement('div');
+      placeholder.className = 'avatar-placeholder';
+      placeholder.style.background = 'rgba(239, 68, 68, 0.2)';
+      placeholder.style.color = '#f87171';
+      placeholder.textContent = initial;
+      avatarDiv.appendChild(placeholder);
+    }
+
+    const detailsDiv = document.createElement('div');
+    detailsDiv.className = 'channel-details';
+
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'channel-name';
+    nameSpan.title = ch.name;
+    nameSpan.textContent = ch.name;
+
+    const metaRow = document.createElement('div');
+    metaRow.className = 'channel-meta-row';
+
+    const handleSpan = document.createElement('span');
+    handleSpan.className = 'channel-handle';
+    handleSpan.textContent = ch.handle || ch.id;
+
+    const dotSpan = document.createElement('span');
+    dotSpan.className = 'channel-meta-dot';
+    dotSpan.textContent = '•';
+
+    const dateSpan = document.createElement('span');
+    dateSpan.className = 'channel-date';
+    dateSpan.textContent = blockedDate;
+
+    metaRow.appendChild(handleSpan);
+    metaRow.appendChild(dotSpan);
+    metaRow.appendChild(dateSpan);
+
+    detailsDiv.appendChild(nameSpan);
+    detailsDiv.appendChild(metaRow);
+
+    infoMain.appendChild(avatarDiv);
+    infoMain.appendChild(detailsDiv);
+
+    const actions = document.createElement('div');
+    actions.className = 'channel-actions';
+
+    const unblockBtn = document.createElement('button');
+    unblockBtn.type = 'button';
+    unblockBtn.className = 'btn-unblock-channel';
+    unblockBtn.setAttribute('data-identifier', identifier);
+    unblockBtn.title = t('btnUnblockChannel', lang);
+    const unblockSvg = createSvg('0 0 24 24', '13', '13', '2.2', [
+      createSvgChild('polyline', { points: '20 6 9 17 4 12' }),
+    ]);
+    const unblockSpan = document.createElement('span');
+    unblockSpan.textContent = t('btnUnblockChannel', lang);
+    unblockBtn.appendChild(unblockSvg);
+    unblockBtn.appendChild(unblockSpan);
+
+    actions.appendChild(unblockBtn);
+
+    card.appendChild(infoMain);
+    card.appendChild(actions);
+    blockedChannelsListEl.appendChild(card);
+  }
 
   // Attach unblock handlers
   blockedChannelsListEl.querySelectorAll('.btn-unblock-channel').forEach((btn) => {
@@ -1271,6 +1694,346 @@ function renderBlockedChannels() {
       }
     });
   });
+}
+
+/**
+ * Render the list of whitelisted channels and sync strict whitelist mode toggle.
+ */
+function renderWhitelist() {
+  if (!whitelistChannelsListEl || !whitelistChannelsEmptyEl) return;
+  const lang = currentSettings.language;
+
+  if (toggleWhitelistMode) {
+    toggleWhitelistMode.checked = currentSettings.whitelistOnlyMode === true;
+  }
+
+  if (badgeWhitelistCount) {
+    badgeWhitelistCount.textContent = String(approvedChannels.length);
+  }
+
+  const filtered = approvedChannels.filter((ch) => {
+    if (!whitelistSearchQuery) return true;
+    const q = whitelistSearchQuery.toLowerCase();
+    return (
+      ch.name.toLowerCase().includes(q) ||
+      ch.handle.toLowerCase().includes(q) ||
+      ch.id.toLowerCase().includes(q)
+    );
+  });
+
+  if (approvedChannels.length === 0) {
+    whitelistChannelsListEl.replaceChildren();
+    whitelistChannelsEmptyEl.style.display = 'block';
+    whitelistChannelsEmptyEl.replaceChildren();
+
+    const emptyIcon = document.createElement('div');
+    emptyIcon.className = 'empty-icon';
+    const emptySvg = createSvg('0 0 24 24', '48', '48', '1.5', [
+      createSvgChild('path', { d: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z' }),
+      createSvgChild('polyline', { points: '9 12 11 14 15 10' }),
+    ]);
+    emptyIcon.appendChild(emptySvg);
+
+    const emptyTitle = document.createElement('h3');
+    emptyTitle.className = 'empty-title';
+    emptyTitle.textContent = t('emptyWhitelistTitle', lang);
+
+    const emptyDesc = document.createElement('p');
+    emptyDesc.className = 'empty-desc';
+    emptyDesc.textContent = t('emptyWhitelistDesc', lang);
+
+    whitelistChannelsEmptyEl.appendChild(emptyIcon);
+    whitelistChannelsEmptyEl.appendChild(emptyTitle);
+    whitelistChannelsEmptyEl.appendChild(emptyDesc);
+    return;
+  }
+
+  if (filtered.length === 0) {
+    whitelistChannelsListEl.replaceChildren();
+    whitelistChannelsEmptyEl.style.display = 'block';
+    whitelistChannelsEmptyEl.replaceChildren();
+
+    const emptyIcon = document.createElement('div');
+    emptyIcon.className = 'empty-icon';
+    emptyIcon.textContent = '🔍';
+
+    const emptyTitle = document.createElement('h3');
+    emptyTitle.className = 'empty-title';
+    emptyTitle.textContent = t('noChannelsFound', lang);
+
+    whitelistChannelsEmptyEl.appendChild(emptyIcon);
+    whitelistChannelsEmptyEl.appendChild(emptyTitle);
+    return;
+  }
+
+  whitelistChannelsEmptyEl.style.display = 'none';
+  whitelistChannelsListEl.replaceChildren();
+
+  for (const ch of filtered) {
+    const rawName = ch.name?.trim() || '';
+    const displayName =
+      rawName && !rawName.startsWith('@')
+        ? rawName
+        : rawName.replace(/^@/, '') || ch.handle?.replace(/^@/, '') || ch.id || 'Channel';
+
+    const displayHandle = ch.handle ? (ch.handle.startsWith('@') ? ch.handle : `@${ch.handle}`) : ch.id || '';
+    const initial = displayName.charAt(0).toUpperCase();
+    const channelUrl = ch.handle
+      ? `https://www.youtube.com/${ch.handle.startsWith('@') ? ch.handle : '@' + ch.handle}`
+      : `https://www.youtube.com/channel/${ch.id}`;
+    const videosUrl = `${channelUrl}/videos`;
+
+    const card = document.createElement('div');
+    card.className = 'channel-card';
+    card.setAttribute('data-id', ch.id);
+    card.setAttribute('data-handle', ch.handle);
+
+    const infoLink = document.createElement('a');
+    infoLink.href = channelUrl;
+    infoLink.target = '_blank';
+    infoLink.rel = 'noopener';
+    infoLink.className = 'channel-info';
+    infoLink.title = displayName;
+
+    const avatarWrapper = document.createElement('div');
+    avatarWrapper.className = 'channel-avatar-wrapper';
+    const pill = document.createElement('div');
+    pill.className = 'channel-avatar-pill';
+    pill.style.background = 'rgba(34, 197, 94, 0.2)';
+    pill.style.color = '#4ade80';
+    pill.textContent = initial;
+
+    if (ch.avatarUrl && isValidChannelAvatar(ch.avatarUrl)) {
+      const img = document.createElement('img');
+      img.src = ch.avatarUrl;
+      img.alt = displayName;
+      img.className = 'channel-avatar-img';
+      img.setAttribute('referrerpolicy', 'no-referrer');
+      pill.style.display = 'none';
+      img.onerror = () => {
+        img.style.display = 'none';
+        pill.style.display = 'flex';
+      };
+      avatarWrapper.appendChild(img);
+    }
+    avatarWrapper.appendChild(pill);
+
+    const meta = document.createElement('div');
+    meta.className = 'channel-meta';
+    const nameDiv = document.createElement('div');
+    nameDiv.className = 'channel-name';
+    nameDiv.title = displayName;
+    nameDiv.textContent = displayName;
+    const handleDiv = document.createElement('div');
+    handleDiv.className = 'channel-handle';
+    handleDiv.textContent = displayHandle;
+    meta.appendChild(nameDiv);
+    meta.appendChild(handleDiv);
+
+    infoLink.appendChild(avatarWrapper);
+    infoLink.appendChild(meta);
+
+    const actions = document.createElement('div');
+    actions.className = 'channel-actions';
+
+    const viewBtn = document.createElement('a');
+    viewBtn.href = videosUrl;
+    viewBtn.target = '_blank';
+    viewBtn.rel = 'noopener';
+    viewBtn.className = 'channel-action-btn view-btn';
+    viewBtn.title = t('openVideos', lang);
+    const viewSvg = createSvg('0 0 24 24', '12', '12', '2.5', [
+      createSvgChild('polygon', { points: '5 3 19 12 5 21 5 3' }),
+    ]);
+    const viewSpan = document.createElement('span');
+    viewSpan.textContent = t('openVideos', lang);
+    viewBtn.appendChild(viewSvg);
+    viewBtn.appendChild(viewSpan);
+
+    const delBtn = document.createElement('button');
+    delBtn.type = 'button';
+    delBtn.className = 'channel-action-btn delete-btn btn-remove-whitelist-channel';
+    const identifier = ch.id || ch.handle;
+    delBtn.setAttribute('data-identifier', identifier);
+    delBtn.title = t('removeChannel', lang);
+    const delSvg = createSvg('0 0 24 24', '15', '15', '2', [
+      createSvgChild('polyline', { points: '3 6 5 6 21 6' }),
+      createSvgChild('path', {
+        d: 'M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2',
+      }),
+    ]);
+    delBtn.appendChild(delSvg);
+
+    actions.appendChild(viewBtn);
+    actions.appendChild(delBtn);
+
+    card.appendChild(infoLink);
+    card.appendChild(actions);
+    whitelistChannelsListEl.appendChild(card);
+  }
+
+  // Attach delete handlers
+  whitelistChannelsListEl.querySelectorAll('.btn-remove-whitelist-channel').forEach((btn) => {
+    btn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      const identifier = btn.getAttribute('data-identifier');
+      if (!identifier) return;
+
+      const confirmed = await showCustomConfirm({
+        message: t('confirmRemove', lang),
+        confirmText: t('removeChannel', lang),
+        isDanger: true,
+      });
+
+      if (confirmed) {
+        approvedChannels = await removeApprovedChannel(identifier);
+        renderWhitelist();
+        renderChannels();
+        renderCurrentChannelCard();
+        showToast(t('statusDeleted', lang));
+      }
+    });
+  });
+}
+
+/**
+ * Handle searching and previewing a channel to add to the whitelist.
+ */
+async function handleSearchWhitelistChannel() {
+  if (!inputWhitelistChannel) return;
+  const val = inputWhitelistChannel.value.trim();
+  const lang = currentSettings.language;
+
+  if (!val) {
+    inputWhitelistChannel.focus();
+    return;
+  }
+
+  if (whitelistSearchError) {
+    whitelistSearchError.style.display = 'none';
+    whitelistSearchError.textContent = '';
+  }
+  if (whitelistPreviewCard) {
+    whitelistPreviewCard.style.display = 'none';
+    whitelistPreviewCard.replaceChildren();
+  }
+  if (whitelistSearchLoading) {
+    whitelistSearchLoading.style.display = 'flex';
+  }
+
+  try {
+    const resolved = await resolveChannelIdFromHandle(val);
+    if (whitelistSearchLoading) {
+      whitelistSearchLoading.style.display = 'none';
+    }
+
+    if (!resolved || (!resolved.id && !resolved.name)) {
+      if (whitelistSearchError) {
+        whitelistSearchError.textContent = t('channelNotFound', lang);
+        whitelistSearchError.style.display = 'block';
+      }
+      return;
+    }
+
+    const displayName = resolved.name || resolved.handle || 'Channel';
+    const displayHandle = resolved.handle || (resolved.id ? `@${resolved.id}` : '');
+    const initial = displayName.charAt(0).toUpperCase();
+    const isAlreadyApproved = isChannelApproved(resolved.id || resolved.handle || '', approvedChannels);
+
+    if (whitelistPreviewCard) {
+      whitelistPreviewCard.replaceChildren();
+
+      const previewInfo = document.createElement('div');
+      previewInfo.className = 'whitelist-preview-info';
+
+      const avatarWrap = document.createElement('div');
+      avatarWrap.className = 'whitelist-preview-avatar-wrapper';
+
+      const pill = document.createElement('div');
+      pill.className = 'whitelist-preview-pill';
+      pill.textContent = initial;
+
+      if (resolved.avatarUrl && isValidChannelAvatar(resolved.avatarUrl)) {
+        const img = document.createElement('img');
+        img.src = resolved.avatarUrl;
+        img.alt = displayName;
+        img.className = 'whitelist-preview-avatar';
+        img.setAttribute('referrerpolicy', 'no-referrer');
+        pill.style.display = 'none';
+        img.onerror = () => {
+          img.style.display = 'none';
+          pill.style.display = 'flex';
+        };
+        avatarWrap.appendChild(img);
+      }
+      avatarWrap.appendChild(pill);
+
+      const textCol = document.createElement('div');
+      textCol.className = 'whitelist-preview-text';
+      const nameDiv = document.createElement('div');
+      nameDiv.className = 'whitelist-preview-name';
+      nameDiv.textContent = displayName;
+      const handleDiv = document.createElement('div');
+      handleDiv.className = 'whitelist-preview-handle';
+      handleDiv.textContent = displayHandle;
+      textCol.appendChild(nameDiv);
+      textCol.appendChild(handleDiv);
+
+      previewInfo.appendChild(avatarWrap);
+      previewInfo.appendChild(textCol);
+
+      const actionBtn = document.createElement('button');
+      actionBtn.type = 'button';
+      actionBtn.className = 'btn-confirm-add-whitelist';
+
+      if (isAlreadyApproved) {
+        actionBtn.disabled = true;
+        actionBtn.style.opacity = '0.6';
+        actionBtn.style.cursor = 'default';
+        actionBtn.textContent = t('channelAlreadyInWhitelist', lang);
+      } else {
+        const plusSvg = createSvg('0 0 24 24', '14', '14', '2.5', [
+          createSvgChild('line', { x1: '12', y1: '5', x2: '12', y2: '19' }),
+          createSvgChild('line', { x1: '5', y1: '12', x2: '19', y2: '12' }),
+        ]);
+        const btnSpan = document.createElement('span');
+        btnSpan.textContent = t('btnAddToWhitelist', lang);
+        actionBtn.appendChild(plusSvg);
+        actionBtn.appendChild(btnSpan);
+
+        actionBtn.addEventListener('click', async () => {
+          const newChannel: ApprovedChannel = {
+            id: resolved.id || `UC_${Date.now()}`,
+            name: displayName,
+            handle: resolved.handle || (resolved.id ? `@${resolved.id}` : `@channel`),
+            avatarUrl: resolved.avatarUrl,
+            addedAt: Date.now(),
+          };
+
+          approvedChannels = await addApprovedChannel(newChannel);
+          whitelistPreviewCard.style.display = 'none';
+          whitelistPreviewCard.replaceChildren();
+          inputWhitelistChannel.value = '';
+          showToast(t('channelAddedToWhitelist', lang, { name: displayName }), 'success');
+          renderWhitelist();
+          renderChannels();
+          browser.runtime.sendMessage({ type: 'POLL_FEEDS_NOW' });
+        });
+      }
+
+      whitelistPreviewCard.appendChild(previewInfo);
+      whitelistPreviewCard.appendChild(actionBtn);
+      whitelistPreviewCard.style.display = 'flex';
+    }
+  } catch (err) {
+    if (whitelistSearchLoading) {
+      whitelistSearchLoading.style.display = 'none';
+    }
+    if (whitelistSearchError) {
+      whitelistSearchError.textContent = t('channelNotFound', lang);
+      whitelistSearchError.style.display = 'block';
+    }
+  }
 }
 
 /**
@@ -1308,47 +2071,106 @@ function renderCurrentBlockedChannelCard() {
     ? `https://www.youtube.com/${info.handle.startsWith('@') ? info.handle : '@' + info.handle}`
     : `https://www.youtube.com/channel/${info.id}`;
 
-  currentBlockedChannelCard.innerHTML = `
-    <div class="current-channel-header">
-      <span class="current-channel-title">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
-        </svg>
-        ${isBlocked ? t('channelIsBlocked', lang) : t('blockCurrentChannel', lang)}
-      </span>
-    </div>
-    <div class="current-channel-body">
-      <a href="${channelUrl}" target="_blank" rel="noopener" class="current-channel-main" title="${displayName}">
-        <div class="channel-avatar-wrapper">
-          ${
-            info.avatarUrl && isValidChannelAvatar(info.avatarUrl)
-              ? `<img src="${info.avatarUrl}" alt="${displayName}" class="channel-avatar-img" referrerpolicy="no-referrer" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" /><div class="channel-avatar-pill current-pill" style="display: none; background: rgba(239, 68, 68, 0.2); color: #f87171;">${initial}</div>`
-              : `<div class="channel-avatar-pill current-pill" style="background: rgba(239, 68, 68, 0.2); color: #f87171;">${initial}</div>`
-          }
-        </div>
-        <div class="channel-meta">
-          <div class="channel-name" title="${displayName}">${displayName}</div>
-          <div class="channel-handle" dir="ltr">${displayHandle}</div>
-        </div>
-      </a>
-      <div class="current-channel-action">
-        ${
-          isBlocked
-            ? `<button type="button" id="btn-unblock-current-card" class="btn-unblock-channel">
-                <span>${t('btnUnblockChannel', lang)}</span>
-              </button>`
-            : `<button type="button" id="btn-block-current-card" class="action-btn small-btn danger-btn">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
-                </svg>
-                <span>${t('btnBlockChannel', lang)}</span>
-              </button>`
-        }
-      </div>
-    </div>
-  `;
+  currentBlockedChannelCard.replaceChildren();
+
+  const headerDiv = document.createElement('div');
+  headerDiv.className = 'current-channel-header';
+  const titleSpan = document.createElement('span');
+  titleSpan.className = 'current-channel-title';
+  const headerSvg = createSvg('0 0 24 24', '13', '13', '2.5', [
+    createSvgChild('circle', { cx: '12', cy: '12', r: '10' }),
+    createSvgChild('line', { x1: '4.93', y1: '4.93', x2: '19.07', y2: '19.07' }),
+  ]);
+  titleSpan.appendChild(headerSvg);
+  titleSpan.appendChild(
+    document.createTextNode(' ' + (isBlocked ? t('channelIsBlocked', lang) : t('blockCurrentChannel', lang)))
+  );
+  headerDiv.appendChild(titleSpan);
+
+  const bodyDiv = document.createElement('div');
+  bodyDiv.className = 'current-channel-body';
+
+  const mainLink = document.createElement('a');
+  mainLink.href = channelUrl;
+  mainLink.target = '_blank';
+  mainLink.rel = 'noopener';
+  mainLink.className = 'current-channel-main';
+  mainLink.title = displayName;
+
+  const avatarWrapper = document.createElement('div');
+  avatarWrapper.className = 'channel-avatar-wrapper';
+  const avatarPill = document.createElement('div');
+  avatarPill.className = 'channel-avatar-pill current-pill';
+  avatarPill.style.background = 'rgba(239, 68, 68, 0.2)';
+  avatarPill.style.color = '#f87171';
+  avatarPill.textContent = initial;
+
+  if (info.avatarUrl && isValidChannelAvatar(info.avatarUrl)) {
+    const avatarImg = document.createElement('img');
+    avatarImg.src = info.avatarUrl;
+    avatarImg.alt = displayName;
+    avatarImg.className = 'channel-avatar-img';
+    avatarImg.setAttribute('referrerpolicy', 'no-referrer');
+    avatarPill.style.display = 'none';
+    avatarImg.onerror = () => {
+      avatarImg.style.display = 'none';
+      avatarPill.style.display = 'flex';
+    };
+    avatarWrapper.appendChild(avatarImg);
+  }
+  avatarWrapper.appendChild(avatarPill);
+
+  const metaDiv = document.createElement('div');
+  metaDiv.className = 'channel-meta';
+  const nameDiv = document.createElement('div');
+  nameDiv.className = 'channel-name';
+  nameDiv.title = displayName;
+  nameDiv.textContent = displayName;
+  const handleDiv = document.createElement('div');
+  handleDiv.className = 'channel-handle';
+  handleDiv.setAttribute('dir', 'ltr');
+  handleDiv.textContent = displayHandle;
+  metaDiv.appendChild(nameDiv);
+  metaDiv.appendChild(handleDiv);
+
+  mainLink.appendChild(avatarWrapper);
+  mainLink.appendChild(metaDiv);
+
+  const actionDiv = document.createElement('div');
+  actionDiv.className = 'current-channel-action';
+
+  let btnUnblock: HTMLButtonElement | null = null;
+  let btnBlock: HTMLButtonElement | null = null;
+  if (isBlocked) {
+    btnUnblock = document.createElement('button');
+    btnUnblock.type = 'button';
+    btnUnblock.id = 'btn-unblock-current-card';
+    btnUnblock.className = 'btn-unblock-channel';
+    const unblockSpan = document.createElement('span');
+    unblockSpan.textContent = t('btnUnblockChannel', lang);
+    btnUnblock.appendChild(unblockSpan);
+    actionDiv.appendChild(btnUnblock);
+  } else {
+    btnBlock = document.createElement('button');
+    btnBlock.type = 'button';
+    btnBlock.id = 'btn-block-current-card';
+    btnBlock.className = 'action-btn small-btn danger-btn';
+    const blockSvg = createSvg('0 0 24 24', '13', '13', '2.5', [
+      createSvgChild('circle', { cx: '12', cy: '12', r: '10' }),
+      createSvgChild('line', { x1: '4.93', y1: '4.93', x2: '19.07', y2: '19.07' }),
+    ]);
+    const blockSpan = document.createElement('span');
+    blockSpan.textContent = t('btnBlockChannel', lang);
+    btnBlock.appendChild(blockSvg);
+    btnBlock.appendChild(blockSpan);
+    actionDiv.appendChild(btnBlock);
+  }
+
+  bodyDiv.appendChild(mainLink);
+  bodyDiv.appendChild(actionDiv);
+
+  currentBlockedChannelCard.appendChild(headerDiv);
+  currentBlockedChannelCard.appendChild(bodyDiv);
 
   if (isBlocked) {
     const btnUnblock = document.getElementById('btn-unblock-current-card');
@@ -1450,18 +2272,24 @@ async function handleAddBlockedChannel() {
 /**
  * Switch the active tab.
  */
-function switchTab(tab: 'channels' | 'uploads' | 'blocked' | 'settings') {
+function switchTab(tab: 'channels' | 'uploads' | 'blocked' | 'whitelist' | 'settings') {
   currentTab = tab;
 
   tabBtnChannels.classList.toggle('active', tab === 'channels');
   tabBtnUploads.classList.toggle('active', tab === 'uploads');
   if (tabBtnBlocked) tabBtnBlocked.classList.toggle('active', tab === 'blocked');
+  if (tabBtnWhitelist) tabBtnWhitelist.classList.toggle('active', tab === 'whitelist');
   tabBtnSettings.classList.toggle('active', tab === 'settings');
 
   panelChannels.classList.toggle('active', tab === 'channels');
   panelUploads.classList.toggle('active', tab === 'uploads');
   if (panelBlocked) panelBlocked.classList.toggle('active', tab === 'blocked');
+  if (panelWhitelist) panelWhitelist.classList.toggle('active', tab === 'whitelist');
   panelSettings.classList.toggle('active', tab === 'settings');
+
+  if (tab === 'whitelist') {
+    renderWhitelist();
+  }
 }
 
 /**
@@ -1481,6 +2309,7 @@ async function init() {
   await applyLocalization(currentSettings.language);
   renderChannels();
   renderBlockedChannels();
+  renderWhitelist();
   renderFolderNav();
   renderUploads();
   await checkActiveTabChannel();
@@ -1533,9 +2362,13 @@ async function init() {
 
   // Populate onboarding language selector
   if (onboardingSelectLanguage) {
-    onboardingSelectLanguage.innerHTML = supportedLanguages
-      .map((l) => `<option value="${l.code}">${l.nativeLanguageName}</option>`)
-      .join('');
+    onboardingSelectLanguage.replaceChildren();
+    for (const l of supportedLanguages) {
+      const opt = document.createElement('option');
+      opt.value = l.code;
+      opt.textContent = l.nativeLanguageName;
+      onboardingSelectLanguage.appendChild(opt);
+    }
     onboardingSelectLanguage.value = currentSettings.language || 'ar';
 
     onboardingSelectLanguage.addEventListener('change', async () => {
@@ -1567,9 +2400,13 @@ async function init() {
   });
 
   // Populate 48 supported languages
-  selectLanguage.innerHTML = supportedLanguages
-    .map((l) => `<option value="${l.code}">${l.nativeLanguageName}</option>`)
-    .join('');
+  selectLanguage.replaceChildren();
+  for (const l of supportedLanguages) {
+    const opt = document.createElement('option');
+    opt.value = l.code;
+    opt.textContent = l.nativeLanguageName;
+    selectLanguage.appendChild(opt);
+  }
   selectLanguage.value = currentSettings.language || 'ar';
 
   selectPollInterval.value = String(currentSettings.pollIntervalMinutes || 30);
@@ -1608,7 +2445,47 @@ async function init() {
   tabBtnChannels.addEventListener('click', () => switchTab('channels'));
   tabBtnUploads.addEventListener('click', () => switchTab('uploads'));
   tabBtnBlocked?.addEventListener('click', () => switchTab('blocked'));
+  tabBtnWhitelist?.addEventListener('click', () => switchTab('whitelist'));
   tabBtnSettings.addEventListener('click', () => switchTab('settings'));
+
+  // Whitelist Add, Search & Filter
+  btnSearchWhitelistChannel?.addEventListener('click', handleSearchWhitelistChannel);
+  inputWhitelistChannel?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      handleSearchWhitelistChannel();
+    }
+  });
+
+  inputWhitelistSearch?.addEventListener('input', () => {
+    whitelistSearchQuery = inputWhitelistSearch.value.trim();
+    if (btnClearWhitelistSearch) {
+      btnClearWhitelistSearch.style.display = whitelistSearchQuery ? 'inline-flex' : 'none';
+    }
+    renderWhitelist();
+  });
+
+  btnClearWhitelistSearch?.addEventListener('click', () => {
+    if (inputWhitelistSearch) inputWhitelistSearch.value = '';
+    whitelistSearchQuery = '';
+    if (btnClearWhitelistSearch) btnClearWhitelistSearch.style.display = 'none';
+    renderWhitelist();
+  });
+
+  // Whitelist Strict Mode Toggle
+  if (toggleWhitelistMode) {
+    toggleWhitelistMode.checked = currentSettings.whitelistOnlyMode === true;
+    toggleWhitelistMode.addEventListener('change', async () => {
+      const isChecked = toggleWhitelistMode.checked;
+      currentSettings = await saveSettings({ whitelistOnlyMode: isChecked });
+      showToast(
+        isChecked
+          ? t('whitelistModeTitle', currentSettings.language)
+          : t('settingsSaved', currentSettings.language),
+        'success'
+      );
+    });
+  }
 
   // Blocked Channels input & search
   btnAddBlockedChannel?.addEventListener('click', handleAddBlockedChannel);

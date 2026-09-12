@@ -8,6 +8,7 @@ const STORAGE_KEYS = {
   NEW_UPLOADS: 'newUploads',
   VIDEO_FOLDERS: 'videoFolders',
   BLOCKED_CHANNELS: 'blockedChannels',
+  WHITELIST_FEED_VIDEOS: 'whitelistFeedVideos',
 } as const;
 
 export const DEFAULT_SETTINGS: AppSettings = {
@@ -16,6 +17,7 @@ export const DEFAULT_SETTINGS: AppSettings = {
   hasSeenOnboarding: false,
   hideShorts: true,
   disableTitleTranslation: true,
+  whitelistOnlyMode: false,
 };
 
 /**
@@ -59,12 +61,19 @@ export function isChannelApproved(
   if (!identifier) return false;
   const cleanId = identifier.trim();
   const normalized = normalizeHandle(cleanId);
+  const lowerCleanId = cleanId.toLowerCase();
+  const compactCleanId = lowerCleanId.replace(/\s+/g, '');
 
   return channels.some((ch) => {
     if (ch.id && ch.id === cleanId) return true;
     if (ch.handle) {
       const chNorm = normalizeHandle(ch.handle);
       if (chNorm && chNorm === normalized) return true;
+    }
+    if (ch.name) {
+      const chNameLower = ch.name.trim().toLowerCase();
+      if (chNameLower === lowerCleanId) return true;
+      if (chNameLower.replace(/\s+/g, '') === compactCleanId) return true;
     }
     return false;
   });
@@ -152,6 +161,20 @@ export async function removeApprovedChannel(identifier: string): Promise<Approve
   });
 
   await saveApprovedChannels(filtered);
+
+  try {
+    const feedVideos = await getWhitelistFeedVideos();
+    const updatedFeed = feedVideos.filter((v) => {
+      if (v.channelId && v.channelId === cleanId) return false;
+      return true;
+    });
+    if (updatedFeed.length !== feedVideos.length) {
+      await saveWhitelistFeedVideos(updatedFeed);
+    }
+  } catch {
+    // Ignore feed prune errors
+  }
+
   return filtered;
 }
 
@@ -188,6 +211,8 @@ export function isChannelBlocked(
   if (!identifier) return false;
   const cleanId = identifier.trim();
   const normalized = normalizeHandle(cleanId);
+  const lowerCleanId = cleanId.toLowerCase();
+  const compactCleanId = lowerCleanId.replace(/\s+/g, '');
 
   return channels.some((ch) => {
     if (ch.id && ch.id === cleanId) return true;
@@ -195,7 +220,11 @@ export function isChannelBlocked(
       const chNorm = normalizeHandle(ch.handle);
       if (chNorm && chNorm === normalized) return true;
     }
-    if (ch.name && ch.name.toLowerCase() === cleanId.toLowerCase()) return true;
+    if (ch.name) {
+      const chNameLower = ch.name.trim().toLowerCase();
+      if (chNameLower === lowerCleanId) return true;
+      if (chNameLower.replace(/\s+/g, '') === compactCleanId) return true;
+    }
     return false;
   });
 }
@@ -361,6 +390,30 @@ export async function removeNewUploadVideo(videoId: string): Promise<NewUploadVi
   const filtered = current.filter((v) => v.videoId !== videoId);
   await saveNewUploads(filtered);
   return filtered;
+}
+
+/**
+ * Retrieve the list of whitelist feed videos from browser.storage.local.
+ */
+export async function getWhitelistFeedVideos(): Promise<NewUploadVideo[]> {
+  try {
+    const data = await browser.storage.local.get(STORAGE_KEYS.WHITELIST_FEED_VIDEOS);
+    const videos = data[STORAGE_KEYS.WHITELIST_FEED_VIDEOS];
+    return Array.isArray(videos) ? videos : [];
+  } catch (err) {
+    console.error('[Haris] Failed to get whitelist feed videos:', err);
+    return [];
+  }
+}
+
+/**
+ * Save whitelist feed videos (capped at 250 items).
+ */
+export async function saveWhitelistFeedVideos(videos: NewUploadVideo[]): Promise<void> {
+  const capped = videos.slice(0, 250);
+  await browser.storage.local.set({
+    [STORAGE_KEYS.WHITELIST_FEED_VIDEOS]: capped,
+  });
 }
 
 /**

@@ -11,6 +11,7 @@ import {
   recordVideoUpload,
   removeNewUploadVideo,
   isVideoApproved,
+  getWhitelistFeedVideos,
   DEFAULT_SETTINGS,
 } from '@/utils/storage';
 import { isValidChannelAvatar } from '@/utils/youtube';
@@ -27,11 +28,31 @@ export default defineContentScript({
     let cachedApprovedChannels: ApprovedChannel[] = [];
     let cachedBlockedChannels: BlockedChannel[] = [];
     let cachedApprovedVideos: NewUploadVideo[] = [];
+    let cachedWhitelistFeedVideos: NewUploadVideo[] = [];
     let cachedSettings: AppSettings = { ...DEFAULT_SETTINGS };
     let currentLang: SupportedLanguage = 'ar';
     let isProcessing = false;
     const originalTitleCache = new Map<string, string>();
     const fetchingTitles = new Set<string>();
+
+    function updatePageTypeClasses(targetUrl?: string) {
+      const url = targetUrl || window.location.href;
+      let path = window.location.pathname;
+      try {
+        const parsed = new URL(url, window.location.origin);
+        path = parsed.pathname;
+      } catch {
+        // fallback
+      }
+
+      const isHome = path === '/' || path === '';
+      const isSearch = path.startsWith('/results');
+      const isWatch = path.startsWith('/watch');
+
+      document.documentElement.classList.toggle('haris-page-home', isHome);
+      document.documentElement.classList.toggle('haris-page-search', isSearch);
+      document.documentElement.classList.toggle('haris-page-watch', isWatch);
+    }
 
     function applyShortsClass() {
       if (cachedSettings.hideShorts !== false) {
@@ -39,6 +60,12 @@ export default defineContentScript({
       } else {
         document.documentElement.classList.remove('haris-hide-shorts');
       }
+    }
+
+    function applyWhitelistClass() {
+      const isWhitelist = cachedSettings.whitelistOnlyMode === true;
+      document.documentElement.classList.toggle('haris-whitelist-mode', isWhitelist);
+      updatePageTypeClasses();
     }
 
     function handleShortsRedirect() {
@@ -238,6 +265,22 @@ export default defineContentScript({
           background: #dc2626;
           transform: translateY(-1px);
         }
+        .haris-whitelist-card {
+          border-color: rgba(34, 197, 94, 0.35) !important;
+        }
+        .haris-whitelist-card h3 {
+          color: #4ade80 !important;
+        }
+        .haris-whitelist-icon {
+          background: rgba(34, 197, 94, 0.15) !important;
+          color: #22c55e !important;
+        }
+        .haris-whitelist-add-btn {
+          background: #22c55e !important;
+        }
+        .haris-whitelist-add-btn:hover {
+          background: #16a34a !important;
+        }
 
         /* YouTube Shorts suppression */
         html.haris-hide-shorts ytd-rich-shelf-renderer[is-shorts],
@@ -255,6 +298,321 @@ export default defineContentScript({
         html.haris-hide-shorts [role="tab"]:has(a[href*="/shorts"]) {
           display: none !important;
         }
+
+        /* Whitelist mode instant CSS suppression of homepage clutter and sections */
+        html.haris-whitelist-mode.haris-page-home ytd-rich-section-renderer,
+        html.haris-whitelist-mode.haris-page-home ytd-feed-filter-chip-bar-renderer,
+        html.haris-whitelist-mode.haris-page-home #chips-wrapper,
+        html.haris-whitelist-mode.haris-page-home ytd-post-renderer,
+        html.haris-whitelist-mode.haris-page-home ytd-shared-post-renderer,
+        html.haris-whitelist-mode.haris-page-home ytd-statement-banner-renderer,
+        html.haris-whitelist-mode ytd-browse[page-subtype="home"] ytd-rich-section-renderer,
+        html.haris-whitelist-mode ytd-browse[page-subtype="home"] ytd-feed-filter-chip-bar-renderer,
+        html.haris-whitelist-mode ytd-browse[page-subtype="home"] #chips-wrapper,
+        html.haris-whitelist-mode ytd-browse[page-subtype="home"] ytd-post-renderer,
+        html.haris-whitelist-mode ytd-browse[page-subtype="home"] ytd-shared-post-renderer,
+        html.haris-whitelist-mode ytd-browse[page-subtype="home"] ytd-statement-banner-renderer,
+        html.haris-whitelist-mode.haris-page-search ytd-reel-shelf-renderer,
+        html.haris-whitelist-mode ytd-search ytd-reel-shelf-renderer,
+
+        /* In whitelist mode, kill native YouTube search results (videos, playlists, mixes, shelves, continuation loader) completely */
+        html.haris-whitelist-mode ytd-search ytd-video-renderer,
+        html.haris-whitelist-mode ytd-search ytd-playlist-renderer,
+        html.haris-whitelist-mode ytd-search ytd-radio-renderer,
+        html.haris-whitelist-mode ytd-search ytd-shelf-renderer,
+        html.haris-whitelist-mode ytd-search ytd-reel-shelf-renderer,
+        html.haris-whitelist-mode ytd-search ytd-continuation-item-renderer,
+        html.haris-whitelist-mode ytd-search tp-yt-paper-spinner,
+        html.haris-whitelist-mode ytd-search #spinner,
+        html.haris-whitelist-mode ytd-search yt-lockup-view-model,
+        html.haris-whitelist-mode ytd-search ytd-lockup-view-model,
+        html.haris-whitelist-mode ytd-search ytd-search-pyv-renderer,
+        html.haris-whitelist-mode ytd-search ytd-exploratory-results-renderer,
+        html.haris-whitelist-mode ytd-search ytd-horizontal-card-list-renderer,
+        html.haris-whitelist-mode.haris-page-search ytd-video-renderer,
+        html.haris-whitelist-mode.haris-page-search ytd-playlist-renderer,
+        html.haris-whitelist-mode.haris-page-search ytd-radio-renderer,
+        html.haris-whitelist-mode.haris-page-search ytd-shelf-renderer,
+        html.haris-whitelist-mode.haris-page-search ytd-reel-shelf-renderer,
+        html.haris-whitelist-mode.haris-page-search ytd-continuation-item-renderer,
+        html.haris-whitelist-mode.haris-page-search tp-yt-paper-spinner,
+        html.haris-whitelist-mode.haris-page-search #spinner,
+        html.haris-whitelist-mode.haris-page-home ytd-continuation-item-renderer,
+
+        /* In whitelist mode, hide Mixes immediately across search and recommendations */
+        html.haris-whitelist-mode ytd-radio-renderer,
+        html.haris-whitelist-mode ytd-compact-radio-renderer,
+        html.haris-whitelist-mode ytd-grid-radio-renderer,
+        html.haris-whitelist-mode yt-lockup-view-model:has(a[href*="list=RD"]),
+        html.haris-whitelist-mode ytd-lockup-view-model:has(a[href*="list=RD"]),
+        html.haris-whitelist-mode [role="listitem"]:has(a[href*="list=RD"]),
+        html.haris-whitelist-mode ytd-video-renderer:has(a[href*="list=RD"]),
+
+        /* In whitelist mode on watch page, hide chip filter bar and endscreen clutter */
+        html.haris-whitelist-mode.haris-page-watch #related ytd-feed-filter-chip-bar-renderer,
+        html.haris-whitelist-mode.haris-page-watch #secondary ytd-feed-filter-chip-bar-renderer,
+        html.haris-whitelist-mode.haris-page-watch .ytp-endscreen-content,
+        html.haris-whitelist-mode.haris-page-watch .ytp-ce-element {
+          display: none !important;
+        }
+
+        /* Haris Whitelist Feeds (Home, Search, Recommendations) */
+        .haris-feed-container {
+          width: 100%;
+          margin: 0 0 24px 0;
+          padding: 16px 20px;
+          border-radius: 16px;
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          box-sizing: border-box;
+        }
+        html:not([dark]) .haris-feed-container {
+          background: rgba(0, 0, 0, 0.02);
+          border-color: rgba(0, 0, 0, 0.08);
+        }
+        .haris-feed-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 16px;
+          gap: 12px;
+          flex-wrap: wrap;
+        }
+        .haris-feed-title-wrap {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        .haris-feed-title {
+          font-size: 18px;
+          font-weight: 700;
+          color: var(--yt-spec-text-primary, #f1f1f1);
+          margin: 0;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        html:not([dark]) .haris-feed-title {
+          color: #0f0f0f;
+        }
+        .haris-feed-badge {
+          background: #16a34a;
+          color: #ffffff;
+          font-size: 11px;
+          font-weight: 700;
+          padding: 2px 8px;
+          border-radius: 10px;
+        }
+        .haris-channels-chips-row {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          overflow-x: auto;
+          padding-bottom: 8px;
+          margin-bottom: 16px;
+          scrollbar-width: thin;
+        }
+        .haris-channel-chip {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          background: rgba(255, 255, 255, 0.07);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          border-radius: 20px;
+          padding: 4px 12px 4px 4px;
+          color: inherit;
+          text-decoration: none;
+          font-size: 13px;
+          font-weight: 600;
+          transition: all 0.2s ease;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+        html:not([dark]) .haris-channel-chip {
+          background: rgba(0, 0, 0, 0.05);
+          border-color: rgba(0, 0, 0, 0.1);
+        }
+        .haris-channel-chip:hover {
+          background: rgba(22, 163, 74, 0.2);
+          border-color: #16a34a;
+          transform: translateY(-1px);
+        }
+        .haris-channel-chip-avatar {
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          object-fit: cover;
+          background: #333;
+        }
+        .haris-video-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 18px;
+        }
+        .haris-video-card {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          background: transparent;
+          text-decoration: none;
+          color: inherit;
+          border-radius: 12px;
+          overflow: hidden;
+          transition: transform 0.2s ease;
+          position: relative;
+        }
+        .haris-video-card:hover {
+          transform: translateY(-3px);
+        }
+        .haris-video-thumb-wrap {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          border-radius: 12px;
+          overflow: hidden;
+          background: #1e1e1e;
+        }
+        .haris-video-thumb {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+        .haris-video-meta {
+          display: flex;
+          gap: 10px;
+          align-items: flex-start;
+        }
+        .haris-video-channel-avatar {
+          width: 34px;
+          height: 34px;
+          border-radius: 50%;
+          object-fit: cover;
+          flex-shrink: 0;
+          background: #333;
+        }
+        .haris-video-details {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          min-width: 0;
+          flex: 1;
+        }
+        .haris-video-title {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 1.35;
+          margin: 0;
+          color: var(--yt-spec-text-primary, #f1f1f1);
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        html:not([dark]) .haris-video-title {
+          color: #0f0f0f;
+        }
+        .haris-video-channel-name {
+          font-size: 12px;
+          color: #a3a3a3;
+          margin: 0;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+        .haris-empty-state {
+          padding: 32px 20px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          color: #a3a3a3;
+        }
+        .haris-empty-state h4 {
+          margin: 0;
+          font-size: 16px;
+          color: var(--yt-spec-text-primary, #f1f1f1);
+        }
+        html:not([dark]) .haris-empty-state h4 {
+          color: #0f0f0f;
+        }
+        .haris-empty-state p {
+          margin: 0;
+          font-size: 13px;
+          max-width: 440px;
+        }
+        .haris-related-block {
+          margin-bottom: 20px;
+          padding: 12px;
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        html:not([dark]) .haris-related-block {
+          background: rgba(0, 0, 0, 0.02);
+          border-color: rgba(0, 0, 0, 0.08);
+        }
+        .haris-related-list {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          margin-top: 10px;
+        }
+        .haris-related-card {
+          display: flex;
+          gap: 10px;
+          text-decoration: none;
+          color: inherit;
+          border-radius: 8px;
+          overflow: hidden;
+          transition: transform 0.2s;
+        }
+        .haris-related-card:hover {
+          transform: translateX(-2px);
+        }
+        .haris-related-thumb-wrap {
+          position: relative;
+          width: 140px;
+          min-width: 140px;
+          aspect-ratio: 16 / 9;
+          border-radius: 8px;
+          overflow: hidden;
+          background: #1e1e1e;
+        }
+        .haris-related-info {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+          min-width: 0;
+          flex: 1;
+        }
+        .haris-related-title {
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 1.3;
+          margin: 0;
+          color: var(--yt-spec-text-primary, #f1f1f1);
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        html:not([dark]) .haris-related-title {
+          color: #0f0f0f;
+        }
+        .haris-related-channel {
+          font-size: 11px;
+          color: #a3a3a3;
+          margin: 0;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
       `;
       (document.head || document.documentElement).appendChild(style);
     }
@@ -263,11 +621,17 @@ export default defineContentScript({
       cachedApprovedChannels = await getApprovedChannels();
       cachedBlockedChannels = await getBlockedChannels();
       cachedApprovedVideos = await getNewUploads();
+      cachedWhitelistFeedVideos = await getWhitelistFeedVideos();
       const settings = await getSettings();
       cachedSettings = settings;
       currentLang = settings.language || 'ar';
       applyShortsClass();
+      applyWhitelistClass();
       await loadLanguageMessages(currentLang);
+
+      if (cachedWhitelistFeedVideos.length === 0 && cachedApprovedChannels.length > 0) {
+        browser.runtime.sendMessage({ type: 'POLL_FEEDS_NOW' }).catch(() => {});
+      }
     }
 
     /**
@@ -491,16 +855,36 @@ export default defineContentScript({
 
       const activeText = isApproved ? t('inMyList', currentLang) : t('addToList', currentLang);
       existingBtn.className = `haris-channel-btn ${isApproved ? 'is-added' : 'not-added'}`;
-      existingBtn.innerHTML = `
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          ${
-            isApproved
-              ? '<polyline points="20 6 9 17 4 12"></polyline>'
-              : '<line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>'
-          }
-        </svg>
-        <span>${activeText}</span>
-      `;
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('width', '15');
+      svg.setAttribute('height', '15');
+      svg.setAttribute('viewBox', '0 0 24 24');
+      svg.setAttribute('fill', 'none');
+      svg.setAttribute('stroke', 'currentColor');
+      svg.setAttribute('stroke-width', '2.5');
+      svg.setAttribute('stroke-linecap', 'round');
+      svg.setAttribute('stroke-linejoin', 'round');
+      if (isApproved) {
+        const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+        polyline.setAttribute('points', '20 6 9 17 4 12');
+        svg.appendChild(polyline);
+      } else {
+        const line1 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line1.setAttribute('x1', '12');
+        line1.setAttribute('y1', '5');
+        line1.setAttribute('x2', '12');
+        line1.setAttribute('y2', '19');
+        const line2 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line2.setAttribute('x1', '5');
+        line2.setAttribute('y1', '12');
+        line2.setAttribute('x2', '19');
+        line2.setAttribute('y2', '12');
+        svg.appendChild(line1);
+        svg.appendChild(line2);
+      }
+      const span = document.createElement('span');
+      span.textContent = activeText;
+      existingBtn.replaceChildren(svg, span);
 
       // Attach click handler (clone to clear previous listeners)
       const newBtn = existingBtn.cloneNode(true) as HTMLButtonElement;
@@ -598,16 +982,36 @@ export default defineContentScript({
       const activeText = isApproved ? t('videoInMyList', currentLang) : t('addVideoToList', currentLang);
       existingBtn.className = `haris-channel-btn ${isApproved ? 'is-added' : 'not-added'}`;
       existingBtn.style.marginInlineStart = '8px';
-      existingBtn.innerHTML = `
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          ${
-            isApproved
-              ? '<polyline points="20 6 9 17 4 12"></polyline>'
-              : '<line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>'
-          }
-        </svg>
-        <span>${activeText}</span>
-      `;
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('width', '15');
+      svg.setAttribute('height', '15');
+      svg.setAttribute('viewBox', '0 0 24 24');
+      svg.setAttribute('fill', 'none');
+      svg.setAttribute('stroke', 'currentColor');
+      svg.setAttribute('stroke-width', '2.5');
+      svg.setAttribute('stroke-linecap', 'round');
+      svg.setAttribute('stroke-linejoin', 'round');
+      if (isApproved) {
+        const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+        polyline.setAttribute('points', '20 6 9 17 4 12');
+        svg.appendChild(polyline);
+      } else {
+        const line1 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line1.setAttribute('x1', '12');
+        line1.setAttribute('y1', '5');
+        line1.setAttribute('x2', '12');
+        line1.setAttribute('y2', '19');
+        const line2 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line2.setAttribute('x1', '5');
+        line2.setAttribute('y1', '12');
+        line2.setAttribute('x2', '19');
+        line2.setAttribute('y2', '12');
+        svg.appendChild(line1);
+        svg.appendChild(line2);
+      }
+      const span = document.createElement('span');
+      span.textContent = activeText;
+      existingBtn.replaceChildren(svg, span);
 
       // Attach click handler (clone to clear previous listeners)
       const newBtn = existingBtn.cloneNode(true) as HTMLButtonElement;
@@ -680,27 +1084,40 @@ export default defineContentScript({
 
       existingBtn.style.marginInlineStart = '8px';
 
+      const blockSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      blockSvg.setAttribute('width', '15');
+      blockSvg.setAttribute('height', '15');
+      blockSvg.setAttribute('viewBox', '0 0 24 24');
+      blockSvg.setAttribute('fill', 'none');
+      blockSvg.setAttribute('stroke', 'currentColor');
+      blockSvg.setAttribute('stroke-width', '2.5');
+      blockSvg.setAttribute('stroke-linecap', 'round');
+      blockSvg.setAttribute('stroke-linejoin', 'round');
+      const blockCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      blockCircle.setAttribute('cx', '12');
+      blockCircle.setAttribute('cy', '12');
+      blockCircle.setAttribute('r', '10');
+      const blockLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      blockLine.setAttribute('x1', '4.93');
+      blockLine.setAttribute('y1', '4.93');
+      blockLine.setAttribute('x2', '19.07');
+      blockLine.setAttribute('y2', '19.07');
+      blockSvg.appendChild(blockCircle);
+      blockSvg.appendChild(blockLine);
+
+      const blockSpan = document.createElement('span');
+
       if (isBlocked) {
         existingBtn.className = 'haris-channel-btn is-blocked';
         existingBtn.title = t('confirmUnblockChannel', currentLang);
-        existingBtn.innerHTML = `
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
-          </svg>
-          <span>${t('channelIsBlocked', currentLang)} (${t('btnUnblockChannel', currentLang)})</span>
-        `;
+        blockSpan.textContent = `${t('channelIsBlocked', currentLang)} (${t('btnUnblockChannel', currentLang)})`;
       } else {
         existingBtn.className = 'haris-channel-btn block-btn-not-blocked';
         existingBtn.title = t('btnBlockChannel', currentLang);
-        existingBtn.innerHTML = `
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
-          </svg>
-          <span>${t('btnBlockChannel', currentLang)}</span>
-        `;
+        blockSpan.textContent = t('btnBlockChannel', currentLang);
       }
+
+      existingBtn.replaceChildren(blockSvg, blockSpan);
 
       // Attach click handler (clone to clear previous listeners)
       const newBtn = existingBtn.cloneNode(true) as HTMLButtonElement;
@@ -782,7 +1199,20 @@ export default defineContentScript({
         (channelInfo.handle && isChannelBlocked(channelInfo.handle, cachedBlockedChannels)) ||
         (channelInfo.name && isChannelBlocked(channelInfo.name, cachedBlockedChannels));
 
-      if (isBlocked) {
+      const isApproved =
+        (channelInfo.id && isChannelApproved(channelInfo.id, cachedApprovedChannels)) ||
+        (channelInfo.handle && isChannelApproved(channelInfo.handle, cachedApprovedChannels)) ||
+        (channelInfo.name && isChannelApproved(channelInfo.name, cachedApprovedChannels));
+
+      const currentVideoId = new URLSearchParams(window.location.search).get('v');
+      const isVideoApprovedDirectly = currentVideoId
+        ? isVideoApproved(currentVideoId, cachedApprovedVideos)
+        : false;
+
+      const isWhitelisted = isApproved || isVideoApprovedDirectly;
+      const isWhitelistBlocked = cachedSettings.whitelistOnlyMode === true && !isWhitelisted;
+
+      if (isBlocked || isWhitelistBlocked) {
         // Pause playback immediately
         const video = document.querySelector<HTMLVideoElement>('video');
         if (video && !video.paused) {
@@ -798,30 +1228,90 @@ export default defineContentScript({
           const overlay = document.createElement('div');
           overlay.id = 'haris-blocked-video-overlay';
           overlay.className = 'haris-blocked-overlay';
-          overlay.innerHTML = `
-            <div class="haris-blocked-overlay-card">
-              <div class="haris-blocked-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
-                </svg>
-              </div>
-              <h3>${t('blockedOverlayTitle', currentLang)}</h3>
-              <p>${channelInfo.name || channelInfo.handle}</p>
-              <button id="haris-unblock-watch-btn" class="haris-unblock-btn">
-                ${t('btnUnblockChannel', currentLang)}
-              </button>
-            </div>
-          `;
+
+          const card = document.createElement('div');
+          card.className = isBlocked
+            ? 'haris-blocked-overlay-card'
+            : 'haris-blocked-overlay-card haris-whitelist-card';
+
+          const iconDiv = document.createElement('div');
+          iconDiv.className = isBlocked
+            ? 'haris-blocked-icon'
+            : 'haris-blocked-icon haris-whitelist-icon';
+
+          const overlaySvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+          overlaySvg.setAttribute('width', '40');
+          overlaySvg.setAttribute('height', '40');
+          overlaySvg.setAttribute('viewBox', '0 0 24 24');
+          overlaySvg.setAttribute('fill', 'none');
+          overlaySvg.setAttribute('stroke', 'currentColor');
+          overlaySvg.setAttribute('stroke-width', '2.5');
+          overlaySvg.setAttribute('stroke-linecap', 'round');
+          overlaySvg.setAttribute('stroke-linejoin', 'round');
+
+          if (isBlocked) {
+            const overlayCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            overlayCircle.setAttribute('cx', '12');
+            overlayCircle.setAttribute('cy', '12');
+            overlayCircle.setAttribute('r', '10');
+            const overlayLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            overlayLine.setAttribute('x1', '4.93');
+            overlayLine.setAttribute('y1', '4.93');
+            overlayLine.setAttribute('x2', '19.07');
+            overlayLine.setAttribute('y2', '19.07');
+            overlaySvg.appendChild(overlayCircle);
+            overlaySvg.appendChild(overlayLine);
+          } else {
+            const overlayShield = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            overlayShield.setAttribute('d', 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z');
+            const overlayCheck = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+            overlayCheck.setAttribute('points', '9 12 11 14 15 10');
+            overlaySvg.appendChild(overlayShield);
+            overlaySvg.appendChild(overlayCheck);
+          }
+          iconDiv.appendChild(overlaySvg);
+
+          const h3 = document.createElement('h3');
+          h3.textContent = isBlocked
+            ? t('blockedOverlayTitle', currentLang)
+            : t('unapprovedOverlayTitle', currentLang);
+
+          const p = document.createElement('p');
+          p.textContent = isBlocked
+            ? (channelInfo.name || channelInfo.handle)
+            : `${channelInfo.name || channelInfo.handle} - ${t('unapprovedOverlayDesc', currentLang)}`;
+
+          const actionBtn = document.createElement('button');
+          actionBtn.id = 'haris-unblock-watch-btn';
+          actionBtn.className = isBlocked
+            ? 'haris-unblock-btn'
+            : 'haris-unblock-btn haris-whitelist-add-btn';
+          actionBtn.textContent = isBlocked
+            ? t('btnUnblockChannel', currentLang)
+            : t('btnAddToWhitelist', currentLang);
+
+          card.appendChild(iconDiv);
+          card.appendChild(h3);
+          card.appendChild(p);
+          card.appendChild(actionBtn);
+          overlay.appendChild(card);
           playerContainer.appendChild(overlay);
 
-          const unblockBtn = overlay.querySelector('#haris-unblock-watch-btn');
-          unblockBtn?.addEventListener('click', async (e) => {
+          actionBtn.addEventListener('click', async (e) => {
             e.preventDefault();
             e.stopPropagation();
-            cachedBlockedChannels = await removeBlockedChannel(
-              channelInfo.id || channelInfo.handle || channelInfo.name
-            );
+            if (isBlocked) {
+              cachedBlockedChannels = await removeBlockedChannel(
+                channelInfo.id || channelInfo.handle || channelInfo.name
+              );
+            } else {
+              cachedApprovedChannels = await addApprovedChannel({
+                id: channelInfo.id || '',
+                name: channelInfo.name || channelInfo.handle,
+                handle: channelInfo.handle || channelInfo.name,
+                avatarUrl: channelInfo.avatarUrl,
+              });
+            }
             overlay.remove();
             await updateChannelButton();
             processDOM();
@@ -939,11 +1429,488 @@ export default defineContentScript({
     }
 
     /**
+     * Creates a SVG shield icon element.
+     */
+    function createShieldSvg(): SVGElement {
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('width', '18');
+      svg.setAttribute('height', '18');
+      svg.setAttribute('viewBox', '0 0 24 24');
+      svg.setAttribute('fill', 'none');
+      svg.setAttribute('stroke', '#22c55e');
+      svg.setAttribute('stroke-width', '2.5');
+      svg.setAttribute('stroke-linecap', 'round');
+      svg.setAttribute('stroke-linejoin', 'round');
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z');
+      const poly = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+      poly.setAttribute('points', '9 12 11 14 15 10');
+      svg.appendChild(path);
+      svg.appendChild(poly);
+      return svg;
+    }
+
+    /**
+     * Renders a dedicated Whitelist Feed on YouTube's Home page in Whitelist mode.
+     */
+    function renderWhitelistHomeFeed(isHomePage: boolean) {
+      const existing = document.getElementById('haris-whitelist-home-feed');
+      if (cachedSettings.whitelistOnlyMode !== true || !isHomePage) {
+        if (existing) existing.remove();
+        return;
+      }
+
+      const container = document.querySelector(
+        'ytd-browse[page-subtype="home"] #primary, ytd-browse[page-subtype="home"] #contents, ytd-rich-grid-renderer #contents'
+      );
+      if (!container) return;
+
+      const channelsCount = cachedApprovedChannels.length;
+
+      // Deduplicate whitelist feed videos and manually approved videos
+      const videoMap = new Map<string, NewUploadVideo>();
+      for (const vid of cachedWhitelistFeedVideos) {
+        if (vid.videoId) videoMap.set(vid.videoId, vid);
+      }
+      for (const vid of cachedApprovedVideos) {
+        if (vid.videoId && !videoMap.has(vid.videoId)) videoMap.set(vid.videoId, vid);
+      }
+      const homeVideos = Array.from(videoMap.values());
+      const videosCount = homeVideos.length;
+
+      if (videosCount === 0 && channelsCount > 0) {
+        browser.runtime.sendMessage({ type: 'POLL_FEEDS_NOW' }).catch(() => {});
+      }
+
+      const currentHash = `${channelsCount}_${videosCount}_${currentLang}`;
+      if (existing && existing.dataset.renderHash === currentHash) {
+        return;
+      }
+
+      const feedEl = existing || document.createElement('div');
+      feedEl.id = 'haris-whitelist-home-feed';
+      feedEl.className = 'haris-feed-container';
+      feedEl.dataset.renderHash = currentHash;
+      feedEl.replaceChildren();
+
+      // Header
+      const header = document.createElement('div');
+      header.className = 'haris-feed-header';
+      const titleWrap = document.createElement('div');
+      titleWrap.className = 'haris-feed-title-wrap';
+      titleWrap.appendChild(createShieldSvg());
+      const titleH3 = document.createElement('h3');
+      titleH3.className = 'haris-feed-title';
+      titleH3.textContent = t('whitelistHomeFeedTitle', currentLang);
+      const badge = document.createElement('span');
+      badge.className = 'haris-feed-badge';
+      badge.textContent = `${channelsCount} ${t('tabChannels', currentLang)}`;
+      titleWrap.appendChild(titleH3);
+      titleWrap.appendChild(badge);
+      header.appendChild(titleWrap);
+      feedEl.appendChild(header);
+
+      // Approved Channels Chips Row
+      if (channelsCount > 0) {
+        const chipsRow = document.createElement('div');
+        chipsRow.className = 'haris-channels-chips-row';
+        for (const ch of cachedApprovedChannels) {
+          const chip = document.createElement('a');
+          chip.className = 'haris-channel-chip';
+          const href = ch.handle
+            ? `https://www.youtube.com/${ch.handle.startsWith('@') ? ch.handle : `@${ch.handle}`}`
+            : (ch.id ? `https://www.youtube.com/channel/${ch.id}` : '#');
+          chip.href = href;
+          if (ch.avatarUrl) {
+            const av = document.createElement('img');
+            av.className = 'haris-channel-chip-avatar';
+            av.src = ch.avatarUrl;
+            av.alt = ch.name;
+            chip.appendChild(av);
+          }
+          const span = document.createElement('span');
+          span.textContent = ch.name;
+          chip.appendChild(span);
+          chipsRow.appendChild(chip);
+        }
+        feedEl.appendChild(chipsRow);
+      }
+
+      // Approved Videos Grid
+      if (videosCount > 0) {
+        const grid = document.createElement('div');
+        grid.className = 'haris-video-grid';
+        const displayVideos = homeVideos.slice(0, 48);
+
+        for (const vid of displayVideos) {
+          const card = document.createElement('a');
+          card.className = 'haris-video-card';
+          card.href = vid.url || `https://www.youtube.com/watch?v=${vid.videoId}`;
+
+          const thumbWrap = document.createElement('div');
+          thumbWrap.className = 'haris-video-thumb-wrap';
+          const img = document.createElement('img');
+          img.className = 'haris-video-thumb';
+          img.src = vid.thumbnail || `https://i.ytimg.com/vi/${vid.videoId}/hqdefault.jpg`;
+          img.loading = 'lazy';
+          img.alt = vid.title;
+          thumbWrap.appendChild(img);
+
+          const meta = document.createElement('div');
+          meta.className = 'haris-video-meta';
+
+          const matchingCh = cachedApprovedChannels.find(
+            (c) => c.id === vid.channelId || c.name === vid.channelName
+          );
+          if (matchingCh?.avatarUrl) {
+            const av = document.createElement('img');
+            av.className = 'haris-video-channel-avatar';
+            av.src = matchingCh.avatarUrl;
+            av.alt = vid.channelName;
+            meta.appendChild(av);
+          }
+
+          const details = document.createElement('div');
+          details.className = 'haris-video-details';
+          const title = document.createElement('h4');
+          title.className = 'haris-video-title';
+          title.textContent = vid.title;
+          const chName = document.createElement('div');
+          chName.className = 'haris-video-channel-name';
+          chName.textContent = vid.channelName;
+
+          details.appendChild(title);
+          details.appendChild(chName);
+          meta.appendChild(details);
+
+          card.appendChild(thumbWrap);
+          card.appendChild(meta);
+          grid.appendChild(card);
+        }
+        feedEl.appendChild(grid);
+      } else {
+        const empty = document.createElement('div');
+        empty.className = 'haris-empty-state';
+        const emptyH4 = document.createElement('h4');
+        emptyH4.textContent = channelsCount > 0
+          ? t('whitelistHomeFeedTitle', currentLang)
+          : t('emptyWhitelistTitle', currentLang);
+        const emptyP = document.createElement('p');
+        emptyP.textContent = channelsCount > 0
+          ? (t('channelsSyncedDesc', currentLang) || 'قنواتك المعتمدة جاهزة. انقر على أي قناة أعلاه لتصفح مقاطعها.')
+          : t('emptyWhitelistDesc', currentLang);
+        empty.appendChild(emptyH4);
+        empty.appendChild(emptyP);
+        feedEl.appendChild(empty);
+      }
+
+      if (!existing) {
+        container.prepend(feedEl);
+      }
+    }
+
+    /**
+     * Renders search results filtered strictly to approved channels and videos in Whitelist mode.
+     */
+    function renderWhitelistSearchResults(isSearchPage: boolean) {
+      const existing = document.getElementById('haris-whitelist-search-results');
+      if (cachedSettings.whitelistOnlyMode !== true || !isSearchPage) {
+        if (existing) existing.remove();
+        return;
+      }
+
+      const searchContainer = document.querySelector(
+        'ytd-search #primary, ytd-two-column-search-results-renderer #primary, ytd-search #contents, #contents.ytd-section-list-renderer, ytd-item-section-renderer #contents, ytd-search'
+      );
+      if (!searchContainer) return;
+
+      const query = (new URLSearchParams(window.location.search).get('search_query') || '').trim();
+      const q = query.toLowerCase();
+      const currentHash = `${q}_${cachedApprovedChannels.length}_${cachedApprovedVideos.length}_${currentLang}`;
+
+      if (existing && existing.dataset.renderHash === currentHash) {
+        return;
+      }
+
+      const resultsEl = existing || document.createElement('div');
+      resultsEl.id = 'haris-whitelist-search-results';
+      resultsEl.className = 'haris-feed-container';
+      resultsEl.dataset.renderHash = currentHash;
+      resultsEl.replaceChildren();
+
+      const header = document.createElement('div');
+      header.className = 'haris-feed-header';
+      const titleWrap = document.createElement('div');
+      titleWrap.className = 'haris-feed-title-wrap';
+      titleWrap.appendChild(createShieldSvg());
+      const titleH3 = document.createElement('h3');
+      titleH3.className = 'haris-feed-title';
+      titleH3.textContent = t('whitelistSearchResultsTitle', currentLang);
+      titleWrap.appendChild(titleH3);
+      header.appendChild(titleWrap);
+      resultsEl.appendChild(header);
+
+      // Filter approved channels that match query
+      const matchingChannels = q
+        ? cachedApprovedChannels.filter(
+            (ch) =>
+              ch.name.toLowerCase().includes(q) ||
+              (ch.handle && ch.handle.toLowerCase().includes(q))
+          )
+        : cachedApprovedChannels;
+
+      // Filter approved videos that match query
+      const allSearchVideosMap = new Map<string, NewUploadVideo>();
+      for (const vid of cachedWhitelistFeedVideos) {
+        if (vid.videoId) allSearchVideosMap.set(vid.videoId, vid);
+      }
+      for (const vid of cachedApprovedVideos) {
+        if (vid.videoId && !allSearchVideosMap.has(vid.videoId)) allSearchVideosMap.set(vid.videoId, vid);
+      }
+      const allSearchVideos = Array.from(allSearchVideosMap.values());
+
+      const matchingVideos = q
+        ? allSearchVideos.filter(
+            (v) =>
+              v.title.toLowerCase().includes(q) ||
+              v.channelName.toLowerCase().includes(q)
+          )
+        : allSearchVideos;
+
+      if (matchingChannels.length > 0) {
+        const chipsRow = document.createElement('div');
+        chipsRow.className = 'haris-channels-chips-row';
+        for (const ch of matchingChannels) {
+          const chip = document.createElement('a');
+          chip.className = 'haris-channel-chip';
+          chip.href = ch.handle
+            ? `https://www.youtube.com/${ch.handle.startsWith('@') ? ch.handle : `@${ch.handle}`}`
+            : (ch.id ? `https://www.youtube.com/channel/${ch.id}` : '#');
+          if (ch.avatarUrl) {
+            const av = document.createElement('img');
+            av.className = 'haris-channel-chip-avatar';
+            av.src = ch.avatarUrl;
+            chip.appendChild(av);
+          }
+          const span = document.createElement('span');
+          span.textContent = ch.name;
+          chip.appendChild(span);
+          chipsRow.appendChild(chip);
+        }
+        resultsEl.appendChild(chipsRow);
+      }
+
+      if (matchingVideos.length > 0) {
+        const grid = document.createElement('div');
+        grid.className = 'haris-video-grid';
+        for (const vid of matchingVideos.slice(0, 30)) {
+          const card = document.createElement('a');
+          card.className = 'haris-video-card';
+          card.href = vid.url || `https://www.youtube.com/watch?v=${vid.videoId}`;
+
+          const thumbWrap = document.createElement('div');
+          thumbWrap.className = 'haris-video-thumb-wrap';
+          const img = document.createElement('img');
+          img.className = 'haris-video-thumb';
+          img.src = vid.thumbnail || `https://i.ytimg.com/vi/${vid.videoId}/hqdefault.jpg`;
+          img.loading = 'lazy';
+          img.alt = vid.title;
+          thumbWrap.appendChild(img);
+
+          const meta = document.createElement('div');
+          meta.className = 'haris-video-meta';
+          const matchingCh = cachedApprovedChannels.find(
+            (c) => c.id === vid.channelId || c.name === vid.channelName
+          );
+          if (matchingCh?.avatarUrl) {
+            const av = document.createElement('img');
+            av.className = 'haris-video-channel-avatar';
+            av.src = matchingCh.avatarUrl;
+            meta.appendChild(av);
+          }
+          const details = document.createElement('div');
+          details.className = 'haris-video-details';
+          const title = document.createElement('h4');
+          title.className = 'haris-video-title';
+          title.textContent = vid.title;
+          const chName = document.createElement('div');
+          chName.className = 'haris-video-channel-name';
+          chName.textContent = vid.channelName;
+          details.appendChild(title);
+          details.appendChild(chName);
+          meta.appendChild(details);
+
+          card.appendChild(thumbWrap);
+          card.appendChild(meta);
+          grid.appendChild(card);
+        }
+        resultsEl.appendChild(grid);
+      } else if (matchingChannels.length === 0) {
+        const empty = document.createElement('div');
+        empty.className = 'haris-empty-state';
+        const emptyH4 = document.createElement('h4');
+        emptyH4.textContent = t('whitelistSearchNoResults', currentLang);
+        const emptyP = document.createElement('p');
+        emptyP.textContent = query ? `«${query}»` : '';
+        empty.appendChild(emptyH4);
+        if (query) empty.appendChild(emptyP);
+        resultsEl.appendChild(empty);
+      }
+
+      if (!existing) {
+        searchContainer.prepend(resultsEl);
+      }
+    }
+
+    /**
+     * Renders approved channel recommendations in watch page sidebar in Whitelist mode.
+     */
+    function renderWhitelistRecommendations(isWatchPage: boolean) {
+      const existing = document.getElementById('haris-whitelist-related');
+      if (cachedSettings.whitelistOnlyMode !== true || !isWatchPage) {
+        if (existing) existing.remove();
+        return;
+      }
+
+      const relatedContainer = document.querySelector(
+        '#related #items, ytd-watch-next-secondary-results-renderer #items, #secondary #items'
+      );
+      if (!relatedContainer) return;
+
+      const currentVideoId = new URLSearchParams(window.location.search).get('v') || '';
+      const allRecVideosMap = new Map<string, NewUploadVideo>();
+      for (const vid of cachedWhitelistFeedVideos) {
+        if (vid.videoId) allRecVideosMap.set(vid.videoId, vid);
+      }
+      for (const vid of cachedApprovedVideos) {
+        if (vid.videoId && !allRecVideosMap.has(vid.videoId)) allRecVideosMap.set(vid.videoId, vid);
+      }
+      const recommendedVideos = Array.from(allRecVideosMap.values()).filter((v) => v.videoId !== currentVideoId);
+
+      if (recommendedVideos.length === 0) {
+        if (existing) existing.remove();
+        return;
+      }
+
+      const currentHash = `${currentVideoId}_${recommendedVideos.length}_${currentLang}`;
+      if (existing && existing.dataset.renderHash === currentHash) {
+        return;
+      }
+
+      const block = existing || document.createElement('div');
+      block.id = 'haris-whitelist-related';
+      block.className = 'haris-related-block';
+      block.dataset.renderHash = currentHash;
+      block.replaceChildren();
+
+      const header = document.createElement('div');
+      header.className = 'haris-feed-title';
+      header.style.fontSize = '14px';
+      header.style.marginBottom = '8px';
+      header.appendChild(createShieldSvg());
+      const span = document.createElement('span');
+      span.textContent = t('whitelistRelatedTitle', currentLang);
+      header.appendChild(span);
+      block.appendChild(header);
+
+      const list = document.createElement('div');
+      list.className = 'haris-related-list';
+
+      for (const vid of recommendedVideos.slice(0, 15)) {
+        const card = document.createElement('a');
+        card.className = 'haris-related-card';
+        card.href = vid.url || `https://www.youtube.com/watch?v=${vid.videoId}`;
+
+        const thumbWrap = document.createElement('div');
+        thumbWrap.className = 'haris-related-thumb-wrap';
+        const img = document.createElement('img');
+        img.className = 'haris-video-thumb';
+        img.src = vid.thumbnail || `https://i.ytimg.com/vi/${vid.videoId}/hqdefault.jpg`;
+        img.loading = 'lazy';
+        img.alt = vid.title;
+        thumbWrap.appendChild(img);
+
+        const info = document.createElement('div');
+        info.className = 'haris-related-info';
+        const title = document.createElement('h4');
+        title.className = 'haris-related-title';
+        title.textContent = vid.title;
+        const ch = document.createElement('div');
+        ch.className = 'haris-related-channel';
+        ch.textContent = vid.channelName;
+
+        info.appendChild(title);
+        info.appendChild(ch);
+        card.appendChild(thumbWrap);
+        card.appendChild(info);
+        list.appendChild(card);
+      }
+
+      block.appendChild(list);
+
+      if (!existing) {
+        relatedContainer.prepend(block);
+      }
+    }
+
+    /**
      * Scans video cards across home, search, and recommendation feeds,
      * hides shorts, hides blocked channel videos, and attaches green check badges to approved channels.
      */
     function updateThumbnailBadgesAndFilter() {
-      // 1. Hide Shorts shelves explicitly if enabled
+      const path = window.location.pathname;
+      const isHomePage = path === '/' || path === '';
+      const isSearchPage = path.startsWith('/results');
+      const isWatchPage = path.startsWith('/watch');
+
+      renderWhitelistHomeFeed(isHomePage);
+      renderWhitelistSearchResults(isSearchPage);
+      renderWhitelistRecommendations(isWatchPage);
+
+      // 0. Kill YouTube search continuation loaders and spinners in Whitelist Mode to eliminate 10s wait and black screen
+      if (cachedSettings.whitelistOnlyMode === true && isSearchPage) {
+        const continuations = document.querySelectorAll(
+          'ytd-search ytd-continuation-item-renderer, ytd-search tp-yt-paper-spinner, ytd-search #spinner, ytd-search ytd-search-pyv-renderer, ytd-continuation-item-renderer'
+        );
+        for (const el of continuations) {
+          el.remove();
+        }
+      }
+
+      // 1. Hide homepage clutter (posts shelves, topic chips, explore topics) in Whitelist Mode
+      if (cachedSettings.whitelistOnlyMode === true && isHomePage) {
+        const homeClutter = document.querySelectorAll(
+          'ytd-browse[page-subtype="home"] ytd-rich-section-renderer, ytd-browse[page-subtype="home"] ytd-feed-filter-chip-bar-renderer, ytd-browse[page-subtype="home"] #chips-wrapper, ytd-rich-section-renderer, ytd-feed-filter-chip-bar-renderer, #chips-wrapper, ytd-post-renderer, ytd-shared-post-renderer'
+        );
+        for (const el of homeClutter) {
+          (el as HTMLElement).style.setProperty('display', 'none', 'important');
+        }
+      } else if (cachedSettings.whitelistOnlyMode !== true && isHomePage) {
+        const homeClutter = document.querySelectorAll(
+          'ytd-browse[page-subtype="home"] ytd-rich-section-renderer, ytd-browse[page-subtype="home"] ytd-feed-filter-chip-bar-renderer, ytd-browse[page-subtype="home"] #chips-wrapper, ytd-rich-section-renderer, ytd-feed-filter-chip-bar-renderer, #chips-wrapper, ytd-post-renderer, ytd-shared-post-renderer'
+        );
+        for (const el of homeClutter) {
+          const htmlEl = el as HTMLElement;
+          if (cachedSettings.hideShorts !== false && (el.hasAttribute('is-shorts') || el.querySelector('a[href*="/shorts/"]'))) {
+            continue;
+          }
+          if (htmlEl.style.display === 'none') {
+            htmlEl.style.removeProperty('display');
+          }
+        }
+      }
+
+      // 2. Hide watch page recommendation chip bar in Whitelist Mode
+      if (cachedSettings.whitelistOnlyMode === true && isWatchPage) {
+        const watchClutter = document.querySelectorAll(
+          '#related ytd-feed-filter-chip-bar-renderer, #secondary ytd-feed-filter-chip-bar-renderer, ytd-watch-next-secondary-results-renderer ytd-feed-filter-chip-bar-renderer'
+        );
+        for (const el of watchClutter) {
+          (el as HTMLElement).style.setProperty('display', 'none', 'important');
+        }
+      }
+
+      // 3. Hide Shorts shelves explicitly if enabled
       if (cachedSettings.hideShorts !== false) {
         const shortsShelves = document.querySelectorAll(
           'ytd-rich-shelf-renderer[is-shorts], ytd-reel-shelf-renderer, ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts]), ytd-shorts'
@@ -953,12 +1920,40 @@ export default defineContentScript({
         }
       }
 
-      const cards = document.querySelectorAll(
-        'ytd-rich-item-renderer, ytd-video-renderer, ytd-compact-video-renderer, ytd-grid-video-renderer, ytd-playlist-video-renderer, ytd-channel-renderer'
-      );
+      // 4. Query all video, playlist, mix, and channel cards across Home, Search, Watch page, and feeds
+      const cardSelectors = [
+        'ytd-rich-item-renderer',
+        'ytd-video-renderer',
+        'ytd-compact-video-renderer',
+        'ytd-grid-video-renderer',
+        'ytd-playlist-video-renderer',
+        'ytd-playlist-renderer',
+        'ytd-radio-renderer',
+        'ytd-compact-playlist-renderer',
+        'ytd-compact-radio-renderer',
+        'ytd-grid-playlist-renderer',
+        'ytd-grid-radio-renderer',
+        'ytd-playlist-panel-video-renderer',
+        'ytd-channel-renderer',
+        'yt-lockup-view-model',
+        'ytd-lockup-view-model',
+        'lockup-view-model',
+        'ytd-item-section-renderer #contents > ytd-playlist-renderer',
+        'ytd-item-section-renderer #contents > ytd-radio-renderer',
+        'ytd-item-section-renderer #contents > yt-lockup-view-model',
+        '#related #items > *',
+        'ytd-watch-next-secondary-results-renderer #items > *',
+        '#secondary #items > *',
+      ];
+      const cards = document.querySelectorAll(cardSelectors.join(', '));
 
       for (const card of cards) {
         const htmlCard = card as HTMLElement;
+
+        // Skip elements without links or purely layout wrappers
+        if (!card.querySelector('a[href]')) {
+          continue;
+        }
 
         // Check if card is a Short
         if (cachedSettings.hideShorts !== false) {
@@ -971,22 +1966,71 @@ export default defineContentScript({
           }
         }
 
-        const channelLink = card.querySelector<HTMLAnchorElement>(
-          'ytd-channel-name a, #channel-name a, a[href*="/@"], a[href*="/channel/"]'
-        );
-        const nameEl = card.querySelector(
-          '#channel-name #text, ytd-channel-name #text, #text.ytd-channel-name'
-        );
-        const href = channelLink?.getAttribute('href') || '';
+        // Detect if card is a Mix (algorithmic mix of multiple channels)
+        const isMix =
+          card.tagName.toLowerCase().includes('radio') ||
+          card.querySelector('a[href*="list=RD"]') !== null ||
+          card.querySelector('[overlay-style="MIX"], yt-badge-view-model:has([aria-label*="Mix"]), yt-badge-shape[aria-label*="Mix"]') !== null ||
+          card.textContent?.includes(' • Mix') === true;
 
-        let identifier = '';
-        if (href.startsWith('/@')) {
-          identifier = href.split('/')[1]?.split('?')[0] || '';
-        } else if (href.startsWith('/channel/')) {
-          identifier = href.split('/')[2]?.split('?')[0] || '';
+        // In Whitelist mode, hide Mixes completely
+        if (cachedSettings.whitelistOnlyMode === true && isMix) {
+          htmlCard.style.setProperty('display', 'none', 'important');
+          card.querySelector('.haris-approved-badge')?.remove();
+          continue;
         }
 
-        const channelName = nameEl?.textContent?.trim() || '';
+        // Select channel link - strictly match elements linking to channels/handles, NOT video watch links
+        let channelLink = card.querySelector<HTMLAnchorElement>(
+          'ytd-channel-name a, #channel-name a, .yt-lockup-metadata-view-model a[href*="/@"], .yt-lockup-metadata-view-model a[href*="/channel/"], a[href*="/@"], a[href*="/channel/"], a[href*="/user/"], a#avatar-section[href*="/@"], a#avatar-section[href*="/channel/"], a#channel-thumbnail[href*="/@"], a#channel-thumbnail[href*="/channel/"]'
+        );
+        if (!channelLink && card.matches('ytd-channel-renderer')) {
+          channelLink = card.querySelector<HTMLAnchorElement>('a#main-link, a#avatar-section, a[href]');
+        }
+        const nameEl = card.querySelector(
+          'ytd-channel-name #text, #channel-name #text, #text.ytd-channel-name, #channel-title #text, #channel-title, .yt-lockup-metadata-view-model__byline, #byline, yt-formatted-string.ytd-channel-name'
+        );
+        const href = channelLink?.getAttribute('href') || channelLink?.href || '';
+
+        let identifier = '';
+        if (href.includes('/@')) {
+          const match = href.match(/\/(@[^\/?#]+)/);
+          if (match?.[1]) identifier = match[1];
+        } else if (href.includes('/channel/')) {
+          const match = href.match(/\/channel\/([^\/?#]+)/);
+          if (match?.[1]) identifier = match[1];
+        } else if (href.includes('/user/')) {
+          const match = href.match(/\/user\/([^\/?#]+)/);
+          if (match?.[1]) identifier = match[1];
+        }
+
+        let channelName = '';
+        if (nameEl) {
+          const clone = nameEl.cloneNode(true) as Element;
+          clone.querySelectorAll('svg, badge, .badge, [aria-label*="Verified"], [aria-label*="متحقق"]').forEach((b) => b.remove());
+          channelName = (clone.textContent || '').replace(/\s+/g, ' ').trim();
+        }
+        if (!channelName && channelLink) {
+          channelName = (channelLink.getAttribute('title') || channelLink.getAttribute('aria-label') || channelLink.textContent || '').replace(/\s+/g, ' ').trim();
+        }
+
+        // Strip playlist/mix tags from channel name if present (e.g. "Sooada 1000 • Playlist")
+        if (channelName.includes('•')) {
+          const parts = channelName.split('•').map((p) => p.trim());
+          if (parts[0] && !parts[0].toLowerCase().includes('playlist') && !parts[0].toLowerCase().includes('mix') && !parts[0].toLowerCase().includes('قائمة')) {
+            channelName = parts[0];
+          }
+        }
+
+        if (!identifier) {
+          const metaText = card.querySelector('#sub-menu, #metadata, #channel-title-container, .yt-lockup-metadata-view-model')?.textContent || '';
+          const handleMatch = metaText.match(/(@[\w\.\-]+)/);
+          if (handleMatch?.[1]) identifier = handleMatch[1];
+        }
+
+        if (channelName.startsWith('@') && !identifier) {
+          identifier = channelName;
+        }
 
         // Check if Channel is Blocked
         const isBlocked =
@@ -997,16 +2041,49 @@ export default defineContentScript({
           htmlCard.style.setProperty('display', 'none', 'important');
           card.querySelector('.haris-approved-badge')?.remove();
           continue;
-        } else {
-          // If was hidden previously due to blocked status, restore display
-          if (htmlCard.style.display === 'none') {
-            htmlCard.style.removeProperty('display');
+        }
+
+        // Approved badge and whitelist check
+        const isApproved =
+          (identifier ? isChannelApproved(identifier, cachedApprovedChannels) : false) ||
+          (channelName ? isChannelApproved(channelName, cachedApprovedChannels) : false);
+
+        let isVideoInApprovedList = false;
+        const videoLink = card.querySelector<HTMLAnchorElement>('a#thumbnail[href*="v="], a[href*="/watch?v="]');
+        const videoIdMatch = videoLink?.getAttribute('href')?.match(/[?&]v=([^&]+)/);
+        const cardVideoId = videoIdMatch?.[1];
+        if (cardVideoId) {
+          if (cachedApprovedVideos.length > 0 && isVideoApproved(cardVideoId, cachedApprovedVideos)) {
+            isVideoInApprovedList = true;
+          } else if (cachedWhitelistFeedVideos.length > 0 && isVideoApproved(cardVideoId, cachedWhitelistFeedVideos)) {
+            isVideoInApprovedList = true;
           }
         }
 
-        // Approved badge logic
-        const isApproved = identifier ? isChannelApproved(identifier, cachedApprovedChannels) : false;
-        const thumbContainer = card.querySelector('ytd-thumbnail, #thumbnail, a#thumbnail');
+        const isWhitelisted = isApproved || isVideoInApprovedList;
+
+        // Strict Whitelist Mode: hide everything unapproved on homepage, recommendations, watch page, and search results
+        if (cachedSettings.whitelistOnlyMode === true) {
+          const isRecommendations =
+            isWatchPage ||
+            card.closest(
+              '#related, ytd-watch-next-secondary-results-renderer, #secondary, #below, ytd-compact-video-renderer, ytd-compact-playlist-renderer, ytd-compact-radio-renderer'
+            ) !== null;
+
+          if (isHomePage || isRecommendations || isSearchPage || isWatchPage) {
+            if (!isWhitelisted) {
+              htmlCard.style.setProperty('display', 'none', 'important');
+              card.querySelector('.haris-approved-badge')?.remove();
+              continue;
+            }
+          }
+        }
+
+        // If not hidden by blocked or whitelist filter, restore display
+        if (htmlCard.style.display === 'none') {
+          htmlCard.style.removeProperty('display');
+        }
+        const thumbContainer = card.querySelector('ytd-thumbnail, #thumbnail, a#thumbnail, #avatar-section, yt-thumbnail-view-model');
 
         if (!thumbContainer) continue;
 
@@ -1017,18 +2094,58 @@ export default defineContentScript({
             const badge = document.createElement('div');
             badge.className = 'haris-approved-badge';
             badge.title = t('approvedBadge', currentLang);
-            badge.innerHTML = `
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>${t('inMyList', currentLang).replace('✓', '').trim()}</span>
-            `;
+
+            const badgeSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            badgeSvg.setAttribute('width', '12');
+            badgeSvg.setAttribute('height', '12');
+            badgeSvg.setAttribute('viewBox', '0 0 24 24');
+            badgeSvg.setAttribute('fill', 'none');
+            badgeSvg.setAttribute('stroke', 'currentColor');
+            badgeSvg.setAttribute('stroke-width', '3');
+            badgeSvg.setAttribute('stroke-linecap', 'round');
+            badgeSvg.setAttribute('stroke-linejoin', 'round');
+            const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+            polyline.setAttribute('points', '20 6 9 17 4 12');
+            badgeSvg.appendChild(polyline);
+
+            const span = document.createElement('span');
+            span.textContent = t('inMyList', currentLang).replace('✓', '').trim();
+
+            badge.appendChild(badgeSvg);
+            badge.appendChild(span);
             (thumbContainer as HTMLElement).style.position = 'relative';
             thumbContainer.appendChild(badge);
           }
         } else {
           if (existingBadge) {
             existingBadge.remove();
+          }
+        }
+      }
+
+      // Hide search shelves (recommendations/mixes) if no approved items inside in whitelist mode
+      const searchShelves = document.querySelectorAll('ytd-shelf-renderer, ytd-horizontal-card-list-renderer');
+      for (const shelf of searchShelves) {
+        const htmlShelf = shelf as HTMLElement;
+        if (cachedSettings.whitelistOnlyMode === true && isSearchPage) {
+          const items = shelf.querySelectorAll('ytd-video-renderer, ytd-channel-renderer, ytd-compact-video-renderer, yt-lockup-view-model');
+          let hasVisibleItem = false;
+          for (const item of items) {
+            if ((item as HTMLElement).style.display !== 'none') {
+              hasVisibleItem = true;
+              break;
+            }
+          }
+          if (!hasVisibleItem) {
+            htmlShelf.style.setProperty('display', 'none', 'important');
+          } else {
+            if (htmlShelf.style.display === 'none') {
+              htmlShelf.style.removeProperty('display');
+            }
+          }
+        } else if (cachedSettings.whitelistOnlyMode !== true && isSearchPage) {
+          if (htmlShelf.style.display === 'none') {
+            htmlShelf.style.removeProperty('display');
           }
         }
       }
@@ -1090,11 +2207,12 @@ export default defineContentScript({
       requestAnimationFrame(async () => {
         try {
           handleShortsRedirect();
+          updatePageTypeClasses();
+          updateThumbnailBadgesAndFilter();
           handleWatchPageBlocked();
           await updateChannelButton();
           await updateVideoButton();
           await updateBlockChannelButton();
-          updateThumbnailBadgesAndFilter();
           await handleTitleUntranslation();
         } finally {
           isProcessing = false;
@@ -1105,24 +2223,64 @@ export default defineContentScript({
     // Initial setup
     injectStyles();
     loadData().then(() => {
+      updatePageTypeClasses();
+      updateThumbnailBadgesAndFilter();
       processDOM();
     });
 
-    // Handle YouTube's custom SPA navigation event
+    // Handle YouTube's custom SPA navigation events for instant response
+    window.addEventListener('yt-navigate-start', (e: any) => {
+      const targetUrl = e?.detail?.url;
+      handleShortsRedirect();
+      updatePageTypeClasses(targetUrl);
+      updateThumbnailBadgesAndFilter();
+    });
+
     window.addEventListener('yt-navigate-finish', () => {
       handleShortsRedirect();
-      setTimeout(processDOM, 300);
-      setTimeout(processDOM, 1000);
+      updatePageTypeClasses();
+      updateThumbnailBadgesAndFilter();
+      setTimeout(processDOM, 100);
+      setTimeout(processDOM, 500);
     });
+
+    // Immediate reaction to search submissions or search button clicks
+    document.addEventListener(
+      'submit',
+      (e) => {
+        const form = e.target as HTMLElement;
+        if (form?.id === 'search-form' || form?.closest('#search-form')) {
+          updatePageTypeClasses('/results');
+          updateThumbnailBadgesAndFilter();
+        }
+      },
+      true
+    );
+
+    document.addEventListener(
+      'click',
+      (e) => {
+        const target = e.target as HTMLElement;
+        if (target?.closest('#search-icon-legacy, #search-button, button#search-button, #voice-search-button')) {
+          updatePageTypeClasses('/results');
+          updateThumbnailBadgesAndFilter();
+        }
+      },
+      true
+    );
 
     // Fallback popstate event
     window.addEventListener('popstate', () => {
       handleShortsRedirect();
-      setTimeout(processDOM, 400);
+      updatePageTypeClasses();
+      updateThumbnailBadgesAndFilter();
+      setTimeout(processDOM, 200);
     });
 
     // Observe dynamic feed additions (scrolling / lazy loading)
     const observer = new MutationObserver(() => {
+      // Synchronous filtering immediately before browser paint prevents flickering
+      updateThumbnailBadgesAndFilter();
       processDOM();
     });
     observer.observe(document.body, {
@@ -1136,16 +2294,25 @@ export default defineContentScript({
         if (changes.approvedChannels) {
           const newVal = changes.approvedChannels.newValue;
           cachedApprovedChannels = Array.isArray(newVal) ? (newVal as ApprovedChannel[]) : [];
+          updateThumbnailBadgesAndFilter();
           processDOM();
         }
         if (changes.blockedChannels) {
           const newVal = changes.blockedChannels.newValue;
           cachedBlockedChannels = Array.isArray(newVal) ? (newVal as BlockedChannel[]) : [];
+          updateThumbnailBadgesAndFilter();
           processDOM();
         }
         if (changes.newUploads) {
           const newVal = changes.newUploads.newValue;
           cachedApprovedVideos = Array.isArray(newVal) ? (newVal as NewUploadVideo[]) : [];
+          updateThumbnailBadgesAndFilter();
+          processDOM();
+        }
+        if (changes.whitelistFeedVideos) {
+          const newVal = changes.whitelistFeedVideos.newValue;
+          cachedWhitelistFeedVideos = Array.isArray(newVal) ? (newVal as NewUploadVideo[]) : [];
+          updateThumbnailBadgesAndFilter();
           processDOM();
         }
         if (changes.settings) {
@@ -1153,6 +2320,8 @@ export default defineContentScript({
           cachedSettings = newSettings || {};
           currentLang = newSettings?.language || 'ar';
           applyShortsClass();
+          applyWhitelistClass();
+          updateThumbnailBadgesAndFilter();
           loadLanguageMessages(currentLang).then(() => processDOM());
         }
       }
