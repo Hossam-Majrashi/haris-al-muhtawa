@@ -204,7 +204,7 @@ function isTabMode(): boolean {
     window.location.search.includes('tab=') ||
     window.location.search.includes('mode=tab') ||
     window.location.search.includes('openFile=') ||
-    window.innerWidth > 500
+    window.innerWidth > 700
   );
 }
 

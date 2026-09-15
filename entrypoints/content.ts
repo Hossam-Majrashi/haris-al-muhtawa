@@ -2089,7 +2089,13 @@ export default defineContentScript({
 
         const existingBadge = thumbContainer.querySelector('.haris-approved-badge');
 
-        if (isApproved) {
+        // Show badge only for channel-approved OR manually-added videos (not auto-fetched whitelist feed videos)
+        const isManuallyApprovedVideo = cardVideoId
+          ? (cachedApprovedVideos.length > 0 && isVideoApproved(cardVideoId, cachedApprovedVideos))
+          : false;
+        const showBadge = isApproved || isManuallyApprovedVideo;
+
+        if (showBadge) {
           if (!existingBadge) {
             const badge = document.createElement('div');
             badge.className = 'haris-approved-badge';
@@ -2278,7 +2284,16 @@ export default defineContentScript({
     });
 
     // Observe dynamic feed additions (scrolling / lazy loading)
-    const observer = new MutationObserver(() => {
+    const observer = new MutationObserver((mutations) => {
+      // Skip mutations that occur exclusively inside the video player controls
+      // (e.g. mute button clicks, volume slider changes, progress bar updates)
+      // to avoid interfering with YouTube's player UI interactions.
+      const isPlayerOnly = mutations.every((m) => {
+        const target = m.target as HTMLElement;
+        return target?.closest?.('#movie_player, .html5-video-player, #player') !== null;
+      });
+      if (isPlayerOnly) return;
+
       // Synchronous filtering immediately before browser paint prevents flickering
       updateThumbnailBadgesAndFilter();
       processDOM();
